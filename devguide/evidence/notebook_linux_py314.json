@@ -1,0 +1,313 @@
+{
+  "schema": "recorda-lab.notebook/0.1",
+  "tracking": [
+    "uibcdf/recorda-lab#3",
+    "uibcdf/recorda#1"
+  ],
+  "kernel": {
+    "executable": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "ipykernel": "7.3.0",
+    "ipython": "9.17.1",
+    "recorda_file": "/home/diego/repos@uibcdf/recorda/src/recorda/__init__.py",
+    "dummy_file": "/home/diego/repos@uibcdf/recorda-lab/src/recorda_lab/__init__.py"
+  },
+  "client": {
+    "jupyter_client": "8.10.0",
+    "nbformat": "5.11.1"
+  },
+  "scenarios": {
+    "cross-cell": "succeeded",
+    "failure": "failed",
+    "interrupt": "failed",
+    "kernel-loss": "incomplete"
+  },
+  "checks": [
+    "activation/calls/stop in separate real kernel execute requests",
+    "top-level await and child ownership guard",
+    "inactive calls before and after; native result/reference coexistence",
+    "uncaught native failure followed by stop in next cell",
+    "SIGINT KeyboardInterrupt within declared operation",
+    "kernel termination preserves unclosed operation/session"
+  ],
+  "records": {
+    "cross-cell": {
+      "session_id": "ffd74c1b-2bd6-40de-95ba-aeffe4575bf5",
+      "name": "cross_cell",
+      "status": "succeeded",
+      "coverage": {
+        "mode": "declared_boundaries",
+        "known_gaps": [
+          "unwrapped dummy calls"
+        ]
+      },
+      "operations": [
+        {
+          "id": "e38018a9-922c-423c-b539-2a2ebba41944",
+          "name": "lab.analyze",
+          "profile": "scientific_workflow",
+          "parent_id": null,
+          "inputs": {
+            "samples": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9",
+              "revision": null,
+              "digest": "d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9"
+            }
+          },
+          "parameters": {},
+          "implementation": {
+            "package": "consumer",
+            "callable": "consumer.analyze",
+            "version": null
+          },
+          "start": "2026-10-05T20:19:49.885728+00:00",
+          "status": "succeeded",
+          "outputs": {
+            "return": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:46ad580cd017509c9e59e01d02e50645e626fe75d013352e5d7f6b24030b358e",
+              "revision": null,
+              "digest": null
+            }
+          },
+          "end": "2026-10-05T20:19:49.892044+00:00"
+        },
+        {
+          "id": "704978b4-0555-4472-93dc-c8ffa8abc2d8",
+          "name": "lab.summarize_samples",
+          "profile": "scientific_analysis",
+          "parent_id": "e38018a9-922c-423c-b539-2a2ebba41944",
+          "inputs": {
+            "samples": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9",
+              "revision": null,
+              "digest": "d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9"
+            }
+          },
+          "parameters": {},
+          "implementation": {
+            "package": "consumer",
+            "callable": "consumer.summarize_samples",
+            "version": null
+          },
+          "start": "2026-10-05T20:19:49.887985+00:00",
+          "status": "succeeded",
+          "outputs": {
+            "return": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:46ad580cd017509c9e59e01d02e50645e626fe75d013352e5d7f6b24030b358e",
+              "revision": null,
+              "digest": null
+            }
+          },
+          "end": "2026-10-05T20:19:49.890055+00:00"
+        },
+        {
+          "id": "2893e013-122d-4b42-b6a9-ee8715108793",
+          "name": "lab.sample_count",
+          "profile": "inspection",
+          "parent_id": null,
+          "inputs": {
+            "samples": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9",
+              "revision": null,
+              "digest": "d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9"
+            }
+          },
+          "parameters": {},
+          "implementation": {
+            "package": "consumer",
+            "callable": "consumer.sample_count",
+            "version": null
+          },
+          "start": "2026-10-05T20:19:49.895328+00:00",
+          "status": "succeeded",
+          "outputs": {
+            "return": 4
+          },
+          "end": "2026-10-05T20:19:49.897279+00:00"
+        },
+        {
+          "id": "d1ff3e0b-d5da-47f0-ab70-27186700acaf",
+          "name": "lab.summarize_samples",
+          "profile": "scientific_analysis",
+          "parent_id": null,
+          "inputs": {
+            "samples": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9",
+              "revision": null,
+              "digest": "d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9"
+            }
+          },
+          "parameters": {},
+          "implementation": {
+            "package": "consumer",
+            "callable": "consumer.summarize_samples",
+            "version": null
+          },
+          "start": "2026-10-05T20:19:49.910820+00:00",
+          "status": "succeeded",
+          "outputs": {
+            "return": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:46ad580cd017509c9e59e01d02e50645e626fe75d013352e5d7f6b24030b358e",
+              "revision": null,
+              "digest": null
+            }
+          },
+          "end": "2026-10-05T20:19:49.913289+00:00"
+        }
+      ],
+      "problems": []
+    },
+    "failure": {
+      "session_id": "8ea65846-c6fc-4c49-8b85-257fd2c6b151",
+      "name": "native_failure",
+      "status": "failed",
+      "coverage": {
+        "mode": "declared_boundaries",
+        "known_gaps": []
+      },
+      "operations": [
+        {
+          "id": "5b69d6fe-9251-46d4-a373-ac7bccbdbe16",
+          "name": "lab.summarize_samples",
+          "profile": "scientific_analysis",
+          "parent_id": null,
+          "inputs": {
+            "samples": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "revision": null,
+              "digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            }
+          },
+          "parameters": {},
+          "implementation": {
+            "package": "consumer",
+            "callable": "consumer.summarize_samples",
+            "version": null
+          },
+          "start": "2026-10-05T20:19:49.947842+00:00",
+          "status": "failed",
+          "outputs": {},
+          "end": "2026-10-05T20:19:49.949077+00:00",
+          "exception": {
+            "type": "builtins.ValueError",
+            "message": {
+              "kind": "omitted",
+              "reason": "exception_message_may_be_sensitive"
+            }
+          }
+        }
+      ],
+      "problems": []
+    },
+    "interrupt": {
+      "session_id": "59204005-4105-43d0-84e0-47711b3c86a9",
+      "name": "user_interrupt",
+      "status": "failed",
+      "coverage": {
+        "mode": "declared_boundaries",
+        "known_gaps": []
+      },
+      "operations": [
+        {
+          "id": "f32f8ad7-8d21-4f8e-9a81-d32ad50fe22e",
+          "name": "lab.wait_for_interrupt",
+          "profile": "scientific_analysis",
+          "parent_id": null,
+          "inputs": {
+            "marker": "interrupt-ready"
+          },
+          "parameters": {},
+          "implementation": {
+            "package": "__main__",
+            "callable": "__main__.wait_for_interrupt",
+            "version": null
+          },
+          "start": "2026-10-05T20:19:50.129289+00:00",
+          "status": "failed",
+          "outputs": {},
+          "end": "2026-10-05T20:19:50.146643+00:00",
+          "exception": {
+            "type": "builtins.KeyboardInterrupt",
+            "message": {
+              "kind": "omitted",
+              "reason": "exception_message_may_be_sensitive"
+            }
+          }
+        }
+      ],
+      "problems": []
+    },
+    "kernel-loss": {
+      "session_id": "9d2ca6ed-5489-418e-838a-12e05adad446",
+      "name": "kernel_loss",
+      "status": "incomplete",
+      "coverage": {
+        "mode": "declared_boundaries",
+        "known_gaps": []
+      },
+      "operations": [
+        {
+          "id": "6e62c90e-1007-4029-9efa-4776829cc354",
+          "name": "lab.sample_count",
+          "profile": "inspection",
+          "parent_id": null,
+          "inputs": {
+            "samples": {
+              "kind": "omitted",
+              "reason": "unsupported_type"
+            }
+          },
+          "parameters": {},
+          "implementation": {
+            "package": "consumer",
+            "callable": "consumer.sample_count",
+            "version": null
+          },
+          "start": "2026-10-05T20:19:50.204750+00:00",
+          "status": "succeeded",
+          "outputs": {
+            "return": 4
+          },
+          "end": "2026-10-05T20:19:50.206720+00:00"
+        },
+        {
+          "id": "7c15b26a-641f-497a-a7bc-7b00e3c08760",
+          "name": "lab.wait_for_interrupt",
+          "profile": "scientific_analysis",
+          "parent_id": null,
+          "inputs": {
+            "marker": "loss-ready"
+          },
+          "parameters": {},
+          "implementation": {
+            "package": "__main__",
+            "callable": "__main__.wait_for_interrupt",
+            "version": null
+          },
+          "start": "2026-10-05T20:19:50.217885+00:00",
+          "status": "incomplete",
+          "outputs": {}
+        }
+      ],
+      "problems": []
+    }
+  },
+  "scope": "this IPykernel/client combination on this interpreter; no browser frontend claim",
+  "executed_notebook_sha256": "65b6ea35e0e9ed1230a778353b79081f064910114cce381ba1a526c6cb5a5e32"
+}

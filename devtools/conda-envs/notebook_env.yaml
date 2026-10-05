@@ -1,0 +1,15 @@
+name: recorda-lab-notebook-test
+channels:
+  - uibcdf
+  - conda-forge
+dependencies:
+  - python=3.14
+  - pip
+  - setuptools>=77
+  - wheel
+  - pytest
+  - ipykernel=7.3.0
+  - jupyter_client=8.10.0
+  - nbformat=5.11.1
+  - pip:
+      - pytest-receptor==1.1.0

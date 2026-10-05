@@ -1,0 +1,136 @@
+{
+  "schema": "recorda-lab.scipy/0.1",
+  "tracking": [
+    "uibcdf/recorda-lab#4",
+    "uibcdf/recorda#1"
+  ],
+  "environment": {
+    "executable": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "scipy": "1.18.1",
+    "numpy": "2.4.6"
+  },
+  "data": "deterministic fictional dimensionless observations; no physical quantity encoding",
+  "scientific_summary": {
+    "parameters": [
+      2.5023636363636363,
+      -0.6966363636363636
+    ],
+    "covariance": [
+      [
+        0.00015886501533245425,
+        -7.943250780816357e-05
+      ],
+      [
+        -7.943250780816357e-05,
+        0.0004368787866062028
+      ]
+    ],
+    "least_squares_oracle": [
+      2.502363636363636,
+      -0.696636363636363
+    ],
+    "residual_sum_squares": 0.03931909090909076
+  },
+  "checks": [
+    "native/dormant/recorded results agree; caller alias leaves SciPy untouched",
+    "native result tuple identity and input arrays preserved",
+    "failed attempt followed by successful retry; session retains failure",
+    "alternate solver agrees with independent linear least-squares oracle",
+    "model, inputs, initial guess, solver options, version and native outputs referenced",
+    "trial receipts inspect independently without importing SciPy or NumPy"
+  ],
+  "audit": {
+    "schema": "recorda-lab.scipy-inspection/0.1",
+    "records": {
+      "retry": {
+        "status": "failed",
+        "operations": [
+          {
+            "operation_id": "63e57f3b-620d-4236-87f2-30bfee192a16",
+            "status": "failed",
+            "implementation": {
+              "package": "scipy",
+              "callable": "scipy.optimize._minpack_py.curve_fit",
+              "version": "1.18.1"
+            },
+            "method": "lm",
+            "solver_options": {
+              "maxfev": 1
+            },
+            "model_reference": "sha256:378c907293b5528f934f3b494d293a228b0d6c5cc07ca72863f60179004a8668",
+            "input_references": {
+              "xdata": "sha256:7d7b10d12576d7fb5660d439be46cd5e3fcc54b5949d870a84a299ab9bebbd9b",
+              "ydata": "sha256:90b2d5c29f3f5565c8ddf9300fd0721824da32664372005bdeddad8c2c3787e6",
+              "p0": "sha256:a5d6728702b6df85ff7574fa8efb377113f9f7ca52cd5424ad6f9c6fb399c5bb",
+              "bounds": "sha256:2edd342846436f2f3f98271342c52a7627221a7a54e9d8ee7b1e00d18bb60a9d"
+            },
+            "result_reference": null
+          },
+          {
+            "operation_id": "0690e333-c8f8-4031-b2b1-f8b461a8e356",
+            "status": "succeeded",
+            "implementation": {
+              "package": "scipy",
+              "callable": "scipy.optimize._minpack_py.curve_fit",
+              "version": "1.18.1"
+            },
+            "method": "lm",
+            "solver_options": {
+              "maxfev": 1000
+            },
+            "model_reference": "sha256:378c907293b5528f934f3b494d293a228b0d6c5cc07ca72863f60179004a8668",
+            "input_references": {
+              "xdata": "sha256:7d7b10d12576d7fb5660d439be46cd5e3fcc54b5949d870a84a299ab9bebbd9b",
+              "ydata": "sha256:90b2d5c29f3f5565c8ddf9300fd0721824da32664372005bdeddad8c2c3787e6",
+              "p0": "sha256:a5d6728702b6df85ff7574fa8efb377113f9f7ca52cd5424ad6f9c6fb399c5bb",
+              "bounds": "sha256:2edd342846436f2f3f98271342c52a7627221a7a54e9d8ee7b1e00d18bb60a9d"
+            },
+            "result_reference": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:51a35e5ee23a8d9a466e151b5ab41091e6200a004f7ae0b741347a717af811d6",
+              "revision": null,
+              "digest": "51a35e5ee23a8d9a466e151b5ab41091e6200a004f7ae0b741347a717af811d6"
+            }
+          }
+        ]
+      },
+      "comparison": {
+        "status": "succeeded",
+        "operations": [
+          {
+            "operation_id": "3ee4dac1-e8d1-4627-9b3d-b0e2aa5a2386",
+            "status": "succeeded",
+            "implementation": {
+              "package": "scipy",
+              "callable": "scipy.optimize._minpack_py.curve_fit",
+              "version": "1.18.1"
+            },
+            "method": "trf",
+            "solver_options": {
+              "max_nfev": 1000
+            },
+            "model_reference": "sha256:378c907293b5528f934f3b494d293a228b0d6c5cc07ca72863f60179004a8668",
+            "input_references": {
+              "xdata": "sha256:7d7b10d12576d7fb5660d439be46cd5e3fcc54b5949d870a84a299ab9bebbd9b",
+              "ydata": "sha256:90b2d5c29f3f5565c8ddf9300fd0721824da32664372005bdeddad8c2c3787e6",
+              "p0": "sha256:a5d6728702b6df85ff7574fa8efb377113f9f7ca52cd5424ad6f9c6fb399c5bb",
+              "bounds": "sha256:7c9135ca3bc50448a417129f2dfda92d37c54bfca9b13b5c727191fce33e6f47"
+            },
+            "result_reference": {
+              "kind": "reference",
+              "owner": "recorda-lab",
+              "identifier": "sha256:fa85208a9eda2fb4f03038d188fade80fe82adbda6ab28ae0650c5e84382e145",
+              "revision": null,
+              "digest": "fa85208a9eda2fb4f03038d188fade80fe82adbda6ab28ae0650c5e84382e145"
+            }
+          }
+        ]
+      }
+    },
+    "native_files_checked": 15,
+    "scope": "trial-specific receipts and declared boundaries, not Recorda verification/replay"
+  },
+  "scope": "controlled real-library usability; not arbitrary calls, broad adapter support or replay"
+}

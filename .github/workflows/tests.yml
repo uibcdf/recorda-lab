@@ -1,0 +1,99 @@
+name: Dummy tests and manual Recorda integration
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '47 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      recorda_commit:
+        description: Reviewed full commit SHA of the published Recorda implementation
+        required: true
+        default: 7e0c8dc79fbc529826d27e467de381e248c36da8
+        type: string
+      run_scipy:
+        description: Also run the controlled SciPy trial and scientific notebook
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  dummy:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ruff==0.16.5
+      - run: python -m pip install --no-deps --no-build-isolation .
+      - run: python devtools/validate_governance.py
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: python -m pytest --receptor=ci -o pythonpath='' tests/test_dummy.py
+  integration:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: lab
+      - name: Validate source identity
+        env:
+          RECORDA_COMMIT: ${{ inputs.recorda_commit }}
+        run: python -c 'import os,re; assert re.fullmatch(r"[0-9a-f]{40}", os.environ["RECORDA_COMMIT"]), "full reviewed SHA required"'
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/recorda
+          ref: ${{ inputs.recorda_commit }}
+          path: recorda
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ipykernel==7.3.0 jupyter_client==8.10.0 nbformat==5.11.1
+      - run: python -m pip install --no-deps --no-build-isolation ./recorda ./lab
+      - run: python -m pytest --receptor=ci -o pythonpath='' lab/tests
+        env:
+          RECORDA_LAB_NOTEBOOK: '1'
+  scientific:
+    if: github.event_name == 'workflow_dispatch' && inputs.run_scipy
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: lab
+      - name: Validate source identity
+        env:
+          RECORDA_COMMIT: ${{ inputs.recorda_commit }}
+        run: python -c 'import os,re; assert re.fullmatch(r"[0-9a-f]{40}", os.environ["RECORDA_COMMIT"]), "full reviewed SHA required"'
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/recorda
+          ref: ${{ inputs.recorda_commit }}
+          path: recorda
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          environment-file: lab/devtools/conda-envs/scientific_env.yaml
+          activate-environment: recorda-lab-scientific
+          auto-activate-base: false
+      - run: python -m pip install --no-deps --no-build-isolation ./recorda ./lab
+      - run: python -m pytest --receptor=ci -o pythonpath='' recorda/tests lab/tests
+        env:
+          RECORDA_LAB_NOTEBOOK: '1'
+          RECORDA_LAB_SCIPY: '1'
