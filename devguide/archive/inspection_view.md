@@ -14,7 +14,7 @@ supersedes: []
 
 ## What
 
-Receive the qualified Recorda #21 prototype at
+Receive the qualified uibcdf/recorda#21 prototype at
 80ef3dd337cd7db901132007c390ced8b7980b9c. Compare explicitly requested views with
 existing reference JSON and native multi-step scientific checks. Keep the dummy
 implementation and scientific libraries independent.
@@ -39,7 +39,7 @@ technical message does not replace the laboratory's scientific oracle.
 ## Alternatives
 
 A new text renderer would duplicate the core catalog. Live provider-event capture
-and scientific narrative are separately scoped in Recorda #15; this trial only
+and scientific narrative are separately scoped in uibcdf/recorda#15; this trial only
 receives the read-only technical view. Existing source JSON remains available.
 
 ## Acceptance criteria
@@ -60,7 +60,7 @@ installed bytes, published providers, pip check, source/environment preflight,
 governance/shared MOLI core and Ruff pass. Evidence is retained in
 `devguide/evidence/inspection_view_linux_py314.json`.
 
-The initial Recorda #21 head exposed a saved-report wording ambiguity; Recorda
+The initial uibcdf/recorda#21 head exposed a saved-report wording ambiguity; Recorda
 #22 corrects it with an actual restoration regression. The selected corrected
 candidate is 48a6c9a0630027f0f2c3d8d82215de8e27764913, whose core source/installed
 305 tests and all 11 exact-head CI jobs pass. Explicit-candidate Lab CI
@@ -77,5 +77,5 @@ Hosted evidence is retained in `devguide/evidence/inspection_view_hosted.json`.
 Closing documentation preserves every selected source/qualification byte and
 records the one-line workflow promotion separately. The fixed user questions are
 answered by actual source observations and messages; this is not a human usability
-study or broader standalone/public-release certification. Provider proposals remain SMonitor #39 and ArgDigest #32,
-coordinated with MOLI #62; no provider implementation belongs to this trial.
+study or broader standalone/public-release certification. Provider proposals remain uibcdf/smonitor#39 and uibcdf/argdigest#32,
+coordinated with uibcdf/moli#62; no provider implementation belongs to this trial.

@@ -1,7 +1,7 @@
 # Explicit inspection-view receiving experiment
 
 Owner: [uibcdf/recorda-lab#13](https://github.com/uibcdf/recorda-lab/issues/13).
-The core API belongs to Recorda #21; supplied-check wording is Recorda #22.
+The core API belongs to uibcdf/recorda#21; supplied-check wording is uibcdf/recorda#22.
 This is a controlled technical presentation experiment, not a human usability
 study, scientific interpretation, fresh-check certification or replay.
 
@@ -57,7 +57,7 @@ Missing/failing presentation keeps facts, counts and fixed fallback reasons.
 Enabled DEBUG application policy, handlers, warning/logging hooks and events remain
 unchanged during projection. Invalid scientific calls/native exceptions are not
 turned into new technical-view errors. Provider text improvements remain SMonitor
-#39 and ArgDigest #32 coordinated with MOLI #62.
+#39 and uibcdf/argdigest#32 coordinated with uibcdf/moli#62.
 
 ## Qualification
 
@@ -87,4 +87,4 @@ selected core identities, verdicts and log hashes. The resolved analysis is
 Sabueso remains historical/optional. The experiment answers fixed technical
 questions alongside source JSON; it does not measure human comprehension,
 certify fresh/authenticated bytes, scientific correctness, public OS support,
-a release or replay. Core #15 live correlation remains separately scoped.
+a release or replay. uibcdf/recorda#15 live correlation remains separately scoped.
