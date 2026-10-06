@@ -25,6 +25,11 @@ They belong to Recorda Lab; the scientific dummy package remains independent.
   alter output bytes and restore files. Distinguish availability/hash checks,
   omissions and interrupted work. Tracked by `uibcdf/recorda-lab#9`.
 
+- `07_multi_step_workflow.ipynb`: prepare finite observations, fit with SciPy,
+  evaluate residuals and inspect native dependencies across cells. Check failure,
+  interruption, minimal capture and intermediate-file loss. Requires the scientific
+  lane; tracked by `uibcdf/recorda-lab#10`. Read `devguide/MULTI_STEP_WORKFLOW.md`.
+
 Use Python 3.14 and the declared development environment. Install both checkouts
 with `--no-deps --editable`, then launch `python -m jupyterlab` from the laboratory
 root and select that environment's kernel. The setup cell prints the actual interpreter.

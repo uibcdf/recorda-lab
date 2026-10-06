@@ -151,3 +151,8 @@ minimal/detailed sessions without changing the dummy library. See
 The sixth usage notebook and common reference-check experiment distinguish
 missing/altered native files, unknown or unverified references, capture omissions
 and incomplete execution. See [devguide/REFERENCE_CHECKS.md](devguide/REFERENCE_CHECKS.md).
+
+The multi-step workflow and seventh notebook retain native references from sample
+preparation through SciPy fitting and residual evaluation. An independent scalar
+oracle checks the scientific result; faults and missing intermediate files stay
+visible. See [devguide/MULTI_STEP_WORKFLOW.md](devguide/MULTI_STEP_WORKFLOW.md).

@@ -56,9 +56,11 @@ Consolidate useful provenance and remaining acceptance in
 [uibcdf/recorda-lab#1](https://github.com/uibcdf/recorda-lab/issues/1), coordinated
 with [uibcdf/recorda#1](https://github.com/uibcdf/recorda/issues/1). The six notebook
 scenarios are complete. A small multi-step workflow linking native references
-is a candidate; choose a concrete consumer question, independent scientific
-oracle and explicit failure/omission cases in a new Lab issue first. Its scope
-is a proposal, not an implemented feature or an approved next experiment.
+was chosen under `uibcdf/recorda-lab#10` and implemented locally. Read
+[MULTI_STEP_WORKFLOW.md](MULTI_STEP_WORKFLOW.md) for the consumer question,
+independent scientific oracle, failure/omission cases and exact local receipt.
+It does not replace the published pair above or complete broader acceptance;
+owner review and hosted qualification for this new Lab source remain separate.
 
 Ecosystem boundaries and release/OS/coverage reviews remain core issues
 uibcdf/recorda#2, uibcdf/recorda#3, uibcdf/recorda#4 and uibcdf/recorda#6. MOLI

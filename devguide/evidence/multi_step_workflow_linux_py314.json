@@ -1,0 +1,416 @@
+{
+  "schema": "recorda-lab.workflow-local/0.1",
+  "observed": "2026-10-06T09:01:13.554878+00:00",
+  "issue": "uibcdf/recorda-lab#10",
+  "coordination": [
+    "uibcdf/recorda#1",
+    "uibcdf/recorda-lab#1"
+  ],
+  "core_base": "639355885de0a1c68ed2aad9f0ff9dc594e4a39a",
+  "lab_base": "19b237b71a6dca73df956386ccdb520523740c5d",
+  "manifest_scope": "Local modified Lab sources; fingerprints identify tested files before publication. Core runtime unchanged. Documentation and receipts excluded from the tested source manifests.",
+  "executable": "/tmp/recorda-workflow-env/bin/python",
+  "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+  "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+  "tools": {
+    "pytest": "9.1.1",
+    "pytest-receptor": "1.1.0",
+    "ruff": "0.16.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "ipykernel": "7.4.0",
+    "jupyter_client": "8.10.0",
+    "nbformat": "5.11.1"
+  },
+  "pytest_receptor_distribution": {
+    "path": "/tmp/recorda-workflow-env/lib/python3.14/site-packages/pytest_receptor",
+    "version": "1.1.0",
+    "source": "Published PyPI distribution installed in isolated /tmp venv; no editable direct_url.",
+    "direct_url": null
+  },
+  "development_installations": {
+    "recorda": "/home/liliana/repos@uibcdf/recorda",
+    "recorda-lab": "/tmp/recorda-workflow-lab",
+    "method": "--no-deps --no-build-isolation --editable in isolated venv inheriting scientific dependencies"
+  },
+  "command": [
+    "/tmp/recorda-workflow-env/bin/python",
+    "-m",
+    "pytest",
+    "-p",
+    "pytest_receptor.plugin",
+    "--receptor=llm",
+    "-o",
+    "pythonpath=",
+    "--basetemp=/tmp/recorda-workflow-qualified-tests",
+    "/home/liliana/repos@uibcdf/recorda/tests",
+    "/tmp/recorda-workflow-lab/tests"
+  ],
+  "environment": {
+    "RECORDA_LAB_SCIPY": "1",
+    "RECORDA_LAB_NOTEBOOK": "1",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "RECORDA_LAB_SABUESO": "not enabled"
+  },
+  "tests": {
+    "passed": 112,
+    "skipped": 4,
+    "skip_reason": "Explicit offline Sabueso lane not enabled",
+    "new_workflow_cases": 4
+  },
+  "notebooks": {
+    "schema": "recorda-lab.examples/0.1",
+    "notebooks": {
+      "01_manual_activation.ipynb": {
+        "code_cells_passed": 9,
+        "source_sha256": "52938756c15f959af4d37d76763be1034e3fcdd1489b15c24f9d0a957eec68fb",
+        "executed_notebook": "01_manual_activation/executed.ipynb",
+        "executed_sha256": "d821faab336e9c625fb6be869960a6ac8bbd9616deb333670171abe8301a3345"
+      },
+      "02_recording_cost.ipynb": {
+        "code_cells_passed": 4,
+        "source_sha256": "19ecb334f219f6155708de4d6780b4a90353d951befedad4b7dad07693c2a8d1",
+        "executed_notebook": "02_recording_cost/executed.ipynb",
+        "executed_sha256": "22cf1cff5ae486dc92951b3a605f042a75c215f0e3a1eb1bb4f90d1b29028b10"
+      },
+      "03_scipy_fit.ipynb": {
+        "code_cells_passed": 8,
+        "source_sha256": "e01c91c84a7e2f3ca1941d17af48b17d2eb362e70d4985c66faf2d3fc272852d",
+        "executed_notebook": "03_scipy_fit/executed.ipynb",
+        "executed_sha256": "788a82437d8171be7bd3302305a7c6840c44e3c91d4b5f32527d7f0020b45ce0"
+      },
+      "05_capture_selection.ipynb": {
+        "code_cells_passed": 8,
+        "source_sha256": "28c00f5b4c8ea9fd95ef6ae26cdae4819212f3d8538f23c7c4a968de331cca8e",
+        "executed_notebook": "05_capture_selection/executed.ipynb",
+        "executed_sha256": "5a6e95619e6f98f3be855fc4c8663f9c36c46d08d9e4512588e9a39c12c21132"
+      },
+      "06_reference_checks.ipynb": {
+        "code_cells_passed": 8,
+        "source_sha256": "4ae0a988e4ec5fb640bd47962cfdec58a87eb269aa7e63b44dd9235effcedeab",
+        "executed_notebook": "06_reference_checks/executed.ipynb",
+        "executed_sha256": "753dfe7f0e82bc0d8fd954a6e4061d1ff9689f9220f1bf46eb65526a4a743c3b"
+      },
+      "07_multi_step_workflow.ipynb": {
+        "code_cells_passed": 8,
+        "source_sha256": "22b614d05f3a5562d2ce25aecf7bc6666efbccb12fe19fa6163b208cf8f707e2",
+        "executed_notebook": "07_multi_step_workflow/executed.ipynb",
+        "executed_sha256": "7d70a817c426d83d891186ad3910953b4f93f928ec366614b295794040ceda8f"
+      }
+    },
+    "skipped": {
+      "04_sabueso_resolution.ipynb": "enable RECORDA_LAB_SABUESO=1 with the declared trial dependencies"
+    }
+  },
+  "executed_code_cells": 45,
+  "checks": [
+    "Core/Lab local governance passed",
+    "Core/Lab canonical MOLI component checks passed",
+    "Core/Lab Ruff 0.16.5 check/format passed",
+    "git diff --check passed"
+  ],
+  "source_sha256": {
+    "recorda": {
+      "pyproject.toml": "a486d5d3fa7ea50d3f6a3c616a253a56afe371bbfbf62533284dfa7cb81a12ff",
+      "src/recorda/__init__.py": "3339e01bb48b599c80c41e0947ed8cff0721f946915d332d44df34d464009b33",
+      "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+      "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+      "src/recorda/policy.py": "629ff718915a469bbbc0aad18d7783d2f75957374c693b8b3dd0a62db75ffa72",
+      "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+      "src/recorda/references.py": "8a5cdf0a187bf716c56698ee4821de4730e3f73b5a04dfcc758754e3fa24bf5f",
+      "src/recorda/runtime.py": "c8f0d76ef28fb267610f0de3aeef9bfa442e8cb189e8fc0fcd4bfbd65acf435a",
+      "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
+      "tests/test_capture_policy.py": "349eae718489d06327b7f5fd16b4bd87f840779d8e005bd98bebb1f308ced613",
+      "tests/test_exception_references.py": "06eb89019b2daf59067696f879cafc6b83d67207622d74933a5e2b3f58aedb3c",
+      "tests/test_manual_recovery.py": "3a7f3dfc3af027f2ec65f87030e7026a377d9991dd553f91ea9d39fb089e5a63",
+      "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64",
+      "tests/test_references.py": "86d1121a1f014473d22df34b8c957ae6b6a6564a01ed08c0b4e7f1746902fe6e"
+    },
+    "recorda-lab": {
+      "experiments/consumer.py": "f38f7fd6bd71204b3336341d86607e31992f0fb55497dadce85eda5a38f98806",
+      "experiments/inspect_sabueso_trial.py": "9be2fcbc080449e383beb31fbe64057be5ade9b5122b2ea53b4e9ebe8cf66eab",
+      "experiments/inspect_scipy_trial.py": "a42ce91037e8999004c11ff572735c9590f62ffd091358c8a8e08e4c78fb00ec",
+      "experiments/inspect_workflow.py": "698c537b1928f010e96c829db5f3bfa48f22b1c7ab7fae91e1c89dc818015ba4",
+      "experiments/reference_files.py": "7916906c9b9518e3519f29e9f9825b9a72038e99eb19542e50c43b027b30236c",
+      "experiments/run_activation.py": "afabfc0dff27fd313bf21b6e597678cbdefbfd65c77558cc845887f6929c2811",
+      "experiments/run_examples.py": "622a019e77b597d0f55a8d64ee41c98bc1e816faa9caa434fbeec5b12f55bdbc",
+      "experiments/run_notebook.py": "b5c660abf77142c0e57437a13f2429b952bab0c730984e49c608b81704e4433b",
+      "experiments/run_performance.py": "0570c964f20cd94d53ab0a66eddd9eb629bc5b53b010941049d03039795fed0c",
+      "experiments/run_reference_checks.py": "1e4a1b9a7a1b054d1673b12f4208d139a94d5839bc34dbd1855cfe1a4e0516dd",
+      "experiments/run_sabueso.py": "020f70bcb846ca9b86f6ac014ea729dc5baee83d187a51581f97bbf74b8bcfae",
+      "experiments/run_scipy.py": "e7d53ccdf79a287f87b491fdf5ab21a72ee829b4131f37bdaa0b57e95f22242f",
+      "experiments/run_selection.py": "6229c7b86b93c6c2f3f965e767dbe0e9a2e2ef4b71017ca20eee59b8068f10f1",
+      "experiments/run_slice.py": "5bcbd46feafa3b5be96156d0fa75755016857c04b219dd6172bb130c68ee9a66",
+      "experiments/run_workflow.py": "dccaab0b66b42c394ddee61f7f0bf62af245559d6d1415be1ee331ec0b164180",
+      "experiments/sabueso_consumer.py": "81188e58bb5fd0dcfad29325c4ae5abbd425ff534635260f161ab75d80230cc2",
+      "experiments/scipy_consumer.py": "c02fbdb70b3d59708396b0ee86c4e4d64c946433e01f282e645c02434eeddd59",
+      "experiments/workflow_consumer.py": "263f1de83f80b6636027654eb665d11cca63c8b16f7951719d9ed60a601ac24a",
+      "notebooks/01_manual_activation.ipynb": "52938756c15f959af4d37d76763be1034e3fcdd1489b15c24f9d0a957eec68fb",
+      "notebooks/02_recording_cost.ipynb": "19ecb334f219f6155708de4d6780b4a90353d951befedad4b7dad07693c2a8d1",
+      "notebooks/03_scipy_fit.ipynb": "e01c91c84a7e2f3ca1941d17af48b17d2eb362e70d4985c66faf2d3fc272852d",
+      "notebooks/04_sabueso_resolution.ipynb": "c8126f3fec0c9f1debd91689669ea9567500365ec2f5e407d0ae11c9ce7179d1",
+      "notebooks/05_capture_selection.ipynb": "28c00f5b4c8ea9fd95ef6ae26cdae4819212f3d8538f23c7c4a968de331cca8e",
+      "notebooks/06_reference_checks.ipynb": "4ae0a988e4ec5fb640bd47962cfdec58a87eb269aa7e63b44dd9235effcedeab",
+      "notebooks/07_multi_step_workflow.ipynb": "22b614d05f3a5562d2ce25aecf7bc6666efbccb12fe19fa6163b208cf8f707e2",
+      "pyproject.toml": "3caccfd6ca18cfdb7db317981678bf3d25050af2c0f950b6fd2acf65415b0ea0",
+      "src/recorda_lab/__init__.py": "e4030acac2b3139b9920fe0045d9eeeca040881e3bdfab7e56e26c07fe87221d",
+      "tests/test_activation_experiment.py": "b2eacd47146b04f821358379de0cf3751ff8595233894063e0d518acdcf0320f",
+      "tests/test_dummy.py": "765e738e251733a3632b1dba307cfbab1a5226a67ed9d7f93cbeec03664598f4",
+      "tests/test_experiment.py": "354fd2b39c7873336420a5c14e2e79cb38e5aad53e8bab82e0ef1fc8fe9984de",
+      "tests/test_notebook_experiment.py": "9e46c1fd5c50ac36e5945d0e1ad7c3c38a43168bd84033166aeff84058b5c97c",
+      "tests/test_performance_experiment.py": "6797c3e7c1a63b3334e5bc9ffc70c29b23c2c5332fe270ff3664b81eca0905c6",
+      "tests/test_reference_checks_experiment.py": "9c59e2605548e4cb8df50b3fbd395c4c4b803fb0913024db104f49cee1333886",
+      "tests/test_sabueso_experiment.py": "83eafadac988f57ed095b8faf9938bce1ac98faa18abf7011cfafd025fcc97ef",
+      "tests/test_scipy_experiment.py": "e0c5a0ce0d40b33d3443ba200db8d1e6d0e6bbe3aad8650e9a15cfb43120e2f7",
+      "tests/test_selection_experiment.py": "be809153c81bcb6f48e029a243bf5882bf92dc9a67fbda7876dd224827b5c997",
+      "tests/test_workflow_experiment.py": "1f1527009cee9978a2ed774d53c6f88877374833e5c65569e24814adbc45b027"
+    }
+  },
+  "artifact_directory": "/tmp/recorda-workflow-qualified-tests/test_multi_step_oracle_dependecurrent/workflow",
+  "artifact_sha256": {
+    "acceptance.json": "07b646fe130570596507ec9b2506ed1f91865ca991d716b64e8a778d61cf0a51",
+    "full/native/affine.py": "378c907293b5528f934f3b494d293a228b0d6c5cc07ca72863f60179004a8668",
+    "full/native/evaluation-4f13097b898b9d56.json": "4f13097b898b9d56326d86f16931ed300b724a62b0dc50b6a7209333aed5725c",
+    "full/native/fit-1-covariance.npy": "84a777ea2661a9e4ebfc845cfdfd61691e3829140ff3f0aa04d777e398691656",
+    "full/native/fit-1-parameters.npy": "5bf4925bc78e79426c7acb3aadc4b776971bdaeb4d9e2586e435f5b4c4634cba",
+    "full/native/fit-d3ff9913de196a77.json": "d3ff9913de196a77d862954c79edc04e2e1eed745e81af346936ef545e5beed9",
+    "full/native/index.json": "d29cd7d34ce7e0b8a6851cb92ecbfb01536f136ebad86b112542f762a7242dc6",
+    "full/native/initial-parameters.npy": "a5d6728702b6df85ff7574fa8efb377113f9f7ca52cd5424ad6f9c6fb399c5bb",
+    "full/native/prepared-0-x.npy": "66573b146602171ba2c23b72c30958b0441acf375234d8e7a796e07e2b61a283",
+    "full/native/prepared-0-y.npy": "15bb61a4db88d568f6592bd2e89126e6a34e28a243441707876abdfc769e6ec4",
+    "full/native/prepared-ecc072c37cff109a.json": "ecc072c37cff109a20c0759e94f105e84a65f79252c471734d9f67f17ba9ca41",
+    "full/native/raw-x.npy": "b78c98d2c00cb5537b50f7f773cf806339e41ea22c4aa47966d39c511cfc27dd",
+    "full/native/raw-y.npy": "1f5698037579bd3df5ff440a4378a99f3c60bc701efc29747b7e3f349c09bb6a",
+    "full/native/residuals-2.npy": "572d37d2d4f6ca579c408a2885e9d55981f4ab427d24b9ba449a96b11c1a4670",
+    "full/native/solver-a9a9396bd692d85b.json": "a9a9396bd692d85b9e08bb8b08619354aab002b17b52b62da106df19edc74b6b",
+    "full/workflow.jsonl": "d0b9eb254a3af21dd39bd94182edd1f45f46d6bf10d962abdee6af57b79cfd5b",
+    "interrupted/native/affine.py": "378c907293b5528f934f3b494d293a228b0d6c5cc07ca72863f60179004a8668",
+    "interrupted/native/index.json": "35b6f4f1bd5a4723bb2c9a338e6e1b93174e77108f14f3af60037ba23e542a31",
+    "interrupted/native/initial-parameters.npy": "a5d6728702b6df85ff7574fa8efb377113f9f7ca52cd5424ad6f9c6fb399c5bb",
+    "interrupted/native/prepared-0-x.npy": "66573b146602171ba2c23b72c30958b0441acf375234d8e7a796e07e2b61a283",
+    "interrupted/native/prepared-0-y.npy": "15bb61a4db88d568f6592bd2e89126e6a34e28a243441707876abdfc769e6ec4",
+    "interrupted/native/prepared-ecc072c37cff109a.json": "ecc072c37cff109a20c0759e94f105e84a65f79252c471734d9f67f17ba9ca41",
+    "interrupted/native/raw-x.npy": "b78c98d2c00cb5537b50f7f773cf806339e41ea22c4aa47966d39c511cfc27dd",
+    "interrupted/native/raw-y.npy": "1f5698037579bd3df5ff440a4378a99f3c60bc701efc29747b7e3f349c09bb6a",
+    "interrupted/workflow.jsonl": "3dbcf3b6ce2d8332913e5f90b4a21215d8bc3e2c1f9a29935be51528fdcbe8ce",
+    "minimal/native/affine.py": "378c907293b5528f934f3b494d293a228b0d6c5cc07ca72863f60179004a8668",
+    "minimal/native/index.json": "1acc3c2941e8479606823911c3af822c91deee23d08610a32922bb9206609531",
+    "minimal/native/initial-parameters.npy": "a5d6728702b6df85ff7574fa8efb377113f9f7ca52cd5424ad6f9c6fb399c5bb",
+    "minimal/native/raw-x.npy": "b78c98d2c00cb5537b50f7f773cf806339e41ea22c4aa47966d39c511cfc27dd",
+    "minimal/native/raw-y.npy": "1f5698037579bd3df5ff440a4378a99f3c60bc701efc29747b7e3f349c09bb6a",
+    "minimal/workflow.jsonl": "a88489258f70663edac93b33fbfedf00baf372b4dda2aca5165c39fa0626c5c0",
+    "retry/native/affine.py": "378c907293b5528f934f3b494d293a228b0d6c5cc07ca72863f60179004a8668",
+    "retry/native/evaluation-4f13097b898b9d56.json": "4f13097b898b9d56326d86f16931ed300b724a62b0dc50b6a7209333aed5725c",
+    "retry/native/fit-1-covariance.npy": "84a777ea2661a9e4ebfc845cfdfd61691e3829140ff3f0aa04d777e398691656",
+    "retry/native/fit-1-parameters.npy": "5bf4925bc78e79426c7acb3aadc4b776971bdaeb4d9e2586e435f5b4c4634cba",
+    "retry/native/fit-d3ff9913de196a77.json": "d3ff9913de196a77d862954c79edc04e2e1eed745e81af346936ef545e5beed9",
+    "retry/native/index.json": "e21443ea303910cc129c9879b1f6ef40f38ad1222d07e9616253daa8f7347d31",
+    "retry/native/initial-parameters.npy": "a5d6728702b6df85ff7574fa8efb377113f9f7ca52cd5424ad6f9c6fb399c5bb",
+    "retry/native/prepared-0-x.npy": "66573b146602171ba2c23b72c30958b0441acf375234d8e7a796e07e2b61a283",
+    "retry/native/prepared-0-y.npy": "15bb61a4db88d568f6592bd2e89126e6a34e28a243441707876abdfc769e6ec4",
+    "retry/native/prepared-ecc072c37cff109a.json": "ecc072c37cff109a20c0759e94f105e84a65f79252c471734d9f67f17ba9ca41",
+    "retry/native/raw-x.npy": "b78c98d2c00cb5537b50f7f773cf806339e41ea22c4aa47966d39c511cfc27dd",
+    "retry/native/raw-y.npy": "1f5698037579bd3df5ff440a4378a99f3c60bc701efc29747b7e3f349c09bb6a",
+    "retry/native/residuals-2.npy": "572d37d2d4f6ca579c408a2885e9d55981f4ab427d24b9ba449a96b11c1a4670",
+    "retry/native/solver-2ad1b59500beba6e.json": "2ad1b59500beba6e935a4aac88a5025f0520f0f0e7a898f8901b1dcf8a65eeb0",
+    "retry/native/solver-a9a9396bd692d85b.json": "a9a9396bd692d85b9e08bb8b08619354aab002b17b52b62da106df19edc74b6b",
+    "retry/workflow.jsonl": "eeb62d39d22ebd0c5334cf09b089e3357a950d4aa5b380cdbc41b9c315d0b9f0"
+  },
+  "scenario_summary": {
+    "full": {
+      "session_status": "succeeded",
+      "operation_count": 4,
+      "dependency_occurrences": 4,
+      "native_file_states": [
+        "matched"
+      ],
+      "scientific_check": {
+        "status": "consistent",
+        "oracle": {
+          "kept_rows": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "parameters": [
+            2.4857142857142858,
+            -0.6571428571428569
+          ],
+          "residuals": [
+            0.014285714285714235,
+            -0.1714285714285717,
+            0.1428571428571428,
+            0.05714285714285694,
+            0.07142857142857117,
+            -0.11428571428571477
+          ],
+          "rss": 0.07142857142857155,
+          "covariance": [
+            0.0010204081632653077,
+            0.0005102040816326539,
+            0.0005102040816326539,
+            0.003231292517006808
+          ]
+        }
+      },
+      "incomplete_operations": 0,
+      "explicit_omissions": 1
+    },
+    "retry": {
+      "session_status": "failed",
+      "operation_count": 5,
+      "dependency_occurrences": 6,
+      "native_file_states": [
+        "matched"
+      ],
+      "scientific_check": {
+        "status": "consistent",
+        "oracle": {
+          "kept_rows": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "parameters": [
+            2.4857142857142858,
+            -0.6571428571428569
+          ],
+          "residuals": [
+            0.014285714285714235,
+            -0.1714285714285717,
+            0.1428571428571428,
+            0.05714285714285694,
+            0.07142857142857117,
+            -0.11428571428571477
+          ],
+          "rss": 0.07142857142857155,
+          "covariance": [
+            0.0010204081632653077,
+            0.0005102040816326539,
+            0.0005102040816326539,
+            0.003231292517006808
+          ]
+        }
+      },
+      "incomplete_operations": 0,
+      "explicit_omissions": 3
+    },
+    "minimal": {
+      "session_status": "succeeded",
+      "operation_count": 4,
+      "dependency_occurrences": 0,
+      "native_file_states": [
+        "matched"
+      ],
+      "scientific_check": {
+        "status": "unavailable",
+        "reason": "required_references_not_recorded"
+      },
+      "incomplete_operations": 0,
+      "explicit_omissions": 12
+    },
+    "interrupted": {
+      "session_status": "incomplete",
+      "operation_count": 3,
+      "dependency_occurrences": 2,
+      "native_file_states": [
+        "matched"
+      ],
+      "scientific_check": {
+        "status": "unavailable",
+        "reason": "required_references_not_recorded"
+      },
+      "incomplete_operations": 2,
+      "explicit_omissions": 0
+    },
+    "missing_intermediate": {
+      "session_status": "succeeded",
+      "operation_count": 4,
+      "dependency_occurrences": 4,
+      "native_file_states": [
+        "matched",
+        "missing"
+      ],
+      "scientific_check": {
+        "status": "unavailable",
+        "reason": "required_native_file_unavailable"
+      },
+      "incomplete_operations": 0,
+      "explicit_omissions": 1
+    },
+    "modified_intermediate": {
+      "session_status": "succeeded",
+      "operation_count": 4,
+      "dependency_occurrences": 4,
+      "native_file_states": [
+        "matched",
+        "mismatched"
+      ],
+      "scientific_check": {
+        "status": "unavailable",
+        "reason": "required_native_file_unavailable"
+      },
+      "incomplete_operations": 0,
+      "explicit_omissions": 1
+    },
+    "restored": {
+      "session_status": "succeeded",
+      "operation_count": 4,
+      "dependency_occurrences": 4,
+      "native_file_states": [
+        "matched"
+      ],
+      "scientific_check": {
+        "status": "consistent",
+        "oracle": {
+          "kept_rows": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "parameters": [
+            2.4857142857142858,
+            -0.6571428571428569
+          ],
+          "residuals": [
+            0.014285714285714235,
+            -0.1714285714285717,
+            0.1428571428571428,
+            0.05714285714285694,
+            0.07142857142857117,
+            -0.11428571428571477
+          ],
+          "rss": 0.07142857142857155,
+          "covariance": [
+            0.0010204081632653077,
+            0.0005102040816326539,
+            0.0005102040816326539,
+            0.003231292517006808
+          ]
+        }
+      },
+      "incomplete_operations": 0,
+      "explicit_omissions": 1
+    }
+  },
+  "negative_scientific_check": "Test changes retained evaluation RSS, updates both receipt and journal references, observes all native bytes matched and scientific status inconsistent.",
+  "producer_free_check": "Test launches current Python with -I -S; inserts only core src and experiment paths; asserts numpy/scipy/recorda_lab are not imported.",
+  "hosted_evidence": "Not yet executed for this new Lab source; previous checkpoint Actions remain historical.",
+  "limits": [
+    "Fictional dimensionless affine OLS case only",
+    "Trial-specific native dependency expansion and limited NPY 1.0 float64 reader",
+    "No scientific provider changes, authenticated receipts, replay, complete capture, release or public OS claims",
+    "Sabueso providers not reconstructed or executed; previous frozen-source receipts not requalified",
+    "Local Python 3.14 only; existing supported-minor CI declarations remain intact"
+  ]
+}
