@@ -21,6 +21,10 @@ They belong to Recorda Lab; the scientific dummy package remains independent.
   calculation, with explicit coverage, omitted payloads, bytes and repeated
   wall/CPU observations. Tracked by `uibcdf/recorda-lab#8`.
 
+- `06_reference_checks.ipynb`: inspect retained references, remove an input,
+  alter output bytes and restore files. Distinguish availability/hash checks,
+  omissions and interrupted work. Tracked by `uibcdf/recorda-lab#9`.
+
 Use Python 3.14 and the declared development environment. Install both checkouts
 with `--no-deps --editable`, then launch `python -m jupyterlab` from the laboratory
 root and select that environment's kernel. The setup cell prints the actual interpreter.

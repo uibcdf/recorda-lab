@@ -31,6 +31,9 @@ def test_fit_retry_preserves_native_results_and_inspectable_configuration(tmp_pa
     assert operations[0]["input_references"] == operations[1]["input_references"]
     assert operations[0]["result_reference"] is None
     assert operations[1]["result_reference"]["kind"] == "reference"
+    for record in report["audit"]["records"].values():
+        assert record["reference_checks"]["references"]
+        assert all(row["status"] == "matched" for row in record["reference_checks"]["references"])
     assert json.loads((destination / "acceptance.json").read_text()) == report
     with pytest.raises(FileExistsError):
         trial.run(destination)

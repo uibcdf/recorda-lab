@@ -1,11 +1,11 @@
 """Inspect the trial's declared journal and artifact receipts using Recorda and stdlib only."""
 
 import argparse
-import hashlib
 import json
 from pathlib import Path
 
 import recorda
+from reference_files import local_files
 
 
 def inspect_trial(destination):
@@ -13,25 +13,20 @@ def inspect_trial(destination):
     artifacts = destination / "native"
     index = json.loads((artifacts / "index.json").read_text())
     assert index["schema"] == "recorda-lab.scipy-artifacts/0.1"
-    references = {}
-    for entry in index["files"]:
-        path = (artifacts / entry["path"]).resolve()
-        if not path.is_relative_to(artifacts) or not path.is_file():
-            raise ValueError("native artifact is missing or outside the trial")
-        reference = entry["reference"]
-        digest = hashlib.sha256(path.read_bytes()).hexdigest()
-        if digest != reference["digest"] or reference["identifier"] != f"sha256:{digest}":
-            raise ValueError("native artifact no longer matches its receipt")
-        references[reference["identifier"]] = path
+    files = local_files(artifacts, index["files"])
+    for reference in files.references:
+        if reference.identifier != f"sha256:{reference.digest}":
+            raise ValueError("native artifact identity does not match its receipt")
 
     def resolve(reference):
+        path = files.path_for(reference)
         if (
-            reference["owner"] != "recorda-lab"
-            or reference["identifier"] not in references
+            path is None
+            or reference["owner"] != "recorda-lab"
             or reference["identifier"] != f"sha256:{reference['digest']}"
         ):
             raise ValueError("operation has an unresolved trial reference")
-        return references[reference["identifier"]]
+        return path
 
     records = {}
     for name in ["retry", "comparison"]:
@@ -63,7 +58,11 @@ def inspect_trial(destination):
                     "result_reference": operation["outputs"].get("return"),
                 }
             )
-        records[name] = {"status": record.status, "operations": checked}
+        records[name] = {
+            "status": record.status,
+            "operations": checked,
+            "reference_checks": recorda.check_references(record, resolver=files),
+        }
     return {
         "schema": "recorda-lab.scipy-inspection/0.1",
         "records": records,

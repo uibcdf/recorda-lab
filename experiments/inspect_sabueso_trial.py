@@ -1,11 +1,11 @@
 """Read the trial's native receipts using Recorda and stdlib, without Sabueso."""
 
 import argparse
-import hashlib
 import json
 from pathlib import Path
 
 import recorda
+from reference_files import local_files
 
 
 def _key(reference):
@@ -22,18 +22,11 @@ def inspect_trial(destination):
     native = destination / "native"
     index = json.loads((native / "index.json").read_text())
     assert index["schema"] == "recorda-lab.sabueso-artifacts/0.1"
-    files = {}
-    for entry in index["files"]:
-        path = (native / entry["path"]).resolve()
-        if not path.is_relative_to(native) or not path.is_file():
-            raise ValueError("native artifact missing or outside the trial")
-        reference = entry["reference"]
-        if hashlib.sha256(path.read_bytes()).hexdigest() != reference["digest"]:
-            raise ValueError("native artifact no longer matches its receipt")
-        key = _key(reference)
-        if key in files and files[key] != path:
-            raise ValueError("duplicate native reference")
-        files[key] = path
+    resolver = local_files(native, index["files"])
+    files = {
+        (ref.owner, ref.identifier, ref.revision, ref.digest): resolver.path_for(ref)
+        for ref in resolver.references
+    }
 
     def read(reference):
         try:
@@ -163,6 +156,7 @@ def inspect_trial(destination):
         ],
         "network_attempts": sum(event["network_attempts"] for event in events.values()),
         "coverage": record.coverage,
+        "reference_checks": recorda.check_references(record, resolver=resolver),
         "scope": "trial-specific receipts, not authenticated integrity or replay",
     }
 

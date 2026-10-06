@@ -45,3 +45,8 @@ Python 3.11–3.14 is the target and Python 3.14 is the working default. Read `P
 
 `experiments/run_selection.py` and the fifth notebook compare minimal/detailed
 session capture under `uibcdf/recorda-lab#8`. Read `CAPTURE_SELECTION.md`.
+
+`experiments/run_reference_checks.py` and the sixth notebook exercise common
+local reference checks. Existing SciPy/Sabueso inspectors reuse their byte checks
+with unchanged native semantic ownership. Read `REFERENCE_CHECKS.md`; tracked
+by `uibcdf/recorda-lab#9` and `uibcdf/recorda#12`.

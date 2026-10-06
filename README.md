@@ -12,8 +12,8 @@ Caller-owned boundaries and an instrumented example live in `experiments/run_sli
 
 ## Recorded baseline
 
-The current reviewed integration source is Recorda `90ae0decbde4e18ecee206f2097ed9a0bc79ae0a`,
-including experimental capture selection after the immutable **0.2.0** checkpoint.
+The current reviewed integration source is Recorda `565a68c5103a587b06c2411bba2064d1572b4c56`,
+including declared-reference checks after the immutable **0.2.0** checkpoint.
 Manual integration defaults to this full SHA. See
 [`devguide/RECORDA_BASELINE.md`](devguide/RECORDA_BASELINE.md) for current source
 and historical 0.2.0/0.1.0 qualification.
@@ -147,3 +147,7 @@ Python 3.11–3.14 is the target and Python 3.14 is the working default. Read `d
 The controlled capture-selection experiment and fifth usage notebook compare
 minimal/detailed sessions without changing the dummy library. See
 [devguide/CAPTURE_SELECTION.md](devguide/CAPTURE_SELECTION.md).
+
+The sixth usage notebook and common reference-check experiment distinguish
+missing/altered native files, unknown or unverified references, capture omissions
+and incomplete execution. See [devguide/REFERENCE_CHECKS.md](devguide/REFERENCE_CHECKS.md).

@@ -1,8 +1,22 @@
 # Recorded laboratory baseline
 
-## Current integration source — capture selection
+## Current integration source — declared reference checks
 
-Manual integration pins Recorda `90ae0decbde4e18ecee206f2097ed9a0bc79ae0a`. This is unreleased
+Manual integration pins Recorda `565a68c5103a587b06c2411bba2064d1572b4c56`. This unreleased
+source after 0.2.0 adds explicit local reference availability and bounded byte
+checking with declared SHA256, while retaining capture selection and lifecycle
+recovery. Core ownership is uibcdf/recorda#12; Lab adoption and the sixth notebook
+are uibcdf/recorda-lab#9. Native scientific ownership and manifest rules remain local.
+
+The local pair passes 112 tests on Linux Python 3.14.7, including six notebooks
+(45 code cells), SciPy and frozen-source Sabueso. Source hashes, command and
+controlled reports are in evidence/reference_checks_linux_py314.json. The dummy
+remains 0.0.0 and unchanged. Current/historical source and artifact qualification
+remain separate; no new release or public support/replay claim is made.
+
+## Historical integration source — capture selection
+
+The capture-selection integration baseline used Recorda `90ae0decbde4e18ecee206f2097ed9a0bc79ae0a`. This is unreleased
 source after 0.2.0, adding manual persistence recovery and standalone session
 CapturePolicy. Its owning issues are uibcdf/recorda#8 and uibcdf/recorda#11;
 the laboratory experiment/fifth notebook is uibcdf/recorda-lab#8.

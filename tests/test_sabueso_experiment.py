@@ -32,6 +32,8 @@ def test_scientific_decisions_lineage_and_offline_receipts(tmp_path, monkeypatch
     operations = report["operations"]
     assert report["status"] == "failed"
     assert report["network_attempts"] == 0
+    assert report["reference_checks"]["references"]
+    assert all(row["status"] == "matched" for row in report["reference_checks"]["references"])
     assert operations[0]["source"] == "UniProt"
     assert operations[0]["query"] == {"accession": "P60174"}
     assert operations[0]["retrieved_at"] == "2026-09-23"
