@@ -85,8 +85,11 @@ actual interpreter/tools, source and artifact fingerprints, optional lanes and
 local check outcomes. Previous receipts remain historical. This scenario does not
 execute the Sabueso lane or requalify its frozen provider copies.
 
-The implementation PR is [uibcdf/recorda-lab#11](https://github.com/uibcdf/recorda-lab/pull/11),
-paired with [uibcdf/recorda#13](https://github.com/uibcdf/recorda/pull/13).
+The maintainer authorized direct integration into main. Historical PRs
+[uibcdf/recorda-lab#11](https://github.com/uibcdf/recorda-lab/pull/11) and
+[uibcdf/recorda#13](https://github.com/uibcdf/recorda/pull/13) were closed without
+merging; their implementation commits and qualification receipts are preserved.
+The resolved analysis is in [archive/multi_step_workflow.md](archive/multi_step_workflow.md).
 Published gh-run-receptor 1.2.0 inspected
 [routine PR CI](https://github.com/uibcdf/recorda-lab/actions/runs/37440479013)
 and [exact-source Jupyter/SciPy integration](https://github.com/uibcdf/recorda-lab/actions/runs/37440827173).

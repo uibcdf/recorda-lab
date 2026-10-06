@@ -60,7 +60,9 @@ was chosen under `uibcdf/recorda-lab#10` and implemented locally. Read
 [MULTI_STEP_WORKFLOW.md](MULTI_STEP_WORKFLOW.md) for the consumer question,
 independent scientific oracle, failure/omission cases and exact local receipt.
 It does not replace the published pair above or complete broader acceptance;
-owner review remains pending. The subsequent exact-source hosted qualification
+the maintainer authorized direct integration into main. The resolved analysis is
+in [archive/multi_step_workflow.md](archive/multi_step_workflow.md).
+The subsequent exact-source hosted qualification
 is recorded separately in the workflow guide and hosted receipt.
 
 Ecosystem boundaries and release/OS/coverage reviews remain core issues

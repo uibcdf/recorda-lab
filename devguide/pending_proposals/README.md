@@ -1,6 +1,8 @@
 # Pending proposals
 
-- [Multi-step workflow](multi_step_workflow.md) — `uibcdf/recorda-lab#10`, partial.
+The multi-step workflow is resolved in
+[`../archive/multi_step_workflow.md`](../archive/multi_step_workflow.md),
+tracked by `uibcdf/recorda-lab#10`.
 
 The first recording experiment is coordinated by `uibcdf/recorda#1`;
 laboratory scenarios are tracked in this repository's issue board.

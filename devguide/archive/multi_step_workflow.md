@@ -1,9 +1,9 @@
 ---
 summary: Evaluate preparation, fitting and evaluation through retained native references.
 issue: uibcdf/recorda-lab#10
-status: partial
+status: resolved
 opened: 2026-10-06
-closed:
+closed: 2026-10-06
 verification: reproduced
 area: [scientific-workflow, native-references, standalone-acceptance]
 blocked_by: []
@@ -54,9 +54,11 @@ Local implementation and qualification complete: 112 passing paired tests and
 four explicit Sabueso skips, six selected notebooks/45 cells including the new
 seventh notebook. Published pytest-receptor 1.1.0 and Ruff 0.16.5 were used on
 Linux Python 3.14.7; canonical governance checks pass. The paired receipt is
-`../evidence/multi_step_workflow_linux_py314.json`. The implementation is published
-for review in `uibcdf/recorda-lab#11`, paired with `uibcdf/recorda#13` documentation.
+`../evidence/multi_step_workflow_linux_py314.json`. The implementation was initially
+published in `uibcdf/recorda-lab#11`, paired with `uibcdf/recorda#13` documentation.
 Routine PR CI and exact-source manual Jupyter/SciPy integration passed; published
 gh-run-receptor 1.2.0 and native GitHub conclusions agree. See the separate
-`../evidence/multi_step_workflow_hosted.json` receipt. Owner review/merge remains
-pending; broader `uibcdf/recorda#1` and `uibcdf/recorda-lab#1` remain open.
+`../evidence/multi_step_workflow_hosted.json` receipt. The maintainer authorized
+direct integration of these commits into main; the two PRs were closed without
+merging. The bounded acceptance criteria are satisfied and this analysis is
+resolved. Broader `uibcdf/recorda#1` and `uibcdf/recorda-lab#1` remain open.
