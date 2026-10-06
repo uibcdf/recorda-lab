@@ -1,0 +1,292 @@
+{
+  "created_utc": "2026-10-06T23:09:45.951092+00:00",
+  "issue": "uibcdf/recorda-lab#13",
+  "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+  "lab_implementation_commit": "b2b44d18f726bae975c7d21af3bf13bcda594980",
+  "lab_default_promotion_commit": "181f706c09cef42ec104a8edc7b3c413601307d9",
+  "tool": {
+    "name": "gh-run-receptor",
+    "version": "1.2.0",
+    "distribution": "published release wheel",
+    "wheel_sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c",
+    "profile": "ci",
+    "capture": "full"
+  },
+  "runs": [
+    {
+      "id": 37544421813,
+      "attempt": 1,
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813",
+      "head_sha": "b2b44d18f726bae975c7d21af3bf13bcda594980",
+      "event": "workflow_dispatch",
+      "source_selection": "explicit candidate",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 112544866273,
+          "name": "scientific",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813/job/112544866273"
+        },
+        {
+          "id": 112544866584,
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813/job/112544866584"
+        },
+        {
+          "id": 112544866640,
+          "name": "integration (3.12)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813/job/112544866640"
+        },
+        {
+          "id": 112544866656,
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813/job/112544866656"
+        },
+        {
+          "id": 112544866663,
+          "name": "integration (3.14)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813/job/112544866663"
+        },
+        {
+          "id": 112544866702,
+          "name": "integration (3.11)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813/job/112544866702"
+        },
+        {
+          "id": 112544866714,
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813/job/112544866714"
+        },
+        {
+          "id": 112544866722,
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813/job/112544866722"
+        },
+        {
+          "id": 112544866754,
+          "name": "integration (3.13)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544421813/job/112544866754"
+        }
+      ],
+      "installed_verdicts": [
+        {
+          "log": "0_integration (3.13).txt",
+          "passed": 19,
+          "skipped": 13,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "a8bd303818f23c1af4707e3aaebb86c2d8ce43430c0c5031a97b8a76b34c6bc5"
+        },
+        {
+          "log": "1_integration (3.14).txt",
+          "passed": 19,
+          "skipped": 13,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "27844c771f7c02fd12a6ccd2a8d198e94b0c620c887794c12bf4024e0f205b48"
+        },
+        {
+          "log": "2_integration (3.11).txt",
+          "passed": 19,
+          "skipped": 13,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "05555f7509f0a8b5bfbbec8a23db41ab2e1fc97ec001d7f7add6b416a57577db"
+        },
+        {
+          "log": "3_dummy (3.11).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null,
+          "sha256": "5b5b7ca9e80ca5fd816b9edd031f087a2d2258d7e1b71b94c100b29e4288cd84"
+        },
+        {
+          "log": "4_integration (3.12).txt",
+          "passed": 19,
+          "skipped": 13,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "404db848a10fff13f692c064b273a9ebb3b61b5276e5342ddb569bd8e5c21b1b"
+        },
+        {
+          "log": "5_dummy (3.13).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null,
+          "sha256": "79383d12f3b6e475e8bac108cf4274cea8079f1117efc1eceb2da743cc58629f"
+        },
+        {
+          "log": "6_dummy (3.12).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null,
+          "sha256": "e9b4a357b78f5263f44c9598b7d1210b4ddcf31970a102420dc73bfcefd53a2f"
+        },
+        {
+          "log": "7_dummy (3.14).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null,
+          "sha256": "e11979ef39e4513e018d2feaf639dace128493cd19010855710e86e746384d6d"
+        },
+        {
+          "log": "8_scientific.txt",
+          "passed": 333,
+          "skipped": 4,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "55269417d9294584d9153aff3d2388e73f9bce886a38dae8c6fd3fbf84e4d926"
+        }
+      ],
+      "evidence_sha256": {
+        "run.json": "6efae1234278c8846d088121e4bb0affcc517a3227d913ef80c2c8db1e7b0395",
+        "jobs.json": "efd32b68711c9b90cdbc3aaf4a2f86b8ec5a9e9e4bdc104b8d06af379935bd36",
+        "workflow.json": "1109fceba77a717e8efbf136314f4bec82b5083f4988517dd78da034b1474dee",
+        "manifest.json": "8b0f71f141ee59d0eb07493a2e584aa9e656ef13d9e3e68eda47941d6cf437ee",
+        "logs.zip": "de1d6d39109546442235f4d0ac1eed4de414558f3019b1112ca0826682c5fdf2"
+      }
+    },
+    {
+      "id": 37544670429,
+      "attempt": 1,
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429",
+      "head_sha": "181f706c09cef42ec104a8edc7b3c413601307d9",
+      "event": "workflow_dispatch",
+      "source_selection": "promoted default without Recorda override",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 112545690629,
+          "name": "scientific",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429/job/112545690629"
+        },
+        {
+          "id": 112545690754,
+          "name": "integration (3.13)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429/job/112545690754"
+        },
+        {
+          "id": 112545690832,
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429/job/112545690832"
+        },
+        {
+          "id": 112545690843,
+          "name": "integration (3.11)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429/job/112545690843"
+        },
+        {
+          "id": 112545690851,
+          "name": "integration (3.14)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429/job/112545690851"
+        },
+        {
+          "id": 112545690863,
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429/job/112545690863"
+        },
+        {
+          "id": 112545690877,
+          "name": "integration (3.12)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429/job/112545690877"
+        },
+        {
+          "id": 112545690958,
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429/job/112545690958"
+        },
+        {
+          "id": 112545691164,
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37544670429/job/112545691164"
+        }
+      ],
+      "installed_verdicts": [
+        {
+          "log": "0_dummy (3.12).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null,
+          "sha256": "8f1bfe1fa81a62d6c804fea60f99a76de2376ddb6c4b5acf3b3134eeffe300fa"
+        },
+        {
+          "log": "1_dummy (3.14).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null,
+          "sha256": "d87776735fb0ce0077fbe08798a6be2d9a959994b111f48c39e7d15b4eb5dede"
+        },
+        {
+          "log": "2_integration (3.12).txt",
+          "passed": 19,
+          "skipped": 13,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "99d6e9ddb858a60a38d60a12375326ece2f48b4f825c3c9e9348dd206e0be0f2"
+        },
+        {
+          "log": "3_integration (3.11).txt",
+          "passed": 19,
+          "skipped": 13,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "95e2f04378cb50d39268190df10c53d559ebc00c6ae425fbedb81a231e721f9e"
+        },
+        {
+          "log": "4_integration (3.14).txt",
+          "passed": 19,
+          "skipped": 13,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "6c04b2dc4e917a3b634a8d329a5bfbe120de4d72672ae3faad849460e77555f4"
+        },
+        {
+          "log": "5_dummy (3.13).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null,
+          "sha256": "e7edebc5111299473397f1dc8de74bed6707b50d6a4f9af5c465f6154e2487b7"
+        },
+        {
+          "log": "6_dummy (3.11).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null,
+          "sha256": "724b38f042e6f73123b43e7c14ade859d3cf39acbeb9a178e6c584252a6c3c3a"
+        },
+        {
+          "log": "7_scientific.txt",
+          "passed": 333,
+          "skipped": 4,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "b328dfab0a3ff122572f7c19fcecf1558494a565fa4cc3c52c7a3ddba09dbbc5"
+        },
+        {
+          "log": "8_integration (3.13).txt",
+          "passed": 19,
+          "skipped": 13,
+          "verified_recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sha256": "7bed799a673b967a64ef6ee763abde67c12c203f93c0e5907045eba89d71bedf"
+        }
+      ],
+      "evidence_sha256": {
+        "run.json": "30b04ddde0fb05fcda8331872dd9c7a90535e88f36a57e2b4f212bf2f7d86895",
+        "jobs.json": "975fd1f2494caf5cc1cb4e788cf65b4e439b8ea3ca31eacdfd931eaa38609a72",
+        "workflow.json": "1109fceba77a717e8efbf136314f4bec82b5083f4988517dd78da034b1474dee",
+        "manifest.json": "798ab72a4d277d39ef24a56a2e85bd4282577140e3b446c6cdae74a0ca31933e",
+        "logs.zip": "1103a51d4887b27cd59ddda2013b752472aae779b72e533ee2d56c3ab0894dfb"
+      }
+    }
+  ],
+  "scope": "Controlled dummy and real-kernel receiving Linux Python 3.11\u20133.14; scientific/core recovery on 3.14. No Sabueso requalification, public release, general OS, usability-study or replay claim."
+}

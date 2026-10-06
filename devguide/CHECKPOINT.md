@@ -4,7 +4,34 @@ Resume with Recorda's [development checkpoint](https://github.com/uibcdf/recorda
 this guide and [RECORDA_BASELINE.md](RECORDA_BASELINE.md). Lab owns scenarios
 and evidence, Recorda owns the standalone runtime, and MOLI owns shared contracts.
 
-## Current qualified pair
+## Current qualified inspection-view pair
+
+- Recorda: `48a6c9a0630027f0f2c3d8d82215de8e27764913`; core API #21 and supplied-check wording #22.
+- Lab receiving implementation: `b2b44d18f726bae975c7d21af3bf13bcda594980`.
+- Lab default promotion: `181f706c09cef42ec104a8edc7b3c413601307d9`.
+
+`uibcdf/recorda-lab#13` qualifies explicit technical views beside original JSON
+and independent native oracles. [Local receipt](evidence/inspection_view_linux_py314.json):
+**333 installed-pair passes/four Sabueso skips**, six notebooks/**49 code cells**,
+plus the **14-cell** kernel fault scenario. Seven new receiving regressions pass;
+ordinary wheels, published providers, preflight, pip check, governance and Ruff pass.
+
+[Candidate CI](https://github.com/uibcdf/recorda-lab/actions/runs/37544421813) and
+[default CI](https://github.com/uibcdf/recorda-lab/actions/runs/37544670429) each pass
+all **nine jobs**, before and after promotion, using published receptors. The
+[hosted receipt](evidence/inspection_view_hosted.json) retains actual installed
+verdicts and source selections. Read [INSPECTION_VIEW.md](INSPECTION_VIEW.md) for
+the fixed questions, source pointers, saved-observation scope and limits; resolved
+history is [archive/inspection_view.md](archive/inspection_view.md).
+
+Dummy/scientific implementations and runtime dependencies remain independent.
+Notebook 06 has 11 code cells; 07 has nine. These controlled technical answers
+are not a human usability study, scientific interpretation, report freshness,
+public release/general OS or replay qualification. Later documentation preserves
+all selected bytes; only the recorded workflow default changed at promotion.
+Live producer-operation correlation remains separately owned by Recorda #15.
+
+## Previous published-provider qualified pair
 
 - Recorda: `b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac`.
 - Lab receiving implementation: `11b1465f9b8558a2ac4c7c172ab2377251820af3`.
@@ -33,7 +60,7 @@ Published gh-run-receptor 1.2.0 and native GitHub conclusions agree. Exact heads
 source selection and hosted verdicts are in
 [evidence/published_providers_hosted.json](evidence/published_providers_hosted.json).
 
-Seven usage notebooks are retained. The current pair executes 01/02/03/05/06/07;
+Seven usage notebooks are retained. That previous pair executes 01/02/03/05/06/07;
 04/Sabueso is explicitly excluded. Producer-free reference readers receive only
 Recorda and its required support package trees in controlled `-I -S` children,
 with scientific producers unavailable. Plain journal reading remains provider-free.
@@ -70,13 +97,13 @@ SMonitor inspection presentation and operation correlation are separate core
 analyses (#14/#15). Lab is not a production integration destination.
 
 
-## Inspection-view receiving candidate
+## Inspection-view receiving history
 
 `uibcdf/recorda-lab#13` receives the experimental view in Recorda #21 and the
 supplied-check wording correction in Recorda #22. Selected candidate:
 `48a6c9a0630027f0f2c3d8d82215de8e27764913`. Core source/installed checks pass 305
-and all 11 exact-head CI jobs pass. Lab's existing default above is retained
-until separate candidate qualification and promotion.
+and all 11 exact-head CI jobs pass. Candidate/default qualification and promotion are now complete as recorded
+above; earlier identities retain their historical scope.
 
 The [local receiving receipt](evidence/inspection_view_linux_py314.json) records
 333 installed-pair passes/four explicit Sabueso skips, six selected notebooks/49
@@ -85,5 +112,5 @@ JSON facts and messages, source/byte preservation, producer-free reading, hostil
 inputs, message faults and native OLS/attempt history. Ordinary wheel manifests,
 published providers, preflight, pip check, governance/shared MOLI and Ruff pass.
 Read [INSPECTION_VIEW.md](INSPECTION_VIEW.md) for the fixed questions and limits.
-Exact-pair hosted qualification is pending. This adds no scientific/dummy runtime
+Both exact-pair hosted runs pass all nine jobs; see the current pair above. This adds no scientific/dummy runtime
 dependency, report freshness guarantee, general usability or replay claim.

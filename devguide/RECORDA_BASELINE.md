@@ -3,7 +3,22 @@
 Read [CHECKPOINT.md](CHECKPOINT.md) for hosted conclusions and resumption steps.
 Historical entries below retain the state at their respective checkpoints.
 
-## Current integration source — published required providers
+## Current integration source — explicit inspection view
+
+Manual integration pins Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913`. Lab receiving implementation is
+`b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion is `181f706c09cef42ec104a8edc7b3c413601307d9`, under Lab #13. The exact
+candidate passes nine hosted jobs before promotion; the default passes nine after
+promotion without a Recorda override. Local installed qualification passes 333
+with four Sabueso skips and executes six notebooks/49 cells plus 14 kernel fault
+cells. Read [INSPECTION_VIEW.md](INSPECTION_VIEW.md), [CHECKPOINT.md](CHECKPOINT.md)
+and the separate local/hosted receipts for hashes, source selection and limits.
+
+This is technical presentation beside preserved JSON/native OLS facts. Scientific
+implementations, package versions and published provider closure are unchanged.
+Saved observations do not imply fresh checking; messages identify the supplied
+check. No scientific interpretation, public release/OS or replay claim follows.
+
+## Previous integration source — published required providers
 
 Manual integration pins Recorda `b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac`.
 Lab receiving implementation is `11b1465f9b8558a2ac4c7c172ab2377251820af3`;

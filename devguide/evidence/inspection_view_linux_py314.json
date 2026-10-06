@@ -887,6 +887,25 @@
   },
   "manifest_scope": "Runtime/test/experiment/fixture/notebook/tool/metadata/environment/README bytes and candidate workflow, before default promotion; closing documentation is outside selected byte scope.",
   "ci": {
-    "status": "pending explicit-candidate qualification before default promotion"
+    "candidate": {
+      "run_id": 37544421813,
+      "head_sha": "b2b44d18f726bae975c7d21af3bf13bcda594980",
+      "conclusion": "success",
+      "jobs": 9
+    },
+    "default": {
+      "run_id": 37544670429,
+      "head_sha": "181f706c09cef42ec104a8edc7b3c413601307d9",
+      "conclusion": "success",
+      "jobs": 9
+    },
+    "hosted_receipt": "devguide/evidence/inspection_view_hosted.json"
+  },
+  "lab_implementation_commit": "b2b44d18f726bae975c7d21af3bf13bcda594980",
+  "lab_default_promotion_commit": "181f706c09cef42ec104a8edc7b3c413601307d9",
+  "default_promotion": {
+    "initial_workflow_sha256": "46e5573d292400700e3dfff05ddbd11e8d9a2ed1dc504441ac5221482b92c3b2",
+    "promoted_workflow_sha256": "6b8294e2351a2a62cfc0387234079cd8d9326612e5c31222be9e9dd81350f72b",
+    "only_change": "workflow_dispatch recorda_commit default advances from b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac to 48a6c9a0630027f0f2c3d8d82215de8e27764913 after candidate success"
   }
 }

@@ -61,17 +61,30 @@ turned into new technical-view errors. Provider text improvements remain SMonito
 
 ## Qualification
 
-The selected Recorda candidate is
-`48a6c9a0630027f0f2c3d8d82215de8e27764913`, with its supplied-check wording fix
-qualified in [core CI](https://github.com/uibcdf/recorda/actions/runs/37544021836).
-The [local receipt](evidence/inspection_view_linux_py314.json) records **333 passed,
+Current pair: Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913`, Lab receiving implementation `b2b44d18f726bae975c7d21af3bf13bcda594980`,
+default promotion `181f706c09cef42ec104a8edc7b3c413601307d9`. Later documentation preserves all receipt-selected
+runtime/test/experiment/fixture/notebook/tool/metadata/environment/README bytes;
+the one-line workflow promotion is separately fingerprinted.
+
+The [local receipt](evidence/inspection_view_linux_py314.json) records **333 passes,
 four explicit Sabueso skips** (305 core + 28 Lab), seven new receiving regressions,
-six selected notebooks/**49 code cells** and the **14-cell** real-kernel fault
+six selected notebooks/**49 code cells**, and the **14-cell** real-kernel fault
 scenario on Linux Python 3.14.7. Source/wheel/ordinary-install equality, published
-providers, pip check, source/environment preflight, governance/shared MOLI core
-and Ruff pass. Exact-pair hosted qualification remains pending before default
-promotion.
-Use published pytest-receptor and gh-run-receptor and retain ordinary wheel/source
-identities, provider hashes, actual notebook/kernel counts and selected CI SHAs.
-Existing Lab default remains b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac until the
-explicit candidate passes. Sabueso remains an explicit historical/optional lane.
+SMonitor 0.19.0 py_1, ArgDigest 0.15.0 py_0 and DepDigest 0.13.0 py_0, pip check,
+source/environment preflight, governance/shared MOLI core and Ruff pass.
+
+[Candidate CI](https://github.com/uibcdf/recorda-lab/actions/runs/37544421813) passes
+all nine jobs before promotion; [default CI](https://github.com/uibcdf/recorda-lab/actions/runs/37544670429)
+passes the same nine afterward without a Recorda SHA override (SciPy explicitly
+selected). Four dummy and four real-kernel lanes cover Linux Python 3.11–3.14;
+the scientific/core-recovery lane uses 3.14. Actual logs report six dummy passes,
+19 integration passes/13 optional skips, and 333 scientific passes/four Sabueso
+skips. Published pytest-receptor 1.1.0 and gh-run-receptor 1.2.0 were used.
+The [hosted receipt](evidence/inspection_view_hosted.json) retains exact heads,
+selected core identities, verdicts and log hashes. The resolved analysis is
+[archive/inspection_view.md](archive/inspection_view.md).
+
+Sabueso remains historical/optional. The experiment answers fixed technical
+questions alongside source JSON; it does not measure human comprehension,
+certify fresh/authenticated bytes, scientific correctness, public OS support,
+a release or replay. Core #15 live correlation remains separately scoped.

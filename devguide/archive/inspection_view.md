@@ -1,9 +1,9 @@
 ---
 summary: Evaluate explicit technical inspection views against laboratory JSON and notebooks.
 issue: uibcdf/recorda-lab#13
-status: active
+status: resolved
 opened: 2026-10-06
-closed:
+closed: 2026-10-06
 verification: measured
 area: [inspection, notebooks, receiving]
 blocked_by: []
@@ -63,6 +63,19 @@ governance/shared MOLI core and Ruff pass. Evidence is retained in
 The initial Recorda #21 head exposed a saved-report wording ambiguity; Recorda
 #22 corrects it with an actual restoration regression. The selected corrected
 candidate is 48a6c9a0630027f0f2c3d8d82215de8e27764913, whose core source/installed
-305 tests and all 11 exact-head CI jobs pass. Explicit-candidate Lab CI is pending
-before default promotion. Provider proposals remain SMonitor #39 and ArgDigest #32,
+305 tests and all 11 exact-head CI jobs pass. Explicit-candidate Lab CI
+https://github.com/uibcdf/recorda-lab/actions/runs/37544421813 passes all nine jobs
+at b2b44d18f726bae975c7d21af3bf13bcda594980. Only the default SHA was promoted in
+181f706c09cef42ec104a8edc7b3c413601307d9; the subsequent default run
+https://github.com/uibcdf/recorda-lab/actions/runs/37544670429 passes the same nine
+without a Recorda override. Published gh-run-receptor 1.2.0 and native GitHub
+conclusions agree. Actual logs establish all five receiving/scientific selections
+at the exact core SHA, 19 passes/13 explicit optional skips per kernel lane,
+333 passes/four Sabueso skips in scientific, and six passes per dummy lane.
+Hosted evidence is retained in `devguide/evidence/inspection_view_hosted.json`.
+
+Closing documentation preserves every selected source/qualification byte and
+records the one-line workflow promotion separately. The fixed user questions are
+answered by actual source observations and messages; this is not a human usability
+study or broader standalone/public-release certification. Provider proposals remain SMonitor #39 and ArgDigest #32,
 coordinated with MOLI #62; no provider implementation belongs to this trial.
