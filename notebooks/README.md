@@ -60,3 +60,12 @@ with recording implementation tracked by `uibcdf/recorda#1`.
 The scientific trials are tracked by `uibcdf/recorda-lab#4` (SciPy) and
 `uibcdf/recorda-lab#5` (Sabueso). The explicit Sabueso lane fails if selected
 dependencies are unavailable; ordinary runs visibly skip it.
+
+
+Under `uibcdf/recorda-lab#13`, notebooks 06/07 additionally request
+`recorda.inspection_view(...)`. Notebook 06 groups two affected occurrences of one
+reference, distinguishes optional checking and deliberate omissions, and displays
+incomplete work and an explicitly constructed truncated copy. Notebook 07 places
+technical observations beside the independent OLS check and failed-attempt history.
+Saved reports retain their observed phase; presentation does not recheck restored
+files. See `devguide/INSPECTION_VIEW.md` for qualified sources and limits.

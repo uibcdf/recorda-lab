@@ -62,3 +62,11 @@ Required published-provider adoption and the current exact integration pair are
 tracked by `uibcdf/recorda-lab#12`; read `CHECKPOINT.md` and
 `archive/published_recorda_providers.md`. Reference checking needs Recorda's support
 closure; scientific producers remain unnecessary for independent receipt reading.
+
+
+`experiments/run_inspection_view.py` explicitly compares technical presentation
+with the existing reference and optional SciPy workflow scenarios. Producer-free
+`experiments/inspection_examples.py` projects saved observations without rechecking
+native bytes. Notebooks 06/07 demonstrate the view beside original JSON and the
+separate scientific oracle. Tracked by `uibcdf/recorda-lab#13`; read
+[INSPECTION_VIEW.md](INSPECTION_VIEW.md).

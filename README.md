@@ -156,3 +156,12 @@ The multi-step workflow and seventh notebook retain native references from sampl
 preparation through SciPy fitting and residual evaluation. An independent scalar
 oracle checks the scientific result; faults and missing intermediate files stay
 visible. See [devguide/MULTI_STEP_WORKFLOW.md](devguide/MULTI_STEP_WORKFLOW.md).
+
+
+The explicit technical-view receiving experiment is tracked in
+[uibcdf/recorda-lab#13](https://github.com/uibcdf/recorda-lab/issues/13).
+`experiments/run_inspection_view.py DESTINATION` compares Recorda's requested view
+with the existing dummy/reference JSON; add `--workflow` only in the scientific
+lane. Notebooks 06/07 show grouped explanations beside coverage and separate
+scientific checks. Read [the receiving contract](devguide/INSPECTION_VIEW.md) for
+source identities, installed qualification and limits.

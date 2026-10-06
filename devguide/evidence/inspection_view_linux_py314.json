@@ -1,0 +1,892 @@
+{
+  "issue": "uibcdf/recorda-lab#13",
+  "created_utc": "2026-10-06T23:00:46.268958+00:00",
+  "scope": "Controlled technical presentation and native reference/OLS comparison; no general usability or release/replay claim",
+  "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+  "core_correction_issue": "uibcdf/recorda#22",
+  "core_api_issue": "uibcdf/recorda#21",
+  "lab_parent_commit": "0baa00e7618a0cca8ae377ddb13178a41180b13e",
+  "python": {
+    "executable": "/tmp/recorda-lab12-scientific/bin/python",
+    "version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]"
+  },
+  "tools": {
+    "pytest-receptor": "1.1.0",
+    "ruff": "0.16.5",
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "ipykernel": "7.3.0",
+    "jupyter-client": "8.10.0",
+    "nbformat": "5.11.1"
+  },
+  "providers": {
+    "feature": "smonitor",
+    "providers": {
+      "argdigest": {
+        "file": "argdigest-0.15.0-py_0.tar.bz2",
+        "python_files": 38,
+        "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+        "version": "0.15.0"
+      },
+      "depdigest": {
+        "file": "depdigest-0.13.0-py_0.tar.bz2",
+        "python_files": 16,
+        "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+        "version": "0.13.0"
+      },
+      "smonitor": {
+        "file": "smonitor-0.19.0-py_1.tar.bz2",
+        "python_files": 40,
+        "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+        "version": "0.19.0"
+      }
+    }
+  },
+  "lab_source_manifest": {
+    "pyproject.toml": "3caccfd6ca18cfdb7db317981678bf3d25050af2c0f950b6fd2acf65415b0ea0",
+    "README.md": "cf5127858b18fbc356ad10574541ea0c5a1b4f0179fee5ee9d4116afedd07f58",
+    "LICENSE": "98a96608a05ac1004eefb45ee9a0b54efc98b82a09815505cd161d0512256626",
+    "src/recorda_lab/__init__.py": "e4030acac2b3139b9920fe0045d9eeeca040881e3bdfab7e56e26c07fe87221d",
+    "tests/conftest.py": "03ebcc19085325051f7d8491bc92af7d0e0b5bc31513310735b79a5f8c455592",
+    "tests/test_activation_experiment.py": "b2eacd47146b04f821358379de0cf3751ff8595233894063e0d518acdcf0320f",
+    "tests/test_dummy.py": "f766b6a5c7f1273576e83f55e4c1b46cb14441b2b1aeeff6b8eb2f5e97f0a6a8",
+    "tests/test_experiment.py": "354fd2b39c7873336420a5c14e2e79cb38e5aad53e8bab82e0ef1fc8fe9984de",
+    "tests/test_inspection_view_experiment.py": "22852b6b51a976ae535a4079f97dd5b56d70aac7acc5b30f66f7a5ae95061d1c",
+    "tests/test_notebook_experiment.py": "6b5b7b476e891a869d97da6c769e7822bfd0d99a8b5fd6bf76af67a858cbb05f",
+    "tests/test_performance_experiment.py": "6797c3e7c1a63b3334e5bc9ffc70c29b23c2c5332fe270ff3664b81eca0905c6",
+    "tests/test_reference_checks_experiment.py": "10a98516db5425cb0ac5a0445c78e5a81ce292d63ee74ee6f6e435e56c1a986e",
+    "tests/test_sabueso_experiment.py": "6c810df7ed3e10dba707df4dc9adeb9c3bdc4580aa890da6943669f2b5d54195",
+    "tests/test_scipy_experiment.py": "e0c5a0ce0d40b33d3443ba200db8d1e6d0e6bbe3aad8650e9a15cfb43120e2f7",
+    "tests/test_selection_experiment.py": "be809153c81bcb6f48e029a243bf5882bf92dc9a67fbda7876dd224827b5c997",
+    "tests/test_workflow_experiment.py": "7f3e57ea88f8c8e043d9d18ced4f89db2e50bedf5d4243996dd4c0bb995b5ce2",
+    "experiments/consumer.py": "f38f7fd6bd71204b3336341d86607e31992f0fb55497dadce85eda5a38f98806",
+    "experiments/inspect_sabueso_trial.py": "bb2299d0bc86ec4fa9b725633111abaefd4bdcd32cec0ebf18377889384ccd38",
+    "experiments/inspect_scipy_trial.py": "15ceeedcb2ab3211bbaea1a2f2931731ea6053fbd5ad1794dcebf26235f108b9",
+    "experiments/inspect_workflow.py": "19a93058967e65f5f7e960103ea63aa8fc180d207bf398946db3238c0630e4b2",
+    "experiments/inspection_examples.py": "9af79cadd30ace948fe49b93ba329e8511ec76e14174e863cc7e8b19c50e123c",
+    "experiments/reference_files.py": "7916906c9b9518e3519f29e9f9825b9a72038e99eb19542e50c43b027b30236c",
+    "experiments/run_activation.py": "afabfc0dff27fd313bf21b6e597678cbdefbfd65c77558cc845887f6929c2811",
+    "experiments/run_examples.py": "622a019e77b597d0f55a8d64ee41c98bc1e816faa9caa434fbeec5b12f55bdbc",
+    "experiments/run_inspection_view.py": "057539b792eba76bc8720128908cb9dee0657552f58794de12d7c63b51f0d6b0",
+    "experiments/run_notebook.py": "b5c660abf77142c0e57437a13f2429b952bab0c730984e49c608b81704e4433b",
+    "experiments/run_performance.py": "0570c964f20cd94d53ab0a66eddd9eb629bc5b53b010941049d03039795fed0c",
+    "experiments/run_reference_checks.py": "6e5974dd72b752cd58d1d431fc6bd7da3c7b4ec9dd4913042e6324dccf8cf63b",
+    "experiments/run_sabueso.py": "020f70bcb846ca9b86f6ac014ea729dc5baee83d187a51581f97bbf74b8bcfae",
+    "experiments/run_scipy.py": "e7d53ccdf79a287f87b491fdf5ab21a72ee829b4131f37bdaa0b57e95f22242f",
+    "experiments/run_selection.py": "6229c7b86b93c6c2f3f965e767dbe0e9a2e2ef4b71017ca20eee59b8068f10f1",
+    "experiments/run_slice.py": "5bcbd46feafa3b5be96156d0fa75755016857c04b219dd6172bb130c68ee9a66",
+    "experiments/run_workflow.py": "dccaab0b66b42c394ddee61f7f0bf62af245559d6d1415be1ee331ec0b164180",
+    "experiments/sabueso_consumer.py": "81188e58bb5fd0dcfad29325c4ae5abbd425ff534635260f161ab75d80230cc2",
+    "experiments/scipy_consumer.py": "c02fbdb70b3d59708396b0ee86c4e4d64c946433e01f282e645c02434eeddd59",
+    "experiments/workflow_consumer.py": "263f1de83f80b6636027654eb665d11cca63c8b16f7951719d9ed60a601ac24a",
+    "experiments/fixtures/sabueso_uniprot/P00938.json": "6a94f1e8004542306a5f6939de9ea73721745e18c7ae92255261af84dfbf8de9",
+    "experiments/fixtures/sabueso_uniprot/P60174.json": "25b200a9f5f22f24d68d7f64445b447770b1875126829b1de2f9e7e01cc6acdd",
+    "experiments/fixtures/sabueso_uniprot/P60175.json": "2e98129cdc78d0da7b282c77f27965ec8c80a36ae39fdad847411b76dfa102e3",
+    "notebooks/01_manual_activation.ipynb": "52938756c15f959af4d37d76763be1034e3fcdd1489b15c24f9d0a957eec68fb",
+    "notebooks/02_recording_cost.ipynb": "19ecb334f219f6155708de4d6780b4a90353d951befedad4b7dad07693c2a8d1",
+    "notebooks/03_scipy_fit.ipynb": "e01c91c84a7e2f3ca1941d17af48b17d2eb362e70d4985c66faf2d3fc272852d",
+    "notebooks/04_sabueso_resolution.ipynb": "c8126f3fec0c9f1debd91689669ea9567500365ec2f5e407d0ae11c9ce7179d1",
+    "notebooks/05_capture_selection.ipynb": "28c00f5b4c8ea9fd95ef6ae26cdae4819212f3d8538f23c7c4a968de331cca8e",
+    "notebooks/06_reference_checks.ipynb": "9b03a6d8555084ee719f7c5799ac195acb6ff64254d84cc01f3f1c99c523fca7",
+    "notebooks/07_multi_step_workflow.ipynb": "9abb9c6bd9498b32143c9d08a22f68ea7412e931bebdb335706ed9e1a7732329",
+    "devtools/check_recorda_environment.py": "c6208d3898843af6f87e03cf0fb6631f85ac8c4f9fddaff7672de2d260ce5334",
+    "devtools/validate_governance.py": "cb501c41d50f10a537bfb1e3be4203d8722b34b462439eb5b67dfcf62957c503",
+    "devtools/conda-envs/development_env.yaml": "b692fdb678ef66886288221c1382bc2b871053826ebbfabe7c8de0520cc29c8e",
+    "devtools/conda-envs/notebook_env.yaml": "e122696a4b2e803493fe2ed8af9b7811223ded8f291cf9a012f4bdc467235b0c",
+    "devtools/conda-envs/scientific_env.yaml": "cd29a48c116c34abc5df26a4ea0b61ee77016354a877f016f2d692722e0ec979",
+    "devtools/conda-envs/test_env.yaml": "5faf383b93663f81228e5feac394e40a76090d766627336c2fa9ebd7ca48674b",
+    ".github/workflows/tests.yml": "46e5573d292400700e3dfff05ddbd11e8d9a2ed1dc504441ac5221482b92c3b2"
+  },
+  "recorda_source_manifest": {
+    "pyproject.toml": "a0c6bfb833aca4e2534f2d4b14351ffd8a46b4226ff931eec2a6dbe5bfbf3064",
+    "README.md": "9d574792e46859e7b116d05a7f79b2126470160bbe3807315f55267e910370f4",
+    "LICENSE": "98a96608a05ac1004eefb45ee9a0b54efc98b82a09815505cd161d0512256626",
+    "src/recorda/__init__.py": "784dc2cf2699db500b9399d19a9f7091becfdc3a2d50d293cafb43fcab28404a",
+    "src/recorda/__main__.py": "f267fdb2f75336409dd2f830a80cbe29a180b43c56f16682a019afc52a1ebd58",
+    "src/recorda/_arguments.py": "fda6f429a5ca264bc4230173d7114dd4e52f8128a4721634bdb3bb1854c0aa0f",
+    "src/recorda/_inspection_catalog.py": "53693b3238a83a19eecc3357595104d29270d8dba2f919adb05cb9029c5124fc",
+    "src/recorda/_recovery.py": "b4c4e0a4774eb7d3c37b9b44f95dd5da89a59affe74da44717b7872339b3f9cb",
+    "src/recorda/_smonitor.py": "4a2269549e84cb68393d27382bd615737f4b7cab6817820ae71c75df6929fe2a",
+    "src/recorda/capture.py": "0a806a3fa97301ad949806cb2112f18829943558dd237ceb885789f3a318bcfb",
+    "src/recorda/integrations/__init__.py": "64af9085e46c509116bfdf78fb97f4243af80b74b2a898794a5c5f5a1c432bec",
+    "src/recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9",
+    "src/recorda/integrations/smonitor.py": "340ce6b8629bb611bdcec418a69bf5174b14400bcf50ae73c59584330b9a8c9a",
+    "src/recorda/policy.py": "2c0d31af7df068fe6eecd4566e6bff4889918630b679585f21e2214488b918bb",
+    "src/recorda/presentation.py": "634ce056b7e14d037a7e6819bbc1dda46dad6d9cb0fb682d1094da06a3c5e14a",
+    "src/recorda/reader.py": "a23e85b851cbaf6c6806fbf5d7ab76304538ac3da95a350a508867456ac38fe5",
+    "src/recorda/references.py": "e9e48191b32358a0e53218b0425ab44e87ecc454c40e00c009f70d2cddceb60f",
+    "src/recorda/runtime.py": "12078322e8cf4a4059ff8c685777101307ea076e993d69f53241328ffaad257d",
+    "tests/test_activation.py": "64d646c4a911db1f5473b661191a05929d0bcb48e3d6175c0dc465bbab5aace6",
+    "tests/test_argdigest_policy.py": "37db952baa71b1e760f6c58ce2cee41ee28e13f078f771d0af145e8acbae531b",
+    "tests/test_capture_policy.py": "349eae718489d06327b7f5fd16b4bd87f840779d8e005bd98bebb1f308ced613",
+    "tests/test_dependency_contract.py": "58a3fe3c67f91b51895affef83d54e798a3d7d7656dc40c0ee29878234e99e79",
+    "tests/test_exception_references.py": "06eb89019b2daf59067696f879cafc6b83d67207622d74933a5e2b3f58aedb3c",
+    "tests/test_inspection_view.py": "087a3160c659bbab4e69039291f31f95027033401ce211d953cbba472699f49d",
+    "tests/test_manual_recovery.py": "3a7f3dfc3af027f2ec65f87030e7026a377d9991dd553f91ea9d39fb089e5a63",
+    "tests/test_recording.py": "e79905b5ac8d3e56351089ea04c668a146a946a68c99b05eb47ae3cc4d3e0c64",
+    "tests/test_recovery_diagnostics.py": "a4672ed43f1f16453e31f36ce0f43f2fa0e9479ac66cce8065a55d999dd7e072",
+    "tests/test_reference_arguments.py": "b63ca2aa2867e79fb94b836ab729f8586029efa84d7c344d48324621fb434be0",
+    "tests/test_references.py": "3e17e0f17f316200d61a6ef77a5440133921f4eae9bf732019a5d4287ed037fd",
+    "tests/test_smonitor_recovery.py": "4d9585009b443534e4cde1ee38cd7483a332324d7203a78bb33a4be281780511",
+    "devtools/check_dependencies.py": "4ba4fb8f22873e4b256325120177510374580f64331c37972bb4d56531907ec8",
+    "devtools/validate_governance.py": "cb501c41d50f10a537bfb1e3be4203d8722b34b462439eb5b67dfcf62957c503",
+    "devtools/verify_support_environment.py": "bc2d793597e6db77bf89ff18b7794ad0b1dd353f5e5592e2952c397cc2096491",
+    "devtools/conda-envs/development_env.yaml": "99e24c73d861c2157402fdccd37932125dd307121acdd6e9f4bee012a2ea4ca4",
+    "devtools/conda-envs/recovery_test_env.yaml": "e108de45134d8ea3b8e6dfa2f55ec1f8a0abcfdfead424ade359cfcdc8255af5",
+    "devtools/conda-envs/support_test_env.yaml": "27fcb440fb3d41f89a0714f51b8cdccef8d2ca86457baabc4fdef7df1a498a48",
+    "devtools/conda-envs/test_env.yaml": "2694b53e93100ba30c5a1e1a4e32d7c428ac13215ac0e6283535ac0be7196149",
+    ".github/workflows/tests.yml": "1eb0bf06cdac3c073fe52ba4e591b45fd0a4d21debf3bfd7f0782e542cb87a99"
+  },
+  "qualification": {
+    "new_receiving_passed": 7,
+    "installed_pair": {
+      "passed": 333,
+      "skipped": 4,
+      "core_passed": 305,
+      "lab_passed": 28,
+      "receptor": "llm",
+      "skip_reason": "explicit offline Sabueso lane",
+      "stdout_sha256": "94c5125258c7fdfba3b1b6b90a0a9733bfd3ed781b23b4fe9a91cd34fda5327a"
+    },
+    "pip_check": "passed",
+    "published_provider_verification": "passed",
+    "source_identity_environment_preflight": "passed",
+    "governance": "passed",
+    "shared_moli_core": "passed",
+    "ruff_check": "passed",
+    "ruff_format": "passed"
+  },
+  "limitations": [
+    "Fixed laboratory questions are evaluated, not human comprehension or general scientific utility.",
+    "Saved reference observations do not prove freshness or authenticity.",
+    "Sabueso is historical and explicitly skipped.",
+    "Native scientific oracles and objects remain independent."
+  ],
+  "wheels": {
+    "recorda": {
+      "filename": "recorda-0.2.0-py3-none-any.whl",
+      "sha256": "835e4cbaba1f082b7e5ac1934090fbf9f345c3ef05f0f646eba84892df08a250",
+      "direct_url": {
+        "archive_info": {
+          "hash": "sha256=835e4cbaba1f082b7e5ac1934090fbf9f345c3ef05f0f646eba84892df08a250",
+          "hashes": {
+            "sha256": "835e4cbaba1f082b7e5ac1934090fbf9f345c3ef05f0f646eba84892df08a250"
+          }
+        },
+        "url": "file:///tmp/recorda22-wheel/dist/recorda-0.2.0-py3-none-any.whl"
+      },
+      "matched_source_wheel_installed_files": [
+        "recorda/__init__.py",
+        "recorda/__main__.py",
+        "recorda/_arguments.py",
+        "recorda/_inspection_catalog.py",
+        "recorda/_recovery.py",
+        "recorda/_smonitor.py",
+        "recorda/capture.py",
+        "recorda/integrations/__init__.py",
+        "recorda/integrations/argdigest.py",
+        "recorda/integrations/smonitor.py",
+        "recorda/policy.py",
+        "recorda/presentation.py",
+        "recorda/reader.py",
+        "recorda/references.py",
+        "recorda/runtime.py"
+      ]
+    },
+    "recorda_lab": {
+      "filename": "recorda_lab-0.0.0-py3-none-any.whl",
+      "sha256": "1b875d42ff419393530ed63e615c639667139e34cd8384f8de18ef593e561e5e",
+      "direct_url": {
+        "archive_info": {
+          "hash": "sha256=1b875d42ff419393530ed63e615c639667139e34cd8384f8de18ef593e561e5e",
+          "hashes": {
+            "sha256": "1b875d42ff419393530ed63e615c639667139e34cd8384f8de18ef593e561e5e"
+          }
+        },
+        "url": "file:///tmp/recorda-lab13-wheel/dist/recorda_lab-0.0.0-py3-none-any.whl"
+      },
+      "matched_source_wheel_installed_files": [
+        "recorda_lab/__init__.py"
+      ]
+    }
+  },
+  "notebooks": {
+    "schema": "recorda-lab.examples/0.1",
+    "notebooks": {
+      "01_manual_activation.ipynb": {
+        "code_cells_passed": 9,
+        "source_sha256": "52938756c15f959af4d37d76763be1034e3fcdd1489b15c24f9d0a957eec68fb",
+        "executed_notebook": "01_manual_activation/executed.ipynb",
+        "executed_sha256": "233a3c9a3bfb3936180456f5edc61c32c4684b1d05139d1ccdb8b4435007e309"
+      },
+      "02_recording_cost.ipynb": {
+        "code_cells_passed": 4,
+        "source_sha256": "19ecb334f219f6155708de4d6780b4a90353d951befedad4b7dad07693c2a8d1",
+        "executed_notebook": "02_recording_cost/executed.ipynb",
+        "executed_sha256": "e13fa606df611cb9c213585b2e25f964b088816389801d7cb4454bacd8f22312"
+      },
+      "03_scipy_fit.ipynb": {
+        "code_cells_passed": 8,
+        "source_sha256": "e01c91c84a7e2f3ca1941d17af48b17d2eb362e70d4985c66faf2d3fc272852d",
+        "executed_notebook": "03_scipy_fit/executed.ipynb",
+        "executed_sha256": "fd487fb4147db4176254202fe98bffa5f51037998215c92f3a911d8e71a39b65"
+      },
+      "05_capture_selection.ipynb": {
+        "code_cells_passed": 8,
+        "source_sha256": "28c00f5b4c8ea9fd95ef6ae26cdae4819212f3d8538f23c7c4a968de331cca8e",
+        "executed_notebook": "05_capture_selection/executed.ipynb",
+        "executed_sha256": "31c88f788a3b44379a14eda4b270ef6a8accbae5ea30bf4dc19862484b1c092a"
+      },
+      "06_reference_checks.ipynb": {
+        "code_cells_passed": 11,
+        "source_sha256": "9b03a6d8555084ee719f7c5799ac195acb6ff64254d84cc01f3f1c99c523fca7",
+        "executed_notebook": "06_reference_checks/executed.ipynb",
+        "executed_sha256": "17cf43bd4d89fdb3c6ef6e97d6ca4cbb485b983b84c4690cdadb050095f5d5dd"
+      },
+      "07_multi_step_workflow.ipynb": {
+        "code_cells_passed": 9,
+        "source_sha256": "9abb9c6bd9498b32143c9d08a22f68ea7412e931bebdb335706ed9e1a7732329",
+        "executed_notebook": "07_multi_step_workflow/executed.ipynb",
+        "executed_sha256": "9a9d387427a55b051abd2dce7935c5f8ce5996263cb4c99b6ad7fb21085525a1"
+      }
+    },
+    "skipped": {
+      "04_sabueso_resolution.ipynb": "enable RECORDA_LAB_SABUESO=1 with the declared trial dependencies"
+    }
+  },
+  "kernel_faults": {
+    "code_cells": 14,
+    "report": {
+      "schema": "recorda-lab.notebook/0.1",
+      "tracking": [
+        "uibcdf/recorda-lab#3",
+        "uibcdf/recorda#1"
+      ],
+      "kernel": {
+        "executable": "/tmp/recorda-lab12-scientific/bin/python",
+        "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+        "ipykernel": "7.3.0",
+        "ipython": "9.17.1",
+        "recorda_file": "/tmp/recorda-lab12-scientific/lib/python3.14/site-packages/recorda/__init__.py",
+        "dummy_file": "/tmp/recorda-lab12-scientific/lib/python3.14/site-packages/recorda_lab/__init__.py"
+      },
+      "client": {
+        "jupyter_client": "8.10.0",
+        "nbformat": "5.11.1"
+      },
+      "scenarios": {
+        "cross-cell": "succeeded",
+        "failure": "failed",
+        "interrupt": "failed",
+        "kernel-loss": "incomplete"
+      },
+      "checks": [
+        "activation/calls/stop in separate real kernel execute requests",
+        "top-level await and child ownership guard",
+        "inactive calls before and after; native result/reference coexistence",
+        "uncaught native failure followed by stop in next cell",
+        "SIGINT KeyboardInterrupt within declared operation",
+        "kernel termination preserves unclosed operation/session"
+      ],
+      "records": {
+        "cross-cell": {
+          "session_id": "72e2c613-33c4-445e-8e62-636cda875259",
+          "name": "cross_cell",
+          "status": "succeeded",
+          "coverage": {
+            "mode": "declared_boundaries",
+            "known_gaps": [
+              "unwrapped dummy calls"
+            ]
+          },
+          "operations": [
+            {
+              "id": "efbcd04e-1796-42f3-9449-4892df4d3560",
+              "name": "lab.analyze",
+              "profile": "scientific_workflow",
+              "parent_id": null,
+              "inputs": {
+                "samples": {
+                  "kind": "reference",
+                  "owner": "recorda-lab",
+                  "identifier": "sha256:d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9",
+                  "revision": null,
+                  "digest": "d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9"
+                }
+              },
+              "parameters": {},
+              "implementation": {
+                "package": "consumer",
+                "callable": "consumer.analyze",
+                "version": null
+              },
+              "start": "2026-10-06T23:01:04.467068+00:00",
+              "status": "succeeded",
+              "outputs": {
+                "return": {
+                  "kind": "reference",
+                  "owner": "recorda-lab",
+                  "identifier": "sha256:46ad580cd017509c9e59e01d02e50645e626fe75d013352e5d7f6b24030b358e",
+                  "revision": null,
+                  "digest": null
+                }
+              },
+              "end": "2026-10-06T23:01:04.472502+00:00"
+            },
+            {
+              "id": "552e9f0f-6e29-4e29-bf71-3f5972c2d018",
+              "name": "lab.summarize_samples",
+              "profile": "scientific_analysis",
+              "parent_id": "efbcd04e-1796-42f3-9449-4892df4d3560",
+              "inputs": {
+                "samples": {
+                  "kind": "reference",
+                  "owner": "recorda-lab",
+                  "identifier": "sha256:d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9",
+                  "revision": null,
+                  "digest": "d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9"
+                }
+              },
+              "parameters": {},
+              "implementation": {
+                "package": "consumer",
+                "callable": "consumer.summarize_samples",
+                "version": null
+              },
+              "start": "2026-10-06T23:01:04.468577+00:00",
+              "status": "succeeded",
+              "outputs": {
+                "return": {
+                  "kind": "reference",
+                  "owner": "recorda-lab",
+                  "identifier": "sha256:46ad580cd017509c9e59e01d02e50645e626fe75d013352e5d7f6b24030b358e",
+                  "revision": null,
+                  "digest": null
+                }
+              },
+              "end": "2026-10-06T23:01:04.470876+00:00"
+            },
+            {
+              "id": "ded0d220-7d62-4b51-9b64-be61da097e37",
+              "name": "lab.sample_count",
+              "profile": "inspection",
+              "parent_id": null,
+              "inputs": {
+                "samples": {
+                  "kind": "reference",
+                  "owner": "recorda-lab",
+                  "identifier": "sha256:d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9",
+                  "revision": null,
+                  "digest": "d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9"
+                }
+              },
+              "parameters": {},
+              "implementation": {
+                "package": "consumer",
+                "callable": "consumer.sample_count",
+                "version": null
+              },
+              "start": "2026-10-06T23:01:04.474047+00:00",
+              "status": "succeeded",
+              "outputs": {
+                "return": 4
+              },
+              "end": "2026-10-06T23:01:04.475572+00:00"
+            },
+            {
+              "id": "d668ed1d-e6b5-4425-91aa-51039caccf78",
+              "name": "lab.summarize_samples",
+              "profile": "scientific_analysis",
+              "parent_id": null,
+              "inputs": {
+                "samples": {
+                  "kind": "reference",
+                  "owner": "recorda-lab",
+                  "identifier": "sha256:d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9",
+                  "revision": null,
+                  "digest": "d1be96124d992521a95e1a618d79025a5f5ee6613e43b0d235beb9b0fe8635a9"
+                }
+              },
+              "parameters": {},
+              "implementation": {
+                "package": "consumer",
+                "callable": "consumer.summarize_samples",
+                "version": null
+              },
+              "start": "2026-10-06T23:01:04.488514+00:00",
+              "status": "succeeded",
+              "outputs": {
+                "return": {
+                  "kind": "reference",
+                  "owner": "recorda-lab",
+                  "identifier": "sha256:46ad580cd017509c9e59e01d02e50645e626fe75d013352e5d7f6b24030b358e",
+                  "revision": null,
+                  "digest": null
+                }
+              },
+              "end": "2026-10-06T23:01:04.491102+00:00"
+            }
+          ],
+          "problems": []
+        },
+        "failure": {
+          "session_id": "11b10ef6-ede7-4556-9675-283e312752b8",
+          "name": "native_failure",
+          "status": "failed",
+          "coverage": {
+            "mode": "declared_boundaries",
+            "known_gaps": []
+          },
+          "operations": [
+            {
+              "id": "36e5c740-2218-4f4b-bc6c-cbb950c5e210",
+              "name": "lab.summarize_samples",
+              "profile": "scientific_analysis",
+              "parent_id": null,
+              "inputs": {
+                "samples": {
+                  "kind": "reference",
+                  "owner": "recorda-lab",
+                  "identifier": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                  "revision": null,
+                  "digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+                }
+              },
+              "parameters": {},
+              "implementation": {
+                "package": "consumer",
+                "callable": "consumer.summarize_samples",
+                "version": null
+              },
+              "start": "2026-10-06T23:01:04.521961+00:00",
+              "status": "failed",
+              "outputs": {},
+              "end": "2026-10-06T23:01:04.522868+00:00",
+              "exception": {
+                "type": "builtins.ValueError",
+                "message": {
+                  "kind": "omitted",
+                  "reason": "exception_message_may_be_sensitive"
+                },
+                "reference": {
+                  "kind": "omitted",
+                  "reason": "unsupported_type"
+                }
+              }
+            }
+          ],
+          "problems": []
+        },
+        "interrupt": {
+          "session_id": "77078dad-2f6b-4de6-8f66-e1e2b8b2f647",
+          "name": "user_interrupt",
+          "status": "failed",
+          "coverage": {
+            "mode": "declared_boundaries",
+            "known_gaps": []
+          },
+          "operations": [
+            {
+              "id": "3a5db75b-518f-4c0f-87fc-f16b2d74b533",
+              "name": "lab.wait_for_interrupt",
+              "profile": "scientific_analysis",
+              "parent_id": null,
+              "inputs": {
+                "marker": "interrupt-ready"
+              },
+              "parameters": {},
+              "implementation": {
+                "package": "__main__",
+                "callable": "__main__.wait_for_interrupt",
+                "version": null
+              },
+              "start": "2026-10-06T23:01:04.849624+00:00",
+              "status": "failed",
+              "outputs": {},
+              "end": "2026-10-06T23:01:04.866695+00:00",
+              "exception": {
+                "type": "builtins.KeyboardInterrupt",
+                "message": {
+                  "kind": "omitted",
+                  "reason": "exception_message_may_be_sensitive"
+                },
+                "reference": {
+                  "kind": "omitted",
+                  "reason": "unsupported_type"
+                }
+              }
+            }
+          ],
+          "problems": []
+        },
+        "kernel-loss": {
+          "session_id": "15b5401e-1783-467f-9c3f-4bf0ac66b4c4",
+          "name": "kernel_loss",
+          "status": "incomplete",
+          "coverage": {
+            "mode": "declared_boundaries",
+            "known_gaps": []
+          },
+          "operations": [
+            {
+              "id": "0cea2442-fd8c-44b7-a39d-34e90bd9e35b",
+              "name": "lab.sample_count",
+              "profile": "inspection",
+              "parent_id": null,
+              "inputs": {
+                "samples": {
+                  "kind": "omitted",
+                  "reason": "unsupported_type"
+                }
+              },
+              "parameters": {},
+              "implementation": {
+                "package": "consumer",
+                "callable": "consumer.sample_count",
+                "version": null
+              },
+              "start": "2026-10-06T23:01:04.945011+00:00",
+              "status": "succeeded",
+              "outputs": {
+                "return": 4
+              },
+              "end": "2026-10-06T23:01:04.947056+00:00"
+            },
+            {
+              "id": "656ea25e-0312-43ab-88e4-bde19dc7c3f6",
+              "name": "lab.wait_for_interrupt",
+              "profile": "scientific_analysis",
+              "parent_id": null,
+              "inputs": {
+                "marker": "loss-ready"
+              },
+              "parameters": {},
+              "implementation": {
+                "package": "__main__",
+                "callable": "__main__.wait_for_interrupt",
+                "version": null
+              },
+              "start": "2026-10-06T23:01:04.956792+00:00",
+              "status": "incomplete",
+              "outputs": {}
+            }
+          ],
+          "problems": []
+        }
+      },
+      "scope": "this IPykernel/client combination on this interpreter; no browser frontend claim",
+      "executed_notebook_sha256": "11ee35657b2d79e436b71509be8a2d1ce51160d33ace740cf9bc4817f1e16990"
+    },
+    "report_sha256": "72ebf394112c4c9dcdf453cfa6111ed7a602d3e91646d3476c46ac3c434205d7",
+    "executed_sha256": "11ee35657b2d79e436b71509be8a2d1ce51160d33ace740cf9bc4817f1e16990"
+  },
+  "question_observations": {
+    "scientific_result": {
+      "owner": "recorda-lab",
+      "schema": "recorda-lab.result/0.1",
+      "count": 4,
+      "mean": 2.5,
+      "variance": 1.25
+    },
+    "references": {
+      "intact": {
+        "full": {
+          "execution": "succeeded",
+          "reference_states": {
+            "matched": 4
+          },
+          "omissions": {},
+          "findings": []
+        },
+        "minimal": {
+          "execution": "succeeded",
+          "reference_states": {},
+          "omissions": {
+            "capture_policy": 6
+          },
+          "findings": []
+        },
+        "limits": {
+          "execution": "succeeded",
+          "reference_states": {
+            "available_unverified": 1,
+            "unresolved": 1
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "available_unverified",
+              "count": 1,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            },
+            {
+              "state": "unresolved",
+              "count": 1,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            }
+          ]
+        },
+        "interrupted": {
+          "execution": "incomplete",
+          "reference_states": {
+            "matched": 1
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "incomplete",
+              "count": 1,
+              "distinct_references": null,
+              "presentation_status": "resolved"
+            }
+          ]
+        }
+      },
+      "missing_input": {
+        "full": {
+          "execution": "succeeded",
+          "reference_states": {
+            "missing": 2,
+            "matched": 2
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "missing",
+              "count": 2,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            }
+          ]
+        },
+        "minimal": {
+          "execution": "succeeded",
+          "reference_states": {},
+          "omissions": {
+            "capture_policy": 6
+          },
+          "findings": []
+        },
+        "limits": {
+          "execution": "succeeded",
+          "reference_states": {
+            "available_unverified": 1,
+            "unresolved": 1
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "available_unverified",
+              "count": 1,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            },
+            {
+              "state": "unresolved",
+              "count": 1,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            }
+          ]
+        },
+        "interrupted": {
+          "execution": "incomplete",
+          "reference_states": {
+            "missing": 1
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "incomplete",
+              "count": 1,
+              "distinct_references": null,
+              "presentation_status": "resolved"
+            },
+            {
+              "state": "missing",
+              "count": 1,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            }
+          ]
+        }
+      },
+      "modified_output": {
+        "full": {
+          "execution": "succeeded",
+          "reference_states": {
+            "matched": 2,
+            "mismatched": 2
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "mismatched",
+              "count": 2,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            }
+          ]
+        },
+        "minimal": {
+          "execution": "succeeded",
+          "reference_states": {},
+          "omissions": {
+            "capture_policy": 6
+          },
+          "findings": []
+        },
+        "limits": {
+          "execution": "succeeded",
+          "reference_states": {
+            "available_unverified": 1,
+            "unresolved": 1
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "available_unverified",
+              "count": 1,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            },
+            {
+              "state": "unresolved",
+              "count": 1,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            }
+          ]
+        },
+        "interrupted": {
+          "execution": "incomplete",
+          "reference_states": {
+            "matched": 1
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "incomplete",
+              "count": 1,
+              "distinct_references": null,
+              "presentation_status": "resolved"
+            }
+          ]
+        }
+      },
+      "restored": {
+        "full": {
+          "execution": "succeeded",
+          "reference_states": {
+            "matched": 4
+          },
+          "omissions": {},
+          "findings": []
+        },
+        "minimal": {
+          "execution": "succeeded",
+          "reference_states": {},
+          "omissions": {
+            "capture_policy": 6
+          },
+          "findings": []
+        },
+        "limits": {
+          "execution": "succeeded",
+          "reference_states": {
+            "available_unverified": 1,
+            "unresolved": 1
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "available_unverified",
+              "count": 1,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            },
+            {
+              "state": "unresolved",
+              "count": 1,
+              "distinct_references": 1,
+              "presentation_status": "resolved"
+            }
+          ]
+        },
+        "interrupted": {
+          "execution": "incomplete",
+          "reference_states": {
+            "matched": 1
+          },
+          "omissions": {},
+          "findings": [
+            {
+              "state": "incomplete",
+              "count": 1,
+              "distinct_references": null,
+              "presentation_status": "resolved"
+            }
+          ]
+        }
+      }
+    },
+    "workflow": {
+      "full": {
+        "execution": "succeeded",
+        "reference_states": {
+          "matched": 12
+        },
+        "separate_scientific_check": "consistent"
+      },
+      "retry": {
+        "execution": "failed",
+        "reference_states": {
+          "matched": 17
+        },
+        "separate_scientific_check": "consistent"
+      },
+      "minimal": {
+        "execution": "succeeded",
+        "reference_states": {},
+        "separate_scientific_check": "unavailable"
+      },
+      "interrupted": {
+        "execution": "incomplete",
+        "reference_states": {
+          "matched": 5
+        },
+        "separate_scientific_check": "unavailable"
+      },
+      "missing_intermediate": {
+        "execution": "succeeded",
+        "reference_states": {
+          "matched": 11,
+          "missing": 1
+        },
+        "separate_scientific_check": "unavailable"
+      },
+      "modified_intermediate": {
+        "execution": "succeeded",
+        "reference_states": {
+          "matched": 11,
+          "mismatched": 1
+        },
+        "separate_scientific_check": "unavailable"
+      },
+      "restored": {
+        "execution": "succeeded",
+        "reference_states": {
+          "matched": 12
+        },
+        "separate_scientific_check": "consistent"
+      }
+    },
+    "acceptance_sha256": "d6fd31f328d01b92ca5d5aa7fafcc792b0cedb7f32f6b354f13dda327c07c0dd"
+  },
+  "manifest_scope": "Runtime/test/experiment/fixture/notebook/tool/metadata/environment/README bytes and candidate workflow, before default promotion; closing documentation is outside selected byte scope.",
+  "ci": {
+    "status": "pending explicit-candidate qualification before default promotion"
+  }
+}

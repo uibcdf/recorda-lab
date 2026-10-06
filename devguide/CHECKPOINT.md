@@ -68,3 +68,22 @@ issue. Core ecosystem review #2 is complete; MOLI registry reconciliation remain
 separately owned in `uibcdf/moli#62`. Release/OS/coverage remain Recorda #3/#4/#6.
 SMonitor inspection presentation and operation correlation are separate core
 analyses (#14/#15). Lab is not a production integration destination.
+
+
+## Inspection-view receiving candidate
+
+`uibcdf/recorda-lab#13` receives the experimental view in Recorda #21 and the
+supplied-check wording correction in Recorda #22. Selected candidate:
+`48a6c9a0630027f0f2c3d8d82215de8e27764913`. Core source/installed checks pass 305
+and all 11 exact-head CI jobs pass. Lab's existing default above is retained
+until separate candidate qualification and promotion.
+
+The [local receiving receipt](evidence/inspection_view_linux_py314.json) records
+333 installed-pair passes/four explicit Sabueso skips, six selected notebooks/49
+code cells and the 14-cell real-kernel fault scenario. Seven new regressions compare
+JSON facts and messages, source/byte preservation, producer-free reading, hostile
+inputs, message faults and native OLS/attempt history. Ordinary wheel manifests,
+published providers, preflight, pip check, governance/shared MOLI and Ruff pass.
+Read [INSPECTION_VIEW.md](INSPECTION_VIEW.md) for the fixed questions and limits.
+Exact-pair hosted qualification is pending. This adds no scientific/dummy runtime
+dependency, report freshness guarantee, general usability or replay claim.
