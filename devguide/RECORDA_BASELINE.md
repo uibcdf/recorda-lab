@@ -1,5 +1,8 @@
 # Recorded laboratory baseline
 
+Read [CHECKPOINT.md](CHECKPOINT.md) for hosted conclusions and resumption steps.
+Historical entries below retain the state at their respective checkpoints.
+
 ## Current integration source — declared reference checks
 
 Manual integration pins Recorda `565a68c5103a587b06c2411bba2064d1572b4c56`. This unreleased
@@ -65,8 +68,8 @@ These results qualify those recorded inputs, not subsequent laboratory changes.
 
 Historical 0.0.0 receipts remain unchanged. This is source test infrastructure;
 package distribution, public OS qualification and archival remain separate work.
-Consolidation is tracked in `uibcdf/recorda-lab#1`; the next controlled Sabueso
-scenario is tracked in `uibcdf/recorda-lab#5`.
+Consolidation remains tracked in `uibcdf/recorda-lab#1`. The subsequently
+completed controlled Sabueso scenario is tracked in `uibcdf/recorda-lab#5`.
 
 ## Native exception-reference extension
 

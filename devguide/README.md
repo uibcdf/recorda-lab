@@ -1,5 +1,8 @@
 # Recorda Lab developer guide
 
+Read [CHECKPOINT.md](CHECKPOINT.md) first for the published pair, executed
+evidence, resumption procedure and next issue-backed work.
+
 The laboratory owns dummy fixtures, controlled failures, acceptance scenarios and
 experiment artifacts. Recorda owns recording behavior and its provisional API.
 MOLI owns shared provenance and governance contracts. Follow `reporting_protocol.md`.
