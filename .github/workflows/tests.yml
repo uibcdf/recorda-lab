@@ -52,10 +52,13 @@ jobs:
   integration:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
     strategy:
       fail-fast: false
       matrix:
-        python: ['3.13', '3.14']
+        python: ['3.11', '3.12', '3.13', '3.14']
     steps:
       - uses: actions/checkout@v4
         with:
@@ -69,11 +72,19 @@ jobs:
           repository: uibcdf/recorda
           ref: ${{ inputs.recorda_commit }}
           path: recorda
-      - uses: actions/setup-python@v5
+      - uses: mamba-org/setup-micromamba@v2
         with:
-          python-version: ${{ matrix.python }}
-      - run: python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ipykernel==7.3.0 jupyter_client==8.10.0 nbformat==5.11.1
+          environment-file: lab/devtools/conda-envs/notebook_env.yaml
+          create-args: python=${{ matrix.python }} --strict-channel-priority
+      - run: python -m pip install pytest-receptor==1.1.0
+      - run: python recorda/devtools/check_dependencies.py
+      - run: python recorda/devtools/verify_support_environment.py argdigest
+      - name: Verify the selected Recorda source and laboratory environments
+        env:
+          RECORDA_COMMIT: ${{ inputs.recorda_commit }}
+        run: python lab/devtools/check_recorda_environment.py --recorda recorda --commit "$RECORDA_COMMIT"
       - run: python -m pip install --no-deps --no-build-isolation ./recorda ./lab
+      - run: python -m pip check
       - run: python -m pytest --receptor=ci -o pythonpath='' lab/tests
         env:
           RECORDA_LAB_NOTEBOOK: '1'
@@ -96,14 +107,22 @@ jobs:
           repository: uibcdf/recorda
           ref: ${{ inputs.recorda_commit }}
           path: recorda
-      - uses: conda-incubator/setup-miniconda@v3
+      - uses: mamba-org/setup-micromamba@v2
         with:
-          miniforge-version: latest
           environment-file: lab/devtools/conda-envs/scientific_env.yaml
-          activate-environment: recorda-lab-scientific
-          auto-activate-base: false
+          create-args: --strict-channel-priority
+      - run: python -m pip install pytest-receptor==1.1.0
+      - run: python recorda/devtools/check_dependencies.py
+      - run: python recorda/devtools/verify_support_environment.py argdigest
+      - name: Verify the selected Recorda source and laboratory environments
+        env:
+          RECORDA_COMMIT: ${{ inputs.recorda_commit }}
+        run: python lab/devtools/check_recorda_environment.py --recorda recorda --commit "$RECORDA_COMMIT"
       - run: python -m pip install --no-deps --no-build-isolation ./recorda ./lab
-      - run: python -m pytest --receptor=ci -o pythonpath='' recorda/tests lab/tests
+      - run: python -m pip check
+      - run: python -m pytest --receptor=ci -o pythonpath='' tests ../lab/tests
+        working-directory: recorda
         env:
           RECORDA_LAB_NOTEBOOK: '1'
           RECORDA_LAB_SCIPY: '1'
+          RECORDA_TEST_SMONITOR: '1'

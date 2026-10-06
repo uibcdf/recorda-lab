@@ -1,4 +1,4 @@
-"""Inspect the trial's declared journal and artifact receipts using Recorda and stdlib only."""
+"""Inspect the trial's declared journal and artifact receipts using Recorda, its required support providers and stdlib."""
 
 import argparse
 import json

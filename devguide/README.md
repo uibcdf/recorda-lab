@@ -54,6 +54,6 @@ local reference checks. Existing SciPy/Sabueso inspectors reuse their byte check
 with unchanged native semantic ownership. Read `REFERENCE_CHECKS.md`; tracked
 by `uibcdf/recorda-lab#9` and `uibcdf/recorda#12`.
 
-`experiments/run_workflow.py`, its Recorda/stdlib inspector and the seventh
+`experiments/run_workflow.py`, its producer-free Recorda inspector and the seventh
 notebook link preparation, SciPy fitting and residual evaluation through retained
 native references. Read `MULTI_STEP_WORKFLOW.md`; tracked by `uibcdf/recorda-lab#10`.

@@ -35,7 +35,7 @@ def test_dummy_has_no_recorda_instrumentation():
             sys.executable,
             "-c",
             "import sys, recorda_lab; recorda_lab.summarize([1, 2]); "
-            "assert 'recorda' not in sys.modules",
+            "assert not {'recorda', 'smonitor', 'argdigest', 'depdigest'} & set(sys.modules)",
         ],
         env=dict(os.environ, PYTHONPATH=str(Path(recorda_lab.__file__).resolve().parents[1])),
         check=True,

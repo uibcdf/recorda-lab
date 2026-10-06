@@ -1,4 +1,4 @@
-"""Read the trial's native receipts using Recorda and stdlib, without Sabueso."""
+"""Read the trial's native receipts using Recorda and its required support closure, without Sabueso."""
 
 import argparse
 import json

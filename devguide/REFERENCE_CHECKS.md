@@ -13,7 +13,7 @@ The checker does not reinterpret scientific meaning or change execution status.
 The runner also distinguishes available_unverified (no recorded digest),
 unresolved (no full-key locator), payload omission under minimal policy, and an
 actual child-process exit after durable operation start. Producer-free inspection
-uses Recorda and stdlib only. Run with a fresh destination:
+uses Recorda, its required support providers and stdlib. Run with a fresh destination:
 `python experiments/run_reference_checks.py /tmp/new-reference-trial`.
 
 The sixth notebook performs these steps in eight kernel cells. Journals, index,

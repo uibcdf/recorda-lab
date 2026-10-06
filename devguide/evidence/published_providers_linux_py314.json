@@ -1,0 +1,170 @@
+{
+  "created_utc": "2026-10-06T21:52:14.132444+00:00",
+  "issue": "uibcdf/recorda-lab#12",
+  "scope": "Exact installed development source pair with published required providers; notebooks/SciPy/recovery on Linux Python 3.14.7; no Sabueso/public release/general OS support/replay qualification",
+  "recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac",
+  "lab_parent_commit": "de726460a989d4b2ff53dcda2734ab0b9d50ee60",
+  "lab_implementation_commit": "pending publication",
+  "python": {
+    "executable": "/tmp/recorda-lab12-scientific/bin/python",
+    "version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "platform": "linux"
+  },
+  "tools": {
+    "pytest-receptor": "1.1.0",
+    "ruff": "0.16.5",
+    "pytest": "9.1.1",
+    "PyYAML": "6.0.3",
+    "packaging": "26.3"
+  },
+  "scientific_dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "ipykernel": "7.3.0",
+    "jupyter_client": "8.10.0",
+    "nbformat": "5.11.1",
+    "jupyterlab": "4.6.4"
+  },
+  "providers": {
+    "smonitor": {
+      "version": "0.19.0",
+      "build": "py_1",
+      "fn": "smonitor-0.19.0-py_1.tar.bz2",
+      "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2"
+    },
+    "argdigest": {
+      "version": "0.15.0",
+      "build": "py_0",
+      "fn": "argdigest-0.15.0-py_0.tar.bz2",
+      "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.15.0-py_0.tar.bz2"
+    },
+    "depdigest": {
+      "version": "0.13.0",
+      "build": "py_0",
+      "fn": "depdigest-0.13.0-py_0.tar.bz2",
+      "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2"
+    }
+  },
+  "wheels": [
+    {
+      "file": "recorda-0.2.0-py3-none-any.whl",
+      "sha256": "f210e04114056778f7fecfc271685c5a35ac45072b50190182394ec0f71ae64c",
+      "import_path": "/tmp/recorda-lab12-scientific/lib/python3.14/site-packages/recorda",
+      "matched_python_files": 13,
+      "ordinary_installation": true,
+      "matches_selected_source_python": true
+    },
+    {
+      "file": "recorda_lab-0.0.0-py3-none-any.whl",
+      "sha256": "db08d407971d6c187a475b3871b01bc81663c465b6c33fd333b48c132ddac709",
+      "import_path": "/tmp/recorda-lab12-scientific/lib/python3.14/site-packages/recorda_lab",
+      "matched_python_files": 1,
+      "ordinary_installation": true,
+      "matches_selected_source_python": true
+    }
+  ],
+  "command": "RECORDA_TEST_SMONITOR=1 RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SCIPY=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /tmp/recorda-lab12-scientific/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath='' tests /tmp/recorda-lab12-work/tests",
+  "working_directory": "/home/liliana/repos@uibcdf/recorda",
+  "checks": {
+    "pytest": {
+      "passed": 242,
+      "skipped": 4,
+      "exit_code": 0,
+      "elapsed_seconds": 25.87
+    },
+    "installed_core_tests": 221,
+    "installed_lab_tests": 21,
+    "explicit_sabueso_skips": 4,
+    "notebooks": {
+      "selected": [
+        "01",
+        "02",
+        "03",
+        "05",
+        "06",
+        "07"
+      ],
+      "code_cells": 45,
+      "additional_real_kernel_scenario_cells": 14
+    },
+    "preflight_negative_scenarios": [
+      "missing provider",
+      "old provider",
+      "unclassified environment",
+      "missing CI environment route",
+      "wrong source SHA"
+    ],
+    "provider_provenance_and_managed_python_hashes": "passed core verify_support_environment.py argdigest",
+    "pip_check": "passed",
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "governance": "passed",
+    "shared_moli_checker": "passed",
+    "dummy_source_and_metadata_unchanged": true,
+    "provider_source_substitution": false,
+    "producer_free_readers": "unchanged package trees of Recorda and required providers only; -I -S; producers unavailable",
+    "known_tool_warning": "Post-verdict /dev/null ResourceWarning in published pytest-receptor 1.1.0; upstream uibcdf/pytest-receptor#4 already resolved; no exit/verdict effect.",
+    "wheel_readme": "Laboratory wheel rebuilt after baseline pointers were made guide-based; installed/source Python payload identical to the executed tests."
+  },
+  "manifest_scope": "runtime, tests, experiments, notebooks, fixtures, development tools, environment routes, workflow and wheel README; devguide documents separate",
+  "sha256_files": {
+    "src/recorda_lab/__init__.py": "e4030acac2b3139b9920fe0045d9eeeca040881e3bdfab7e56e26c07fe87221d",
+    "tests/conftest.py": "03ebcc19085325051f7d8491bc92af7d0e0b5bc31513310735b79a5f8c455592",
+    "tests/test_activation_experiment.py": "b2eacd47146b04f821358379de0cf3751ff8595233894063e0d518acdcf0320f",
+    "tests/test_dummy.py": "f766b6a5c7f1273576e83f55e4c1b46cb14441b2b1aeeff6b8eb2f5e97f0a6a8",
+    "tests/test_experiment.py": "354fd2b39c7873336420a5c14e2e79cb38e5aad53e8bab82e0ef1fc8fe9984de",
+    "tests/test_notebook_experiment.py": "9e46c1fd5c50ac36e5945d0e1ad7c3c38a43168bd84033166aeff84058b5c97c",
+    "tests/test_performance_experiment.py": "6797c3e7c1a63b3334e5bc9ffc70c29b23c2c5332fe270ff3664b81eca0905c6",
+    "tests/test_reference_checks_experiment.py": "10a98516db5425cb0ac5a0445c78e5a81ce292d63ee74ee6f6e435e56c1a986e",
+    "tests/test_sabueso_experiment.py": "6c810df7ed3e10dba707df4dc9adeb9c3bdc4580aa890da6943669f2b5d54195",
+    "tests/test_scipy_experiment.py": "e0c5a0ce0d40b33d3443ba200db8d1e6d0e6bbe3aad8650e9a15cfb43120e2f7",
+    "tests/test_selection_experiment.py": "be809153c81bcb6f48e029a243bf5882bf92dc9a67fbda7876dd224827b5c997",
+    "tests/test_workflow_experiment.py": "7f3e57ea88f8c8e043d9d18ced4f89db2e50bedf5d4243996dd4c0bb995b5ce2",
+    "experiments/consumer.py": "f38f7fd6bd71204b3336341d86607e31992f0fb55497dadce85eda5a38f98806",
+    "experiments/fixtures/sabueso_uniprot/P00938.json": "6a94f1e8004542306a5f6939de9ea73721745e18c7ae92255261af84dfbf8de9",
+    "experiments/fixtures/sabueso_uniprot/P60174.json": "25b200a9f5f22f24d68d7f64445b447770b1875126829b1de2f9e7e01cc6acdd",
+    "experiments/fixtures/sabueso_uniprot/P60175.json": "2e98129cdc78d0da7b282c77f27965ec8c80a36ae39fdad847411b76dfa102e3",
+    "experiments/inspect_sabueso_trial.py": "bb2299d0bc86ec4fa9b725633111abaefd4bdcd32cec0ebf18377889384ccd38",
+    "experiments/inspect_scipy_trial.py": "15ceeedcb2ab3211bbaea1a2f2931731ea6053fbd5ad1794dcebf26235f108b9",
+    "experiments/inspect_workflow.py": "19a93058967e65f5f7e960103ea63aa8fc180d207bf398946db3238c0630e4b2",
+    "experiments/reference_files.py": "7916906c9b9518e3519f29e9f9825b9a72038e99eb19542e50c43b027b30236c",
+    "experiments/run_activation.py": "afabfc0dff27fd313bf21b6e597678cbdefbfd65c77558cc845887f6929c2811",
+    "experiments/run_examples.py": "622a019e77b597d0f55a8d64ee41c98bc1e816faa9caa434fbeec5b12f55bdbc",
+    "experiments/run_notebook.py": "b5c660abf77142c0e57437a13f2429b952bab0c730984e49c608b81704e4433b",
+    "experiments/run_performance.py": "0570c964f20cd94d53ab0a66eddd9eb629bc5b53b010941049d03039795fed0c",
+    "experiments/run_reference_checks.py": "6e5974dd72b752cd58d1d431fc6bd7da3c7b4ec9dd4913042e6324dccf8cf63b",
+    "experiments/run_sabueso.py": "020f70bcb846ca9b86f6ac014ea729dc5baee83d187a51581f97bbf74b8bcfae",
+    "experiments/run_scipy.py": "e7d53ccdf79a287f87b491fdf5ab21a72ee829b4131f37bdaa0b57e95f22242f",
+    "experiments/run_selection.py": "6229c7b86b93c6c2f3f965e767dbe0e9a2e2ef4b71017ca20eee59b8068f10f1",
+    "experiments/run_slice.py": "5bcbd46feafa3b5be96156d0fa75755016857c04b219dd6172bb130c68ee9a66",
+    "experiments/run_workflow.py": "dccaab0b66b42c394ddee61f7f0bf62af245559d6d1415be1ee331ec0b164180",
+    "experiments/sabueso_consumer.py": "81188e58bb5fd0dcfad29325c4ae5abbd425ff534635260f161ab75d80230cc2",
+    "experiments/scipy_consumer.py": "c02fbdb70b3d59708396b0ee86c4e4d64c946433e01f282e645c02434eeddd59",
+    "experiments/workflow_consumer.py": "263f1de83f80b6636027654eb665d11cca63c8b16f7951719d9ed60a601ac24a",
+    "notebooks/01_manual_activation.ipynb": "52938756c15f959af4d37d76763be1034e3fcdd1489b15c24f9d0a957eec68fb",
+    "notebooks/02_recording_cost.ipynb": "19ecb334f219f6155708de4d6780b4a90353d951befedad4b7dad07693c2a8d1",
+    "notebooks/03_scipy_fit.ipynb": "e01c91c84a7e2f3ca1941d17af48b17d2eb362e70d4985c66faf2d3fc272852d",
+    "notebooks/04_sabueso_resolution.ipynb": "c8126f3fec0c9f1debd91689669ea9567500365ec2f5e407d0ae11c9ce7179d1",
+    "notebooks/05_capture_selection.ipynb": "28c00f5b4c8ea9fd95ef6ae26cdae4819212f3d8538f23c7c4a968de331cca8e",
+    "notebooks/06_reference_checks.ipynb": "4ae0a988e4ec5fb640bd47962cfdec58a87eb269aa7e63b44dd9235effcedeab",
+    "notebooks/07_multi_step_workflow.ipynb": "22b614d05f3a5562d2ce25aecf7bc6666efbccb12fe19fa6163b208cf8f707e2",
+    "devtools/check_recorda_environment.py": "c6208d3898843af6f87e03cf0fb6631f85ac8c4f9fddaff7672de2d260ce5334",
+    "devtools/conda-envs/development_env.yaml": "b692fdb678ef66886288221c1382bc2b871053826ebbfabe7c8de0520cc29c8e",
+    "devtools/conda-envs/notebook_env.yaml": "e122696a4b2e803493fe2ed8af9b7811223ded8f291cf9a012f4bdc467235b0c",
+    "devtools/conda-envs/scientific_env.yaml": "cd29a48c116c34abc5df26a4ea0b61ee77016354a877f016f2d692722e0ec979",
+    "devtools/conda-envs/test_env.yaml": "5faf383b93663f81228e5feac394e40a76090d766627336c2fa9ebd7ca48674b",
+    "devtools/validate_governance.py": "cb501c41d50f10a537bfb1e3be4203d8722b34b462439eb5b67dfcf62957c503",
+    ".github/workflows/tests.yml": "24fc48ff08b5ad8806b1e0c99de180bcfbeac9bd4ff3fe035ccd31d818879a65",
+    "README.md": "8bd649f868cfc05f840bcb9d4746574a2baa98449e8923bbd38872c55359df2a",
+    "pyproject.toml": "3caccfd6ca18cfdb7db317981678bf3d25050af2c0f950b6fd2acf65415b0ea0",
+    "MOLI_GUIDE.md": "2aeb55766a2a24a47392fd250f4378909f667ce2ed0b7d2a8c913fbe5a76fe9a",
+    "AGENTS.md": "0c43d10cf795c87badfbe27518d9a3d6d29eba17470da4d65352e90115db3ac6"
+  },
+  "historical_receipts": "unchanged",
+  "ci": {
+    "state": "not executed"
+  }
+}

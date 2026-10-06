@@ -111,7 +111,7 @@ with handle.operation('lab.pending', inputs={'samples':source}):
 
 
 def inspect_trial(destination):
-    """Read journals and an explicit index with Recorda and stdlib only."""
+    """Read journals and an explicit index with Recorda, its required support providers and stdlib."""
     destination = Path(destination)
     native = destination / "native"
     index = json.loads((native / "index.json").read_text())

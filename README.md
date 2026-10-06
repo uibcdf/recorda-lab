@@ -12,11 +12,11 @@ Caller-owned boundaries and an instrumented example live in `experiments/run_sli
 
 ## Recorded baseline
 
-The current reviewed integration source is Recorda `565a68c5103a587b06c2411bba2064d1572b4c56`,
-including declared-reference checks after the immutable **0.2.0** checkpoint.
-Manual integration defaults to this full SHA. See
-[`devguide/RECORDA_BASELINE.md`](devguide/RECORDA_BASELINE.md) for current source
-and historical 0.2.0/0.1.0 qualification.
+Manual integration selects a full reviewed Recorda SHA, declared in
+`.github/workflows/tests.yml`. See
+[`devguide/RECORDA_BASELINE.md`](devguide/RECORDA_BASELINE.md) for the current
+qualified source pair and historical 0.2.0/0.1.0 evidence. Runtime version metadata
+alone does not identify an unreleased source checkout.
 The independent dummy package remains experimental version `0.0.0`.
 
 ## Run the first experiment
@@ -92,7 +92,7 @@ RECORDA_LAB_SCIPY=1 python experiments/run_examples.py artifacts/scientific-note
 RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SCIPY=1 python -m pytest --receptor=llm
 ```
 
-The trial-specific inspector needs Recorda and stdlib only; it checks the retained
+The trial-specific inspector needs Recorda, its required support providers and stdlib; it checks the retained
 artifact receipts without executing SciPy. This is not a generic integrity/replay API.
 Scientific dependencies stay outside the dummy and Recorda runtimes. Scientific tests
 are explicit; ordinary test runs skip them. The manual baseline run [37379156594](https://github.com/uibcdf/recorda-lab/actions/runs/37379156594)
@@ -119,7 +119,7 @@ RECORDA_LAB_SABUESO=1 python -m pytest --receptor=llm tests/test_sabueso_experim
 RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SABUESO=1 python experiments/run_examples.py artifacts/sabueso-notebooks
 ```
 
-The independent inspector requires Recorda and stdlib only. It detects missing or
+The independent inspector requires Recorda, its required support providers and stdlib. It detects missing or
 changed retained files; it does not authenticate manifests or replay computation.
 The exact ConnectorError adapter retains native exception trace references on failed
 operations. This extension is included in Recorda 0.2.0; the historical

@@ -1,4 +1,4 @@
-"""Inspect this workflow's references and scientific oracle with Recorda/stdlib only."""
+"""Inspect this workflow's references and scientific oracle with Recorda and its required support closure."""
 
 import argparse
 import ast

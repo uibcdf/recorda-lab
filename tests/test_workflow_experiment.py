@@ -77,17 +77,19 @@ def test_multi_step_oracle_dependencies_retry_and_file_loss(tmp_path, monkeypatc
         trial.run(destination)
 
 
-def test_reader_uses_recorda_and_stdlib_without_producers(tmp_path, monkeypatch):
+def test_reader_uses_required_recorda_closure_without_producers(
+    tmp_path, monkeypatch, reader_packages
+):
     trial = load_trial(monkeypatch)
     destination = tmp_path / "workflow"
     trial.run_scenario(destination)
     code = """
-import json, sys
+import importlib.util, json, sys
 sys.path[:0] = sys.argv[1:3]
 from inspect_workflow import inspect_workflow
 report = inspect_workflow(sys.argv[3])
 assert report['scientific_check']['status'] == 'consistent'
-assert not {'numpy', 'scipy', 'recorda_lab'} & set(sys.modules)
+assert all(importlib.util.find_spec(name) is None for name in ('numpy', 'scipy', 'recorda_lab', 'sabueso', 'pyunitwizard'))
 print(json.dumps(report))
 """
     child = subprocess.run(
@@ -98,7 +100,7 @@ print(json.dumps(report))
             "-c",
             code,
             str(Path(trial.__file__).parent),
-            str(Path(trial.recorda.__file__).parents[1]),
+            str(reader_packages),
             str(destination),
         ],
         check=True,

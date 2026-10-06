@@ -49,7 +49,7 @@ runtime dependencies remain empty.
 
 ## Inspection and usage
 
-`inspect_scipy_trial.py` imports Recorda and stdlib only. It checks trusted trial
+`inspect_scipy_trial.py` imports Recorda, its required support providers and stdlib. It checks trusted trial
 receipts/output manifests and exposes method, solver options, model/input identities,
 implementation version, attempt status and native result references. A fresh process
 proves SciPy/NumPy are not imported. Missing or modified files fail this receipt check.

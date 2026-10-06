@@ -61,7 +61,7 @@ Minimal capture retains execution identities/outcomes but omits payload groups a
 does not run their adapters. Its missing links and unavailable scientific check
 are explicit. Journal size or success alone cannot establish adequate provenance.
 
-`inspect_workflow.py` imports Recorda and stdlib only. It reads this trial's NPY
+`inspect_workflow.py` imports Recorda, its required support providers and stdlib. It reads this trial's NPY
 1.0, C-order little-endian float64 files using a deliberately limited native reader;
 it is not a general NumPy deserializer. Native receipts and recorded reference
 checks use a 64 KiB byte bound. Scientific input/shape/model assumptions remain

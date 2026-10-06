@@ -93,27 +93,31 @@ def test_native_return_and_exception_identity(tmp_path, monkeypatch):
     assert trace == raised.value.acquisition_trace
 
 
-def test_reader_without_producer_and_visible_artifact_loss(tmp_path, monkeypatch):
+def test_reader_without_producer_and_visible_artifact_loss(tmp_path, monkeypatch, reader_packages):
     trial = load_trial(monkeypatch)
-    import recorda
 
     destination = tmp_path / "trial"
     trial.run(destination)
     reader = Path(trial.__file__).parent
     code = """import importlib.util, json, sys
+sys.path[:0] = sys.argv[2:4]
 from inspect_sabueso_trial import inspect_trial
 assert all(importlib.util.find_spec(name) is None for name in ('sabueso','ackredit','pyunitwizard'))
 report = inspect_trial(sys.argv[1])
 print(json.dumps({'status': report['status'], 'semantic_statuses': report['semantic_statuses']}))
 """
-    env = {
-        **os.environ,
-        "PYTHONPATH": os.pathsep.join([str(Path(recorda.__file__).parents[1]), str(reader)]),
-    }
     result = subprocess.run(
-        [sys.executable, "-S", "-c", code, str(destination)],
+        [
+            sys.executable,
+            "-I",
+            "-S",
+            "-c",
+            code,
+            str(destination),
+            str(reader_packages),
+            str(reader),
+        ],
         cwd=tmp_path,
-        env=env,
         capture_output=True,
         text=True,
         check=True,

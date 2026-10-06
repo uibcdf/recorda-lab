@@ -6,11 +6,10 @@ import sys
 from pathlib import Path
 
 import pytest
-import recorda
 
 
 def test_controlled_loss_modification_omission_and_incomplete_are_inspectable(
-    tmp_path, monkeypatch
+    tmp_path, monkeypatch, reader_packages
 ):
     experiments = Path(__file__).resolve().parents[1] / "experiments"
     monkeypatch.syspath_prepend(str(experiments))
@@ -36,7 +35,7 @@ def test_controlled_loss_modification_omission_and_incomplete_are_inspectable(
     assert json.loads((destination / "acceptance.json").read_text()) == report
     # Import neither the dummy nor scientific producers when inspecting saved receipts.
     code = """
-import json, sys
+import importlib.util, json, sys
 sys.path.insert(0,sys.argv[1])
 import recorda
 from pathlib import Path
@@ -44,17 +43,18 @@ root=Path(sys.argv[2])
 index=json.loads((root/'native/index.json').read_text())
 files=recorda.LocalFileResolver(root/'native',{recorda.Reference(**e['reference']):e['path'] for e in index['files']},digest_algorithm=index.get('digest_algorithm'))
 report=recorda.check_references(recorda.inspect(root/'full.jsonl'),resolver=files)
-assert 'recorda_lab' not in sys.modules and 'numpy' not in sys.modules and 'sabueso' not in sys.modules
+assert all(importlib.util.find_spec(name) is None for name in ('recorda_lab', 'numpy', 'scipy', 'sabueso', 'ackredit', 'pyunitwizard'))
 assert all(row['status']=='matched' for row in report['references'])
 print(json.dumps({'status':report['session_status'],'references':len(report['references'])}))
 """
     result = subprocess.run(
         [
             sys.executable,
+            "-I",
             "-S",
             "-c",
             code,
-            str(Path(recorda.__file__).resolve().parents[1]),
+            str(reader_packages),
             str(destination),
         ],
         env={key: value for key, value in os.environ.items() if key != "PYTHONPATH"},
