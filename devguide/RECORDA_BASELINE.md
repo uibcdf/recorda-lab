@@ -23,3 +23,13 @@ Historical 0.0.0 receipts remain unchanged. This is source test infrastructure;
 package distribution, public OS qualification and archival remain separate work.
 Consolidation is tracked in `uibcdf/recorda-lab#1`; the next controlled Sabueso
 scenario is tracked in `uibcdf/recorda-lab#5`.
+
+## Native exception-reference extension
+
+`uibcdf/recorda#7` is implemented at Recorda `eabc4a6918bb3b03148b3b6989ccc780a52fb841`. Manual integration now
+uses this full SHA by default; no new release tag is assigned. The historical 0.1.0
+pair remains identified above. The Sabueso consumer now registers exact ConnectorError
+capture once and reads native trace references from failed operations. Adoption is
+tracked by `uibcdf/recorda-lab#6`; the 0.1.0 consumer is preserved in Lab
+`84fec7dbac4daa63b976bee06882403bb734400c`. Read `SABUESO_TRIAL.md` and the new
+`evidence/exception_references_linux_py314.json` for source qualification.

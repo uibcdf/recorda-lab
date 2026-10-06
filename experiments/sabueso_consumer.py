@@ -8,6 +8,7 @@ from pathlib import Path
 import recorda
 import sabueso
 from sabueso.core.card import Card
+from sabueso.core.errors import ConnectorError
 from sabueso.resolver import EntityQuery, EntityResolution, EntityResolver
 from sabueso.tools.db.uniprot import FixtureUniProtClient
 from sabueso.tools.db.uniprot import get_entry as native_get_entry
@@ -229,6 +230,10 @@ class SabuesoArtifacts:
         self.retained[id(value)] = (value, ref, snapshot)
         return ref
 
+    def exception(self, error):
+        # Exact ConnectorError opt-in; preserve its native trace as an owned file.
+        return self.trace(error.acquisition_trace)
+
     @property
     def adapters(self):
         return {
@@ -237,6 +242,7 @@ class SabuesoArtifacts:
             EntityQuery: self.query,
             FixtureUniProtClient: self.client,
             EntityResolver: self.resolver,
+            ConnectorError: self.exception,
         }
 
     def finish(self, *, journal, failed_trace=None, failed_operation=None):

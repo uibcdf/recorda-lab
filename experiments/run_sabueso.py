@@ -45,12 +45,11 @@ def run(destination):
         path=destination / "session.jsonl",
         gaps=[
             "unwrapped source helpers",
-            "exception sidecars retained explicitly by the caller",
+            "unregistered exception provenance is omitted",
             "no MOLI project context, routing or complete pipeline capture",
         ],
         reference_adapters=artifacts.adapters,
     )
-    failed_trace = None
     try:
         envelope = get_entry("P60174", client=client)
         result = resolve_retrieved_entry(envelope, resolver)
@@ -73,13 +72,13 @@ def run(destination):
         assert returned_error[0] is None and returned_error[1].status == "error"
         try:
             get_entry("P12345", client=failing)
-        except ConnectorError as error:
-            failed_trace = artifacts.trace(error.acquisition_trace)
+        except ConnectorError:
+            pass
         else:
             raise AssertionError("the actual fixture source failure did not escape")
     finally:
         record = handle.stop()
-    assert failed_trace is not None
+    assert record.operations[-1]["exception"]["reference"]["owner"] == "sabueso"
     assert record.status == "failed"
     assert len(record.operations) == 7
     assert record.operations[-1]["exception"]["type"] == (
@@ -89,11 +88,7 @@ def run(destination):
     assert record.operations[-2]["status"] == "succeeded"
     assert record.operations[2]["parent_id"] == record.operations[1]["id"]
     assert record.operations[0]["outputs"]["return"] == record.operations[1]["inputs"]["envelope"]
-    artifacts.finish(
-        journal="session.jsonl",
-        failed_trace=failed_trace,
-        failed_operation=record.operations[-1]["id"],
-    )
+    artifacts.finish(journal="session.jsonl")
     report = inspect_trial(destination)
     assert before == {
         p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in FIXTURES.glob("*.json")

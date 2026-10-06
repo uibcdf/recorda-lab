@@ -1,6 +1,7 @@
 # Controlled standalone Sabueso trial
 
-Owner: `uibcdf/recorda-lab#5`; recording substrate: `uibcdf/recorda#1`.
+Owners: original trial `uibcdf/recorda-lab#5`, exception-reference adoption
+`uibcdf/recorda-lab#6`; core extension `uibcdf/recorda#7`.
 
 ## Scientific acceptance
 
@@ -32,10 +33,20 @@ known queries, fixture clients and UniProt-only resolvers. Unknown contracts are
 Reusing a mutated retained native result omits the stale reference. Callbacks are trusted
 code, not a general privacy or serialization policy. They do not inspect opaque repr.
 
-The core records exception type and preserves the same exception instance. The caller
-explicitly retains its native acquisition trace and links it to the failed operation in
-the lab index. This is an acknowledged gap in automatic boundary capture. The follow-up is tracked
-by `uibcdf/recorda#7`; no exception hook or shared MOLI contract is introduced here.
+The core records exception type and preserves the same exception instance. The
+session's existing reference_adapters mapping registers exact ConnectorError capture.
+The adapter stores the unchanged native acquisition_trace and returns its reference;
+Recorda binds it directly to the failed operation under exception.reference. The
+caller only handles the native error normally. Unregistered errors are explicit
+omissions. The inspector also accepts historical caller-owned failure indices.
+No exception messages, arbitrary repr or exception dictionaries are recorded.
+Callbacks are trusted code; a faulty adapter cannot replace the original exception.
+
+This requires the post-0.1.0 core implementation for `uibcdf/recorda#7`,
+commit `eabc4a6918bb3b03148b3b6989ccc780a52fb841`. Historical
+0.1.0 evidence and explicit caller capture are preserved in Lab commit
+`84fec7dbac4daa63b976bee06882403bb734400c`. The old receipt below is historical;
+`evidence/exception_references_linux_py314.json` identifies the new tested code.
 
 ## Qualification and limits
 
@@ -43,7 +54,7 @@ Use Python 3.14 in the existing co-development environment and published
 pytest-receptor 1.1.0. Select `RECORDA_LAB_SABUESO=1`; selecting an unavailable
 dependency fails rather than silently skipping. Add `RECORDA_LAB_NOTEBOOK=1` for
 real-kernel execution; add `RECORDA_LAB_SCIPY=1` for the complete laboratory suite.
-The baseline Recorda is 0.1.0 at `7e0c8dc79fbc529826d27e467de381e248c36da8`.
+The original baseline was Recorda 0.1.0 at `7e0c8dc79fbc529826d27e467de381e248c36da8`.
 `evidence/sabueso_linux_py314.json` records tested source hashes and participants.
 Sabueso and several providers are editable development checkouts. Their live shared
 environment passed the full suite, but concurrent provider edits prevented sealing

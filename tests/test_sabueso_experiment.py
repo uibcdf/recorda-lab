@@ -42,6 +42,10 @@ def test_scientific_decisions_lineage_and_offline_receipts(tmp_path, monkeypatch
     assert operations[5]["execution_status"] == "succeeded"
     assert operations[5]["semantic_status"] == "error"
     assert operations[6]["execution_status"] == "failed"
+    assert operations[6]["exception_reference"]["owner"] == "sabueso"
+    index = json.loads((destination / "native/index.json").read_text())
+    assert index["failure"] is None  # The journal owns the provenance link now.
+    assert any(event["query"] == {"accession": "P12345"} for event in report["source_events"])
     assert operations[2]["card_reference"]["owner"] == "sabueso"
     assert json.loads((destination / "acceptance.json").read_text()) == report
     with pytest.raises(FileExistsError):
@@ -77,6 +81,14 @@ def test_native_return_and_exception_identity(tmp_path, monkeypatch):
     finally:
         record = handle.stop()
     assert [op["status"] for op in record.operations] == ["succeeded", "failed"]
+    reference = record.operations[-1]["exception"]["reference"]
+    retained = next(
+        item
+        for item in artifacts.files
+        if item["reference"]["identifier"] == reference["identifier"]
+    )
+    trace = json.loads((artifacts.destination / retained["path"]).read_text())
+    assert trace == raised.value.acquisition_trace
 
 
 def test_reader_without_producer_and_visible_artifact_loss(tmp_path, monkeypatch):
@@ -112,7 +124,24 @@ print(json.dumps({'status': report['status'], 'semantic_statuses': report['seman
         "error",
     ]
     index = json.loads((destination / "native/index.json").read_text())
-    file = destination / "native" / index["files"][0]["path"]
+    # Historical caller-owned indices still resolve after moving capture to the journal.
+    journal = destination / "session.jsonl"
+    events = [json.loads(line) for line in journal.read_text().splitlines()]
+    failed = next(
+        event for event in events if event.get("status") == "failed" and "exception" in event
+    )
+    reference = failed["exception"].pop("reference")
+    index["failure"] = {"operation": failed["operation_id"], "trace": reference}
+    journal.write_text("".join(json.dumps(event) + "\n" for event in events))
+    (destination / "native/index.json").write_text(json.dumps(index) + "\n")
+    assert trial.inspect_trial(destination)["status"] == "failed"
+    # Remove the exception's own native sidecar, not only a source fixture.
+    entry = next(
+        item
+        for item in index["files"]
+        if item["reference"]["identifier"] == reference["identifier"]
+    )
+    file = destination / "native" / entry["path"]
     original = file.read_bytes()
     file.write_bytes(original + b"changed")
     with pytest.raises(ValueError, match="no longer matches"):

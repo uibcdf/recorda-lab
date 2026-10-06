@@ -10,7 +10,7 @@ on:
       recorda_commit:
         description: Reviewed full commit SHA of the published Recorda implementation
         required: true
-        default: 7e0c8dc79fbc529826d27e467de381e248c36da8
+        default: eabc4a6918bb3b03148b3b6989ccc780a52fb841
         type: string
       run_scipy:
         description: Also run the controlled SciPy trial and scientific notebook

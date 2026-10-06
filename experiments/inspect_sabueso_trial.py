@@ -122,6 +122,12 @@ def inspect_trial(destination):
             row["trace_reference"] = manifest["trace"]
             for event in native_trace["records"]:
                 events[event["id"]] = event
+        if "exception" in operation:
+            reference = operation["exception"].get("reference")
+            row["exception_reference"] = reference
+            if reference is not None and reference.get("kind") == "reference":
+                for event in trace(reference)["records"]:
+                    events[event["id"]] = event
         checked.append(row)
     failure = index["failure"]
     if failure is not None:

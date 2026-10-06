@@ -36,7 +36,7 @@ scientific lane with its declared environment; the basic lab remains independent
 `experiments/run_sabueso.py` and the fourth notebook exercise native knowledge
 retrieval and entity resolution, tracked by `uibcdf/recorda-lab#5`. Read
 `SABUESO_TRIAL.md` for public data attribution, exact co-development scope and
-the explicit exception-sidecar gap. The scientific source is unmodified.
+the opt-in exception-reference capture adopted in `uibcdf/recorda-lab#6`. The scientific source is unmodified.
 
 The laboratory is not a production integration destination. New scenarios must name
 their expected scientific result and recorded facts; do not merely mirror implementation.
