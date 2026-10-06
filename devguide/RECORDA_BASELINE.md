@@ -1,8 +1,22 @@
 # Recorded laboratory baseline
 
-## Current source checkpoint — 0.2.0
+## Current integration source — capture selection
 
-Recorda `0.2.0` is pinned to `4e3d422fef1b0927fe63422323dc6d941c061bfb`. The manual integration default uses
+Manual integration pins Recorda `90ae0decbde4e18ecee206f2097ed9a0bc79ae0a`. This is unreleased
+source after 0.2.0, adding manual persistence recovery and standalone session
+CapturePolicy. Its owning issues are uibcdf/recorda#8 and uibcdf/recorda#11;
+the laboratory experiment/fifth notebook is uibcdf/recorda-lab#8.
+
+The local paired receipt passes 89 tests on Linux Python 3.14.7, including
+five notebooks (37 code cells), SciPy and frozen-source Sabueso. Runtime,
+consumer, test and notebook fingerprints are in evidence/capture_selection_linux_py314.json.
+Core and Lab qualification have independent source identities; the dummy remains
+0.0.0 and unchanged. The 0.2.0 tag and its exact historical artifact receipt
+remain identified below. No new release or public support claim is made.
+
+## Historical source checkpoint — 0.2.0
+
+Recorda `0.2.0` is pinned to `4e3d422fef1b0927fe63422323dc6d941c061bfb`. At that checkpoint the manual integration default used
 this full source identity. The checkpoint is tracked by `uibcdf/recorda#9`, which
 retains artifact hashes, installed-candidate checks, paired laboratory identities
 and exact CI conclusions. The independent dummy remains `0.0.0`.

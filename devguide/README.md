@@ -42,3 +42,6 @@ The laboratory is not a production integration destination. New scenarios must n
 their expected scientific result and recorded facts; do not merely mirror implementation.
 
 Python 3.11–3.14 is the target and Python 3.14 is the working default. Read `PYTHON_SUPPORT.md` for the tracked MOLI transition and explicit selection of `molsyssuite@uibcdf_3.14`.
+
+`experiments/run_selection.py` and the fifth notebook compare minimal/detailed
+session capture under `uibcdf/recorda-lab#8`. Read `CAPTURE_SELECTION.md`.

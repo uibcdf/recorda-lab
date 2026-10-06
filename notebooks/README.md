@@ -17,6 +17,10 @@ They belong to Recorda Lab; the scientific dummy package remains independent.
   retain ambiguity and alternatives, and preserve native source failure traces.
   Requires the co-development Sabueso closure and `RECORDA_LAB_SABUESO=1`.
 
+- `05_capture_selection.ipynb`: compare two session policies for the same native
+  calculation, with explicit coverage, omitted payloads, bytes and repeated
+  wall/CPU observations. Tracked by `uibcdf/recorda-lab#8`.
+
 Use Python 3.14 and the declared development environment. Install both checkouts
 with `--no-deps --editable`, then launch `python -m jupyterlab` from the laboratory
 root and select that environment's kernel. The setup cell prints the actual interpreter.

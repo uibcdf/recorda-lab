@@ -12,10 +12,11 @@ Caller-owned boundaries and an instrumented example live in `experiments/run_sli
 
 ## Recorded baseline
 
-The reviewed Recorda baseline is **0.2.0**, commit
-`4e3d422fef1b0927fe63422323dc6d941c061bfb`. See
-[`devguide/RECORDA_BASELINE.md`](devguide/RECORDA_BASELINE.md) for paired identities
-and historical qualification. Manual integration defaults to this full SHA; the 0.1.0 pair remains historical.
+The current reviewed integration source is Recorda `90ae0decbde4e18ecee206f2097ed9a0bc79ae0a`,
+including experimental capture selection after the immutable **0.2.0** checkpoint.
+Manual integration defaults to this full SHA. See
+[`devguide/RECORDA_BASELINE.md`](devguide/RECORDA_BASELINE.md) for current source
+and historical 0.2.0/0.1.0 qualification.
 The independent dummy package remains experimental version `0.0.0`.
 
 ## Run the first experiment
@@ -142,3 +143,7 @@ the implementation has been published. Local integration uses the two actual che
 Read `AGENTS.md`, `MOLI_GUIDE.md` and `devguide/README.md` for governance.
 
 Python 3.11–3.14 is the target and Python 3.14 is the working default. Read `devguide/PYTHON_SUPPORT.md` for the tracked MOLI transition and explicit selection of `molsyssuite@uibcdf_3.14`.
+
+The controlled capture-selection experiment and fifth usage notebook compare
+minimal/detailed sessions without changing the dummy library. See
+[devguide/CAPTURE_SELECTION.md](devguide/CAPTURE_SELECTION.md).
