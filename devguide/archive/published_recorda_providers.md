@@ -1,9 +1,9 @@
 ---
 summary: Receive required published Recorda providers and qualify the new laboratory pair.
 issue: uibcdf/recorda-lab#12
-status: active
+status: resolved
 opened: 2026-10-06
-closed:
+closed: 2026-10-06
 verification: reproduced
 area: [integration, published-providers, notebooks]
 blocked_by: []
@@ -57,8 +57,23 @@ dummy package would violate its independent ownership.
 
 ## Resolution
 
+Receiving migration is published at Lab `11b1465f9b8558a2ac4c7c172ab2377251820af3`,
+paired with Recorda `b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac`.
 Local installed-pair qualification passes 242 tests with four explicit Sabueso
 skips, six notebooks/45 cells and the real-kernel fault scenario. Published
-provider provenance, pip check, negative preflight scenarios, governance and
-Ruff pass. See `../evidence/published_providers_linux_py314.json`. Hosted explicit
-candidate qualification and subsequent default promotion remain pending.
+provider provenance, pip check, five negative preflight scenarios, governance and
+Ruff pass. See `../evidence/published_providers_linux_py314.json`.
+
+Explicit-candidate Actions run 37536928526 passes all nine jobs before promotion.
+Only then does Lab `4256184d185cbae469b90de36f6f0fb260b7e4d4` change the default
+SHA; run 37537236289 qualifies that default without a recorda_commit override.
+Published gh-run-receptor 1.2.0 and GitHub conclusions agree. Hosted exact heads,
+verified selection, verdicts and log hashes are in
+`../evidence/published_providers_hosted.json`. No prior receipt is rewritten.
+
+All four runtime-bearing environments provide the published required closure;
+dummy source/metadata/routine CI remain independent. Controlled reference readers
+run without producers and retain the support closure they now require. The
+current pair deliberately excludes Sabueso; broader standalone acceptance,
+public distribution/OS qualification, central registry reconciliation and future
+SMonitor presentation/correlation remain separately owned work.

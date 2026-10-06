@@ -57,3 +57,8 @@ by `uibcdf/recorda-lab#9` and `uibcdf/recorda#12`.
 `experiments/run_workflow.py`, its producer-free Recorda inspector and the seventh
 notebook link preparation, SciPy fitting and residual evaluation through retained
 native references. Read `MULTI_STEP_WORKFLOW.md`; tracked by `uibcdf/recorda-lab#10`.
+
+Required published-provider adoption and the current exact integration pair are
+tracked by `uibcdf/recorda-lab#12`; read `CHECKPOINT.md` and
+`archive/published_recorda_providers.md`. Reference checking needs Recorda's support
+closure; scientific producers remain unnecessary for independent receipt reading.

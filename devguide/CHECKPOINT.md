@@ -1,71 +1,70 @@
 # Laboratory checkpoint — 2026-10-06
 
 Resume with Recorda's [development checkpoint](https://github.com/uibcdf/recorda/blob/main/devguide/CHECKPOINT.md),
-this guide and [RECORDA_BASELINE.md](RECORDA_BASELINE.md). The laboratory owns
-scenarios and evidence; Recorda owns the standalone runtime; MOLI owns shared
-contracts. Proposed next experiments require their own issue before implementation.
+this guide and [RECORDA_BASELINE.md](RECORDA_BASELINE.md). Lab owns scenarios
+and evidence, Recorda owns the standalone runtime, and MOLI owns shared contracts.
 
-## Qualified source pair and completed work
+## Current qualified pair
 
-- Recorda: `565a68c5103a587b06c2411bba2064d1572b4c56`.
-- Lab: `bac97e6e53c842846b5d21b3905df79cee9b3342`.
-- Checkpoint-only documentation commits do not change that tested pair. Manual
-  integration pins the full Recorda identity above. The dummy remains 0.0.0,
-  independent of Recorda and unchanged by the consumer experiments.
-- Six usage notebooks cover manual activation, cost measurements, SciPy fitting,
-  offline Sabueso resolution, capture selection and common reference checks.
-  Native providers keep ownership of their results, decisions and records.
+- Recorda: `b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac`.
+- Lab receiving implementation: `11b1465f9b8558a2ac4c7c172ab2377251820af3`.
+- Lab default promotion: `4256184d185cbae469b90de36f6f0fb260b7e4d4`.
+- Later documentation-only commits retain these implementation identities. The
+  dummy remains 0.0.0 with empty runtime dependencies and unchanged native code.
 
-The local paired receipt in `evidence/reference_checks_linux_py314.json` records
-112 passing tests (91 core + 21 Lab) on Linux Python 3.14.7 with published
-pytest-receptor 1.1.0, and six real-kernel notebooks with 45 code cells. Its SHA256
-is `c9f575747ad0f498cbca7ea3da474beeabb46291ad2f080a870256bdedb45cce`;
-it is byte-identical to Recorda's paired receipt. Tested runtime, consumer,
-fixture, test and notebook hashes match the published pair. Governance and Ruff
-checks passed; original receipts and resolved analyses remain historical evidence.
+`uibcdf/recorda-lab#12` provisions published SMonitor 0.19.0 py_1, ArgDigest
+0.15.0 py_0 and transitive DepDigest 0.13.0 py_0 in all four Recorda-bearing
+Conda environments. Manual CI checks the selected source SHA, exact provider
+coordinates/hashes/managed Python bytes, metadata constraints and pip check.
+Dummy-only CI retains its separate pip-only environment.
 
-[Routine CI](https://github.com/uibcdf/recorda-lab/actions/runs/37433553465)
-passed four dummy Python 3.11–3.14 jobs; its manual-only jobs were skipped.
-[Exact-pair manual integration](https://github.com/uibcdf/recorda-lab/actions/runs/37433724195)
-passed all seven jobs, including Jupyter on 3.13/3.14 and SciPy. Hosted CI does
-not execute Sabueso. Local Sabueso evidence uses frozen development package
-copies and attributed public fixtures, not published provider-package closure.
+[Local receipt](evidence/published_providers_linux_py314.json): Linux Python
+3.14.7, ordinary installed wheels, published pytest-receptor 1.1.0, **242 passed
+and four explicit Sabueso skips** (221 core + 21 Lab). Six selected notebooks
+execute 45 cells; the real-kernel fault scenario adds 14 cells. NumPy 2.4.6,
+SciPy 1.18.1 and IPykernel 7.3.0 match the declared scientific route. Governance,
+Ruff, shared MOLI checks and negative preflight scenarios pass.
 
-Recorda's immutable 0.2.0 tag is historical source
-`4e3d422fef1b0927fe63422323dc6d941c061bfb`, without later recovery/selection/checks.
-Current runtime version metadata alone is insufficient to identify source.
-No new release, general OS support, authenticated integrity or replay is qualified.
+[Explicit-candidate qualification](https://github.com/uibcdf/recorda-lab/actions/runs/37536928526)
+passes all nine jobs before default promotion: dummy and real-kernel integration
+on Python 3.11–3.14, plus scientific integration on 3.14.
+[Default qualification](https://github.com/uibcdf/recorda-lab/actions/runs/37537236289) passes the same nine jobs after promotion.
+Published gh-run-receptor 1.2.0 and native GitHub conclusions agree. Exact heads,
+source selection and hosted verdicts are in
+[evidence/published_providers_hosted.json](evidence/published_providers_hosted.json).
+
+Seven usage notebooks are retained. The current pair executes 01/02/03/05/06/07;
+04/Sabueso is explicitly excluded. Producer-free reference readers receive only
+Recorda and its required support package trees in controlled `-I -S` children,
+with scientific producers unavailable. Plain journal reading remains provider-free.
+This pair does not requalify Sabueso's frozen development stack. Previous receipts,
+including the reference-check and multi-step pairs, remain historical and unchanged.
+
+The Recorda 0.2.0 tag remains `4e3d422fef1b0927fe63422323dc6d941c061bfb`.
+Runtime version metadata alone is insufficient to identify the new source.
+No public release, general OS support, authenticated integrity or replay is qualified.
 
 ## Reproducible resumption
 
-1. Read both repositories' `AGENTS.md`, the core checkpoint and owning issues;
-   inspect Git status, exact commits and remote changes before editing.
-2. Select `/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python`
-   explicitly and verify its executable/version. Follow `PYTHON_SUPPORT.md` and
-   use a published receptor, with `--receptor=llm` locally and `--receptor=ci` in CI.
-3. Read the paired receipt for exact commands and lane flags. The receipt is
-   durable; `/tmp` provider/tool installations are temporary. Reconstruct and
-   hash-check matching frozen providers before rerunning Sabueso, or qualify a
-   new pair. Do not silently substitute live development checkouts.
-4. Run local governance, Ruff check/format and relevant pytest acceptance.
-   Enable optional Jupyter/SciPy/Sabueso lanes only with verified prerequisites.
+1. Read both repositories' instructions, maintained checkpoints and owning issues;
+   inspect exact commits and local/remote changes before editing.
+2. Follow `PYTHON_SUPPORT.md`, explicitly select and verify Python 3.14, and use
+   a published receptor (`--receptor=llm` locally, `--receptor=ci` in CI).
+3. Recreate a declared integration environment and verify published provider
+   coordinates/hashes with the selected Recorda checkout's development checker.
+   Install both exact sources and run pip check before installed-package tests.
+   The local receipt gives commands; `/tmp` installations are disposable evidence.
+4. Run local governance, Ruff and relevant pytest checks. Enable optional scientific
+   lanes only with verified prerequisites. Reconstruct/hash-check the historical
+   frozen scientific providers before rerunning Sabueso, or qualify a new pair.
 
 ## Next work
 
-Consolidate useful provenance and remaining acceptance in
-[uibcdf/recorda-lab#1](https://github.com/uibcdf/recorda-lab/issues/1), coordinated
-with [uibcdf/recorda#1](https://github.com/uibcdf/recorda/issues/1). The six notebook
-scenarios are complete. A small multi-step workflow linking native references
-was chosen under `uibcdf/recorda-lab#10` and implemented locally. Read
-[MULTI_STEP_WORKFLOW.md](MULTI_STEP_WORKFLOW.md) for the consumer question,
-independent scientific oracle, failure/omission cases and exact local receipt.
-It does not replace the published pair above or complete broader acceptance;
-the maintainer authorized direct integration into main. The resolved analysis is
-in [archive/multi_step_workflow.md](archive/multi_step_workflow.md).
-The subsequent exact-source hosted qualification
-is recorded separately in the workflow guide and hosted receipt.
-
-Ecosystem boundaries and release/OS/coverage reviews remain core issues
-uibcdf/recorda#2, uibcdf/recorda#3, uibcdf/recorda#4 and uibcdf/recorda#6. MOLI
-context/routing and component adoption need a concrete missing provenance link
-and separately owned work. Do not use Lab as a production integration destination.
+The completed receiving analysis is [archive/published_recorda_providers.md](archive/published_recorda_providers.md).
+Consolidate remaining standalone acceptance in `uibcdf/recorda-lab#1`, coordinated
+with `uibcdf/recorda#1`; the bounded multi-step trial in Lab #10 is complete.
+New experiments need a concrete consumer question, independent oracle and owning
+issue. Core ecosystem review #2 is complete; MOLI registry reconciliation remains
+separately owned in `uibcdf/moli#62`. Release/OS/coverage remain Recorda #3/#4/#6.
+SMonitor inspection presentation and operation correlation are separate core
+analyses (#14/#15). Lab is not a production integration destination.

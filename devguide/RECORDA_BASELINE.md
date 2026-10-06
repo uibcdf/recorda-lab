@@ -3,7 +3,29 @@
 Read [CHECKPOINT.md](CHECKPOINT.md) for hosted conclusions and resumption steps.
 Historical entries below retain the state at their respective checkpoints.
 
-## Current integration source — declared reference checks
+## Current integration source — published required providers
+
+Manual integration pins Recorda `b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac`.
+Lab receiving implementation is `11b1465f9b8558a2ac4c7c172ab2377251820af3`;
+the one-line default promotion is `4256184d185cbae469b90de36f6f0fb260b7e4d4`.
+The explicit candidate qualified before promotion, and a second dispatch qualified
+the new default. See `CHECKPOINT.md` and the separately scoped
+`evidence/published_providers_linux_py314.json` /
+`evidence/published_providers_hosted.json` receipts; owner `uibcdf/recorda-lab#12`.
+
+This pair adds current default/reference ArgDigest boundaries and optional recovery
+SMonitor advice to the existing multi-step workflow. Required published providers
+are SMonitor 0.19.0 py_1, ArgDigest 0.15.0 py_0 and transitive DepDigest 0.13.0 py_0.
+Local installed-pair tests pass 242 with four explicit Sabueso skips; six selected
+notebooks execute 45 cells. Hosted dummy and kernel checks cover Python 3.11–3.14;
+the combined scientific/recovery lane uses 3.14. The seventh notebook is included,
+the fourth/Sabueso notebook excluded. Earlier Sabueso evidence remains historical.
+
+Dummy metadata/native code are unchanged, independent and versioned 0.0.0. Native
+scientific ownership is retained. Neither package metadata 0.2.0 nor passing these
+source checks establishes a new public release, broader OS support or replay.
+
+## Historical integration source — declared reference checks
 
 Manual integration pins Recorda `565a68c5103a587b06c2411bba2064d1572b4c56`. This unreleased
 source after 0.2.0 adds explicit local reference availability and bounded byte

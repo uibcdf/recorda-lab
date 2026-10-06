@@ -65,9 +65,12 @@ and after tests. Original observed checkout identities and exact frozen package
 manifests are separate evidence fields. These are development source snapshots;
 local evidence does not qualify published packages or a clean installed closure.
 
-Tests prohibit source connections, check scientific decisions and return/exception
-identity, and execute the receipt reader in Python `-S` without Sabueso, Ackredit or
-PyUnitWizard. Removing or changing a retained file fails inspection. The eight-cell
+Historical tests prohibit source connections, check scientific decisions and
+return/exception identity, and execute the receipt reader in Python `-S` without
+Sabueso, Ackredit or PyUnitWizard. Current reference checking also requires
+Recorda's published support providers: the receiving test now uses controlled
+`-I -S` package copies with those producers unavailable. The new pair in Lab #12
+explicitly skips Sabueso and does not replace this historical scientific receipt. Removing or changing a retained file fails inspection. The eight-cell
 notebook uses start/stop across cells with ordinary decorated calls. Raw retained
 traces preserve full native events; the inspection summary intentionally shows selected
 fields. Expected observed network attempts are zero.

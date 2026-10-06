@@ -1,0 +1,254 @@
+{
+  "created_utc": "2026-10-06T21:57:52.106268+00:00",
+  "issue": "uibcdf/recorda-lab#12",
+  "scope": "Installed experimental source qualification with published required providers; dummy and kernels Linux Python 3.11-3.14, scientific/recovery Linux 3.14; no Sabueso/public release/general OS/replay qualification",
+  "recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac",
+  "lab_implementation_commit": "11b1465f9b8558a2ac4c7c172ab2377251820af3",
+  "lab_default_promotion_commit": "4256184d185cbae469b90de36f6f0fb260b7e4d4",
+  "tool": {
+    "name": "gh-run-receptor",
+    "version": "1.2.0",
+    "distribution": "published release wheel",
+    "wheel_sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c",
+    "profile": "ci",
+    "capture": "full"
+  },
+  "manual_runs": [
+    {
+      "id": 37536928526,
+      "attempt": 1,
+      "head_sha": "11b1465f9b8558a2ac4c7c172ab2377251820af3",
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526",
+      "event": "workflow_dispatch",
+      "conclusion": "success",
+      "source_selection": "explicit candidate",
+      "completed_utc": "2026-10-06T21:54:40Z",
+      "jobs": [
+        {
+          "name": "scientific",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526/job/112520211421"
+        },
+        {
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526/job/112520211731"
+        },
+        {
+          "name": "integration (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526/job/112520211777"
+        },
+        {
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526/job/112520211829"
+        },
+        {
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526/job/112520211832"
+        },
+        {
+          "name": "integration (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526/job/112520211910"
+        },
+        {
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526/job/112520211992"
+        },
+        {
+          "name": "integration (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526/job/112520212003"
+        },
+        {
+          "name": "integration (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37536928526/job/112520212079"
+        }
+      ],
+      "log_archive_sha256": "9c512196171f1d231304e326cf3e24e331a20a757d1d4b1352b2f86370bfb87e",
+      "observed_installed_test_verdicts": [
+        {
+          "log": "0_dummy (3.13).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null
+        },
+        {
+          "log": "1_integration (3.11).txt",
+          "passed": 13,
+          "skipped": 12,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        },
+        {
+          "log": "2_integration (3.13).txt",
+          "passed": 13,
+          "skipped": 12,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        },
+        {
+          "log": "3_integration (3.12).txt",
+          "passed": 13,
+          "skipped": 12,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        },
+        {
+          "log": "4_dummy (3.12).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null
+        },
+        {
+          "log": "5_dummy (3.14).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null
+        },
+        {
+          "log": "6_scientific.txt",
+          "passed": 242,
+          "skipped": 4,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        },
+        {
+          "log": "7_integration (3.14).txt",
+          "passed": 13,
+          "skipped": 12,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        },
+        {
+          "log": "8_dummy (3.11).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null
+        }
+      ]
+    },
+    {
+      "id": 37537236289,
+      "attempt": 1,
+      "head_sha": "4256184d185cbae469b90de36f6f0fb260b7e4d4",
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289",
+      "event": "workflow_dispatch",
+      "conclusion": "success",
+      "source_selection": "workflow default; recorda_commit omitted",
+      "completed_utc": "2026-10-06T21:56:49Z",
+      "jobs": [
+        {
+          "name": "scientific",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289/job/112521235339"
+        },
+        {
+          "name": "integration (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289/job/112521235466"
+        },
+        {
+          "name": "integration (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289/job/112521235547"
+        },
+        {
+          "name": "integration (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289/job/112521235567"
+        },
+        {
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289/job/112521235618"
+        },
+        {
+          "name": "integration (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289/job/112521235628"
+        },
+        {
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289/job/112521235977"
+        },
+        {
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289/job/112521236035"
+        },
+        {
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37537236289/job/112521236045"
+        }
+      ],
+      "log_archive_sha256": "24ef292d30c89d8c07f98bb8ce2eee690ff9ebcb2103055754a28ce9fe780380",
+      "observed_installed_test_verdicts": [
+        {
+          "log": "0_dummy (3.12).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null
+        },
+        {
+          "log": "1_dummy (3.14).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null
+        },
+        {
+          "log": "2_dummy (3.11).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null
+        },
+        {
+          "log": "3_integration (3.14).txt",
+          "passed": 13,
+          "skipped": 12,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        },
+        {
+          "log": "4_scientific.txt",
+          "passed": 242,
+          "skipped": 4,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        },
+        {
+          "log": "5_dummy (3.13).txt",
+          "passed": 6,
+          "skipped": 0,
+          "verified_recorda_commit": null
+        },
+        {
+          "log": "6_integration (3.13).txt",
+          "passed": 13,
+          "skipped": 12,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        },
+        {
+          "log": "7_integration (3.11).txt",
+          "passed": 13,
+          "skipped": 12,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        },
+        {
+          "log": "8_integration (3.12).txt",
+          "passed": 13,
+          "skipped": 12,
+          "verified_recorda_commit": "b3a53770e3b9917e5ff399dbfc00a9c53f2a37ac"
+        }
+      ]
+    }
+  ],
+  "default_dispatch_command": "gh workflow run tests.yml --repo uibcdf/recorda-lab --ref main -f run_scipy=true",
+  "promotion_order": "explicit candidate conclusion success before one-line default promotion commit and subsequent default dispatch",
+  "local_receipt_sha256": "b6d415e021727b72171a1e1c127b993e6106ed27d15003371d6b6279544379e7",
+  "verified_local_manifest_files_at_implementation_commit": 51,
+  "promoted_changes": "only .github/workflows/tests.yml default SHA differs among local receipt-selected files",
+  "promoted_workflow_sha256": "46e5573d292400700e3dfff05ddbd11e8d9a2ed1dc504441ac5221482b92c3b2",
+  "closing_documentation": "changes only devguide documents/receipts; tested implementation, consumer, fixture, notebook, metadata, README, tools, environment and promoted workflow bytes retained",
+  "historical_receipts": "unchanged"
+}

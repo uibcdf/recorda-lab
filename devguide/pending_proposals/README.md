@@ -7,7 +7,7 @@ tracked by `uibcdf/recorda-lab#10`.
 The first recording experiment is coordinated by `uibcdf/recorda#1`;
 laboratory scenarios are tracked in this repository's issue board.
 
-Published required-provider adoption is active in
-[published_recorda_providers.md](published_recorda_providers.md),
-tracked by `uibcdf/recorda-lab#12`. The default source is retained until hosted
-qualification of the explicit candidate completes.
+Published required-provider adoption is resolved in
+[`../archive/published_recorda_providers.md`](../archive/published_recorda_providers.md),
+tracked by `uibcdf/recorda-lab#12`. The exact current pair and executed gates
+are in `../CHECKPOINT.md`; broader laboratory acceptance remains open.
