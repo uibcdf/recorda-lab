@@ -60,7 +60,8 @@ was chosen under `uibcdf/recorda-lab#10` and implemented locally. Read
 [MULTI_STEP_WORKFLOW.md](MULTI_STEP_WORKFLOW.md) for the consumer question,
 independent scientific oracle, failure/omission cases and exact local receipt.
 It does not replace the published pair above or complete broader acceptance;
-owner review and hosted qualification for this new Lab source remain separate.
+owner review remains pending. The subsequent exact-source hosted qualification
+is recorded separately in the workflow guide and hosted receipt.
 
 Ecosystem boundaries and release/OS/coverage reviews remain core issues
 uibcdf/recorda#2, uibcdf/recorda#3, uibcdf/recorda#4 and uibcdf/recorda#6. MOLI

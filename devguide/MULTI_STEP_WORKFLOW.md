@@ -85,6 +85,18 @@ actual interpreter/tools, source and artifact fingerprints, optional lanes and
 local check outcomes. Previous receipts remain historical. This scenario does not
 execute the Sabueso lane or requalify its frozen provider copies.
 
+The implementation PR is [uibcdf/recorda-lab#11](https://github.com/uibcdf/recorda-lab/pull/11),
+paired with [uibcdf/recorda#13](https://github.com/uibcdf/recorda/pull/13).
+Published gh-run-receptor 1.2.0 inspected
+[routine PR CI](https://github.com/uibcdf/recorda-lab/actions/runs/37440479013)
+and [exact-source Jupyter/SciPy integration](https://github.com/uibcdf/recorda-lab/actions/runs/37440827173).
+Four routine jobs and all seven integration jobs passed; the scientific log reports
+112 passed/four explicit Sabueso skips. The latter uses Lab
+`77e7c36a34a2ae0d140c3ad51b461e046ee0b7d5` and the existing pinned core
+`565a68c5103a587b06c2411bba2064d1572b4c56`. Capture fingerprints, exact heads and
+official conclusions are in `evidence/multi_step_workflow_hosted.json`.
+Later documentation-only commits do not change the tested implementation files.
+
 Broader standalone acceptance remains open. No automatic capture, retained-source
 authenticity, complete dependency closure, public support, replay, release or MOLI
 integration follows from this experiment.

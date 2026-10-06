@@ -54,6 +54,9 @@ Local implementation and qualification complete: 112 passing paired tests and
 four explicit Sabueso skips, six selected notebooks/45 cells including the new
 seventh notebook. Published pytest-receptor 1.1.0 and Ruff 0.16.5 were used on
 Linux Python 3.14.7; canonical governance checks pass. The paired receipt is
-`../evidence/multi_step_workflow_linux_py314.json`. Owner review/publication and
-new hosted CI remain pending. Broader `uibcdf/recorda#1` and
-`uibcdf/recorda-lab#1` remain open.
+`../evidence/multi_step_workflow_linux_py314.json`. The implementation is published
+for review in `uibcdf/recorda-lab#11`, paired with `uibcdf/recorda#13` documentation.
+Routine PR CI and exact-source manual Jupyter/SciPy integration passed; published
+gh-run-receptor 1.2.0 and native GitHub conclusions agree. See the separate
+`../evidence/multi_step_workflow_hosted.json` receipt. Owner review/merge remains
+pending; broader `uibcdf/recorda#1` and `uibcdf/recorda-lab#1` remain open.

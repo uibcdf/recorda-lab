@@ -1,0 +1,181 @@
+{
+  "schema": "recorda-lab.workflow-hosted/0.1",
+  "observed": "2026-10-06T09:16:55.052216+00:00",
+  "issue": "uibcdf/recorda-lab#10",
+  "pull_requests": [
+    "https://github.com/uibcdf/recorda-lab/pull/11",
+    "https://github.com/uibcdf/recorda/pull/13"
+  ],
+  "reader": {
+    "version": "gh-run-receptor 1.2.0",
+    "published_wheel_sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c",
+    "release_asset_verified_against_github_digest": true,
+    "command": "gh-run-receptor inspect <run> --repo <repo> --receptor=llm --capture <adaptive|full>",
+    "official_conclusions": "Native gh run list agrees with captured GitHub conclusions."
+  },
+  "runs": {
+    "core": {
+      "id": 37440493804,
+      "head_sha": "372284a2ce62f8d85e0310e2d24139a8eef08e74",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/uibcdf/recorda/actions/runs/37440493804",
+      "jobs": [
+        {
+          "name": "quality",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda/actions/runs/37440493804/job/112192792042"
+        },
+        {
+          "name": "tests (macos-latest, 3.13)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda/actions/runs/37440493804/job/112192792327"
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.11)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda/actions/runs/37440493804/job/112192792358"
+        },
+        {
+          "name": "tests (macos-latest, 3.14)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda/actions/runs/37440493804/job/112192792364"
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.13)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda/actions/runs/37440493804/job/112192792365"
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.12)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda/actions/runs/37440493804/job/112192792368"
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.14)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda/actions/runs/37440493804/job/112192792405"
+        }
+      ],
+      "capture_sha256": {
+        "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+        "checks.json": "e4fa97ef9d44f3edd9ae976edbdbcb1fb428797d5e2a63a982c93a1ca1bc43db",
+        "jobs.json": "ee2ab5f0c95880c5f89611520805d354452ab7ac00f0aa99a05f1d43db4448d6",
+        "manifest.json": "e0dd8dff6d58446c56fffa7f8e4630aeb3277fd936128dc1a9a704f25a5a22bb",
+        "run.json": "c43d3244aed62a66169c2d6b6d2104af2c90c87089b36531cf22a9e360139787",
+        "workflow.json": "91d40764029b78a61ff11aa586c75dc807edeb1a5b0536ee266955268cb6b7a6"
+      }
+    },
+    "lab_pr": {
+      "id": 37440479013,
+      "head_sha": "77e7c36a34a2ae0d140c3ad51b461e046ee0b7d5",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440479013",
+      "jobs": [
+        {
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440479013/job/112192739155"
+        },
+        {
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440479013/job/112192739403"
+        },
+        {
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440479013/job/112192739415"
+        },
+        {
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440479013/job/112192739445"
+        },
+        {
+          "name": "scientific",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440479013/job/112192740499"
+        },
+        {
+          "name": "integration",
+          "conclusion": "skipped",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440479013/job/112192740862"
+        }
+      ],
+      "capture_sha256": {
+        "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+        "checks.json": "72bca4e542f164b8d4dd2dbb32b811825a3d2111b6738562eb0df604818e3b95",
+        "jobs.json": "6b42003bca88c48347afbfc31abdb2922d31f0548d594e1d104ec73a5a74c775",
+        "manifest.json": "512fcedd05a1fcab7b5f61324e5743c5ad4aab0e4a1abf1db4ec08644407b8a6",
+        "run.json": "93917de08e6c2b13f8d2e514261f6924b362df1cad25c7eb17fc7e68008083f0",
+        "workflow.json": "1109fceba77a717e8efbf136314f4bec82b5083f4988517dd78da034b1474dee"
+      }
+    },
+    "lab_scientific": {
+      "id": 37440827173,
+      "head_sha": "77e7c36a34a2ae0d140c3ad51b461e046ee0b7d5",
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440827173",
+      "jobs": [
+        {
+          "name": "scientific",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440827173/job/112193886701"
+        },
+        {
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440827173/job/112193886818"
+        },
+        {
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440827173/job/112193886822"
+        },
+        {
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440827173/job/112193886849"
+        },
+        {
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440827173/job/112193886919"
+        },
+        {
+          "name": "integration (3.13)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440827173/job/112193886993"
+        },
+        {
+          "name": "integration (3.14)",
+          "conclusion": "success",
+          "html_url": "https://github.com/uibcdf/recorda-lab/actions/runs/37440827173/job/112193887328"
+        }
+      ],
+      "capture_sha256": {
+        "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+        "checks.json": "42b83cb264b32ad8907764acdf98c9029bcab73d1d8b4b42264c4b7e3e6bbb7a",
+        "jobs.json": "594ff478955d8f7c30671181ba938518ab73dbdb0912363f648bc84776eea529",
+        "logs.zip": "af73b63972fc26b0e3f6c538add0bd2c7b3483bc03fca339788cd8aeedf9af7d",
+        "manifest.json": "5bd35620d4ca7b8fd4e965c79bb2c799d2da48eb8629ca0f1a258ce75121c397",
+        "run.json": "803705c735415b3aae0b082280e2d03ec770be9242ea3d2ef88ceb3d15c80596",
+        "workflow.json": "1109fceba77a717e8efbf136314f4bec82b5083f4988517dd78da034b1474dee"
+      }
+    }
+  },
+  "scientific_pair": {
+    "recorda": "565a68c5103a587b06c2411bba2064d1572b4c56",
+    "recorda-lab": "77e7c36a34a2ae0d140c3ad51b461e046ee0b7d5"
+  },
+  "scientific_summary_from_native_log": "PASS exit=0 | 112 passed, 4 skipped | 15.88s",
+  "scientific_skips": "Four explicitly unselected offline Sabueso tests; Sabueso notebook also skipped.",
+  "manifest_scope": "Qualifies the named implementation/source heads. Subsequent documentation-only commits do not change the tested runtime/test/notebook fingerprints in the local paired receipt.",
+  "scope": "Executed source CI and controlled Jupyter/SciPy integration; no release, public OS admission, Sabueso-provider closure or replay qualification."
+}
