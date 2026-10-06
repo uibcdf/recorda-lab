@@ -1,7 +1,7 @@
 ---
 summary: Build repeatable independent Recorda acceptance scenarios.
 issue: uibcdf/recorda-lab#1
-status: active
+status: partial
 opened: 2026-10-05
 closed:
 verification: reproduced
@@ -23,4 +23,21 @@ with start/stop and call decorated consumers normally. Session-local adapters re
 native identity without recording statements inside scientific functions. Dummy code
 and its returned result remain independent; the explicit-boundary experiment is retained.
 
-Initial local evidence: six dummy cases plus one complete integration scenario test; 24 tests across both projects pass on Python 3.11 and on built wheels on Python 3.13. Source files are prepared locally, not yet committed/pushed. Manual hosted integration requires a reviewed full published Recorda commit SHA. A real external library remains later usability validation. The laboratory is associated MOLI infrastructure, not a MolSysSuite member or new scientific pillar.
+Initial local evidence: six dummy cases plus one complete integration scenario test; 24 tests across both projects pass on Python 3.11 and on built wheels on Python 3.13. At that initial stage, source files were prepared locally and not yet committed/pushed. Manual hosted integration requires a reviewed full published Recorda commit SHA. At that stage, a real external library was planned for later usability validation. The laboratory is associated MOLI infrastructure, not a MolSysSuite member or new scientific pillar.
+
+
+## Current progress — 2026-10-06
+
+The controlled slices are now published: manual activation, notebook/cost trials,
+SciPy fitting, offline Sabueso, native exception references, capture selection
+and common local reference checks. [../CHECKPOINT.md](../CHECKPOINT.md) identifies
+the exact source pair, 112 local passing tests, six notebooks/45 cells and hosted
+Jupyter/SciPy evidence. Sabueso remains qualified with frozen local development
+provider copies; hosted CI does not execute it. Resolved scenario analyses are
+preserved in `../archive/`.
+
+This broad report remains partial for acceptance consolidation in
+uibcdf/recorda-lab#1, coordinated with uibcdf/recorda#1. Its initial evidence
+above is historical. A proposed multi-step workflow needs a new scoped issue
+and scientific oracle; it is not implemented. Core engineering/release and MOLI
+integration obligations remain separately owned.
