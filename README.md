@@ -12,11 +12,10 @@ Caller-owned boundaries and an instrumented example live in `experiments/run_sli
 
 ## Recorded baseline
 
-The reviewed Recorda baseline is **0.1.0**, commit
-`7e0c8dc79fbc529826d27e467de381e248c36da8`. See
+The reviewed Recorda baseline is **0.2.0**, commit
+`4e3d422fef1b0927fe63422323dc6d941c061bfb`. See
 [`devguide/RECORDA_BASELINE.md`](devguide/RECORDA_BASELINE.md) for paired identities
-and historical qualification. Manual integration now defaults to the reviewed exception-reference extension SHA
-listed there; the 0.1.0 pair remains historical.
+and historical qualification. Manual integration defaults to this full SHA; the 0.1.0 pair remains historical.
 The independent dummy package remains experimental version `0.0.0`.
 
 ## Run the first experiment
@@ -122,7 +121,7 @@ RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SABUESO=1 python experiments/run_examples.py 
 The independent inspector requires Recorda and stdlib only. It detects missing or
 changed retained files; it does not authenticate manifests or replay computation.
 The exact ConnectorError adapter retains native exception trace references on failed
-operations. This extension requires Recorda after the 0.1.0 baseline; the historical
+operations. This extension is included in Recorda 0.2.0; the historical
 0.1.0 Sabueso trial is preserved at Lab `84fec7dbac4daa63b976bee06882403bb734400c`. These adapters accept
 known fixture contracts, not arbitrary Sabueso objects. See `devguide/SABUESO_TRIAL.md`.
 Routine CI skips Sabueso tests and its notebook; this trial is qualified locally.

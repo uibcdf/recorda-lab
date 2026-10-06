@@ -42,8 +42,9 @@ omissions. The inspector also accepts historical caller-owned failure indices.
 No exception messages, arbitrary repr or exception dictionaries are recorded.
 Callbacks are trusted code; a faulty adapter cannot replace the original exception.
 
-This requires the post-0.1.0 core implementation for `uibcdf/recorda#7`,
-commit `eabc4a6918bb3b03148b3b6989ccc780a52fb841`. Historical
+This capability is included in Recorda 0.2.0, commit
+`4e3d422fef1b0927fe63422323dc6d941c061bfb`. The original extension source
+was `eabc4a6918bb3b03148b3b6989ccc780a52fb841`; its receipts remain historical. Historical
 0.1.0 evidence and explicit caller capture are preserved in Lab commit
 `84fec7dbac4daa63b976bee06882403bb734400c`. The old receipt below is historical;
 `evidence/exception_references_linux_py314.json` identifies the new tested code.
