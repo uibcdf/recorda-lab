@@ -21,11 +21,10 @@ def run(destination):
     for source in examples:
         notebook = nbformat.read(source, as_version=4)
         nbformat.validate(notebook)
-        if (
-            notebook.metadata.get("recorda_lab", {}).get("lane") == "scipy"
-            and os.environ.get("RECORDA_LAB_SCIPY") != "1"
-        ):
-            skipped[source.name] = "enable RECORDA_LAB_SCIPY=1 with scientific environment"
+        lane = notebook.metadata.get("recorda_lab", {}).get("lane")
+        flag = {"scipy": "RECORDA_LAB_SCIPY", "sabueso": "RECORDA_LAB_SABUESO"}.get(lane)
+        if flag is not None and os.environ.get(flag) != "1":
+            skipped[source.name] = f"enable {flag}=1 with the declared trial dependencies"
             continue
         workspace = destination / source.stem
         workspace.mkdir()

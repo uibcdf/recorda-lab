@@ -14,7 +14,9 @@ call decorated consumer functions normally and stop. `experiments/consumer.py` o
 the hooks and exact-type reference adapters, with no change to the dummy library.
 `experiments/run_slice.py` remains the complementary explicit-boundary scenario.
 
-Use only fictional public fixtures. Evidence is scoped to the exact checkouts, Python
+Use small non-confidential fixtures. Dummy/SciPy fixtures are fictional; the Sabueso
+trial uses unchanged public UniProt responses with retained source attribution.
+Evidence is scoped to the exact checkouts, Python
 environment, scenarios and artifact directory used. Keep core unit tests in Recorda;
 keep independent dummy and cross-package acceptance tests here.
 
@@ -30,6 +32,11 @@ parameter-estimation API, tracked by `uibcdf/recorda-lab#4`. Local instrumentati
 narrow adapters and trial receipt inspection stay in `experiments/`; SciPy, NumPy
 and the dummy package are unmodified. Read `SCIPY_TRIAL.md`. Enable the explicit
 scientific lane with its declared environment; the basic lab remains independent.
+
+`experiments/run_sabueso.py` and the fourth notebook exercise native knowledge
+retrieval and entity resolution, tracked by `uibcdf/recorda-lab#5`. Read
+`SABUESO_TRIAL.md` for public data attribution, exact co-development scope and
+the explicit exception-sidecar gap. The scientific source is unmodified.
 
 The laboratory is not a production integration destination. New scenarios must name
 their expected scientific result and recorded facts; do not merely mirror implementation.

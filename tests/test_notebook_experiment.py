@@ -53,6 +53,10 @@ def test_committed_usage_notebooks_execute_all_cells(tmp_path, monkeypatch):
         expected["03_scipy_fit.ipynb"] = 8
     else:
         assert "03_scipy_fit.ipynb" in report["skipped"]
+    if os.environ.get("RECORDA_LAB_SABUESO") == "1":
+        expected["04_sabueso_resolution.ipynb"] = 8
+    else:
+        assert "04_sabueso_resolution.ipynb" in report["skipped"]
     assert {
         name: value["code_cells_passed"] for name, value in report["notebooks"].items()
     } == expected

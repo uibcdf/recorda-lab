@@ -2,7 +2,9 @@
 
 Controlled dummy operations and repeatable integration experiments for Recorda.
 This is test infrastructure associated with MOLI's Recorda component, not a
-MolSysSuite member or a molecular-modeling library. No real scientific content is used.
+MolSysSuite member or a molecular-modeling library. Dummy and SciPy inputs are
+fictional. The separate Sabueso trial uses three frozen public UniProt responses
+with their original CC BY 4.0 attribution.
 
 `recorda_lab.summarize()` computes deterministic population statistics and owns its
 native result representation. It does not import Recorda or contain recording hooks.
@@ -92,8 +94,35 @@ RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SCIPY=1 python -m pytest --receptor=llm
 The trial-specific inspector needs Recorda and stdlib only; it checks the retained
 artifact receipts without executing SciPy. This is not a generic integrity/replay API.
 Scientific dependencies stay outside the dummy and Recorda runtimes. Scientific tests
-are explicit; ordinary test runs skip them. The optional manual Conda CI lane is
-configured, not executed evidence. See `devguide/SCIPY_TRIAL.md` for local scope.
+are explicit; ordinary test runs skip them. The manual baseline run [37379156594](https://github.com/uibcdf/recorda-lab/actions/runs/37379156594)
+passed all seven jobs against Lab `eed6bcc055c1c884187dbca1ed2b278498339f0b`
+and Recorda `7e0c8dc79fbc529826d27e467de381e248c36da8`, including the
+Conda scientific lane. That historical result does not qualify later Lab changes.
+See `devguide/SCIPY_TRIAL.md` for scope.
+
+## Offline Sabueso trial
+
+`notebooks/04_sabueso_resolution.ipynb` and `experiments/run_sabueso.py` use
+caller-local aliases of native Sabueso APIs. Retrieve a public entry, consume its
+accession in a resolution, retain a demerged ambiguity and organism-based choice,
+then exercise returned errors and native source exceptions without network access.
+Cards, decisions and acquisition traces keep native scientific ownership.
+
+Use the co-development Python 3.14 environment with both checkouts installed
+and Sabueso's declared dependency closure; this is an opt-in laboratory lane:
+
+```bash
+python experiments/run_sabueso.py artifacts/sabueso-check
+python experiments/inspect_sabueso_trial.py artifacts/sabueso-check
+RECORDA_LAB_SABUESO=1 python -m pytest --receptor=llm tests/test_sabueso_experiment.py
+RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SABUESO=1 python experiments/run_examples.py artifacts/sabueso-notebooks
+```
+
+The independent inspector requires Recorda and stdlib only. It detects missing or
+changed retained files; it does not authenticate manifests or replay computation.
+Exception sidecars are explicitly retained by the caller. These adapters accept
+known fixture contracts, not arbitrary Sabueso objects. See `devguide/SABUESO_TRIAL.md`.
+Routine CI skips Sabueso tests and its notebook; this trial is qualified locally.
 
 ## Scope
 

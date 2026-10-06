@@ -64,8 +64,13 @@ acceptance explicitly skips this scientific notebook; the full lane selects it.
 Use `devtools/conda-envs/scientific_env.yaml`, with `RECORDA_LAB_SCIPY=1` and,
 for real kernels, `RECORDA_LAB_NOTEBOOK=1`. Local qualification uses Linux Python
 3.14.7, SciPy 1.18.1, NumPy 2.4.6 and Matplotlib 3.11.2 from the existing installed
-environment, with published pytest-receptor 1.1.0. A fresh Conda solve and optional
-manual hosted CI are configured, not executed evidence. No public support follows.
+environment, with published pytest-receptor 1.1.0. The later manual baseline
+run [37379156594](https://github.com/uibcdf/recorda-lab/actions/runs/37379156594)
+passed seven jobs, including a fresh Conda scientific environment, on Lab
+`eed6bcc055c1c884187dbca1ed2b278498339f0b` and Recorda
+`7e0c8dc79fbc529826d27e467de381e248c36da8`. Earlier local receipts below
+remain historical. That hosted baseline does not qualify subsequent commits or
+establish public OS support.
 Exact commands, package/source identities and artifact hashes are in
 `evidence/scipy_linux_py314.json` and Recorda's `devguide/evidence/scipy_local.json`.
 The core runtime, scientific dummy and external libraries are unchanged by this work.

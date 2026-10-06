@@ -1,6 +1,7 @@
 # Laboratory notebooks
 
-These notebooks simulate recommended usage with fictional deterministic fixtures.
+These notebooks simulate recommended usage with deterministic fixtures. Dummy/SciPy
+data is fictional; the Sabueso notebook uses attributed frozen public UniProt responses.
 They belong to Recorda Lab; the scientific dummy package remains independent.
 
 - `01_manual_activation.ipynb`: start in one cell, make normal decorated calls in
@@ -12,13 +13,17 @@ They belong to Recorda Lab; the scientific dummy package remains independent.
   SciPy, retain a failed attempt/retry and native NumPy outputs, compare solvers,
   export a fit/residual SVG and inspect trial receipts. Use the scientific environment.
 
+- `04_sabueso_resolution.ipynb`: retrieve an entry, resolve its consumed accession,
+  retain ambiguity and alternatives, and preserve native source failure traces.
+  Requires the co-development Sabueso closure and `RECORDA_LAB_SABUESO=1`.
+
 Use Python 3.14 and the declared development environment. Install both checkouts
 with `--no-deps --editable`, then launch `python -m jupyterlab` from the laboratory
 root and select that environment's kernel. The setup cell prints the actual interpreter.
 Committed notebooks have no outputs; each execution creates a new artifact directory.
 
 `python experiments/run_examples.py artifacts/example-check` executes every code cell
-of both committed notebooks in disposable workspaces and saves checked executed copies.
+of the selected committed notebooks in disposable workspaces and saves checked executed copies.
 The explicit pytest kernel lane runs this acceptance check as well as the fault scenarios.
 The scientific notebook is selected with `RECORDA_LAB_SCIPY=1`; the basic environment
 and kernel lane explicitly skip it. Use `devtools/conda-envs/scientific_env.yaml`
@@ -39,4 +44,6 @@ retains synchronous fsync per event. Results apply to the tested storage/environ
 
 Tracking: `uibcdf/recorda-lab#3` (notebooks), `uibcdf/recorda-lab#2` (performance),
 with recording implementation tracked by `uibcdf/recorda#1`.
-The real-library trial is tracked by `uibcdf/recorda-lab#4`.
+The scientific trials are tracked by `uibcdf/recorda-lab#4` (SciPy) and
+`uibcdf/recorda-lab#5` (Sabueso). The explicit Sabueso lane fails if selected
+dependencies are unavailable; ordinary runs visibly skip it.
