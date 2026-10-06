@@ -38,6 +38,16 @@ jobs:
       - run: python devtools/validate_governance.py
       - run: ruff check .
       - run: ruff format --check .
+      - name: Check out the reviewed MOLI governance core
+        uses: actions/checkout@v4
+        with:
+          repository: uibcdf/moli
+          ref: 4316867722f259fdf77f4d7d5e6e2c093ff95d04
+          path: .moli-governance
+      - name: Check shared MOLI governance core
+        run: >-
+          python .moli-governance/devtools/scripts/check_repository.py .
+          --canonical-guide .moli-governance/MOLI_GUIDE.md
       - run: python -m pytest --receptor=ci -o pythonpath='' tests/test_dummy.py
   integration:
     if: github.event_name == 'workflow_dispatch'
