@@ -5,6 +5,7 @@ import json
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import contextmanager
 from contextvars import Context, copy_context
 from pathlib import Path
 
@@ -59,6 +60,71 @@ def test_application_setup_preserves_registered_catalogs(consumer):
     manager = consumer.configure_application()
     assert manager.get_codes() == {**existing, **sentinel, **consumer.CODES}
     assert sm.resolve(code="LAB-EXISTING-PROVIDER")[0] == "Existing provider."
+
+
+@pytest.mark.parametrize("failed", [False, True])
+def test_inherited_metadata_budget_fault_preserves_native_call(
+    sink, consumer, tmp_path, monkeypatch, failed
+):
+    import recorda_lab
+
+    result, error = object(), ValueError()
+
+    def science(samples):
+        if failed:
+            raise error
+        return result
+
+    monkeypatch.setattr(recorda_lab, "summarize", science)
+    with sm.diagnostic_scope(safe_extra={f"approved_{i}": i for i in range(32)}):
+        with recorda.session("scope-budget", path=tmp_path / "record.jsonl") as session:
+            if failed:
+                with pytest.raises(ValueError) as caught:
+                    with session.operation("summary") as op, sink.boundary(session, op):
+                        consumer.observed_summary([], diagnostics=sink)
+                assert caught.value is error
+            else:
+                with session.operation("summary") as op, sink.boundary(session, op):
+                    assert consumer.observed_summary([1], diagnostics=sink) is result
+    (row,) = sink.snapshot(session.id)["operations"]
+    assert row["coverage"]["gaps"] == ["provider_fault"] and row["entries"] == []
+
+
+@pytest.mark.parametrize("failed", [False, True])
+def test_scope_cleanup_fault_keeps_native_call(sink, consumer, tmp_path, monkeypatch, failed):
+    import recorda_lab
+
+    result, error = object(), ValueError()
+
+    def science(samples):
+        if failed:
+            raise error
+        return result
+
+    @contextmanager
+    def faulty_scope(*args, **kwargs):
+        yield
+        raise OSError()
+
+    monkeypatch.setattr(recorda_lab, "summarize", science)
+    with recorda.session("scope-cleanup", path=tmp_path / "record.jsonl") as session:
+
+        def call():
+            with session.operation("summary") as op:
+                # Patch only after core argument preparation: the injected fault
+                # belongs to the consumer's diagnostic scope, not core validation.
+                with monkeypatch.context() as patch:
+                    patch.setattr(sm, "diagnostic_scope", faulty_scope)
+                    with sink.boundary(session, op):
+                        return consumer.observed_summary([1], diagnostics=sink)
+
+        if failed:
+            with pytest.raises(ValueError) as caught:
+                call()
+            assert caught.value is error
+        else:
+            assert call() is result
+    assert sink.snapshot(session.id)["operations"][0]["coverage"]["gaps"] == ["provider_fault"]
 
 
 def test_reviewed_native_bundle_matches_both_session_and_operation(sink, consumer, tmp_path):

@@ -1,7 +1,7 @@
 """Application-owned Lab #14 diagnostic selection; native dummy science is independent."""
 
 import json
-from contextlib import contextmanager
+from contextlib import ExitStack, contextmanager
 from contextvars import ContextVar
 from threading import RLock, local
 
@@ -153,19 +153,35 @@ class SelectedDiagnostics:
                     "gaps": set() if self._manager is not None else {"unattached"},
                 }
         token = _CURRENT.set(key)
+        contexts = ExitStack()
         try:
             # Detailed permissions preserve application rendering. Safe identities
             # partition provider aggregation; this is an explicit application choice.
-            with smonitor.diagnostic_scope(
-                smonitor.CapturePolicy(),
-                safe_extra={"recorda_session_id": session.id, "recorda_operation_id": operation.id},
-            ):
-                yield
+            try:
+                contexts.enter_context(
+                    smonitor.diagnostic_scope(
+                        smonitor.CapturePolicy(),
+                        safe_extra={
+                            "recorda_session_id": session.id,
+                            "recorda_operation_id": operation.id,
+                        },
+                    )
+                )
+            except Exception:
+                # A full inherited metadata budget can reject new identities.
+                # Keep the parent's restrictions, expose the gap, and run science.
+                self.mark_gap("provider_fault", key)
+            yield
         finally:
-            with self._lock:
-                if registered:
-                    self.operations[key]["active"] = False
-            _CURRENT.reset(token)
+            try:
+                contexts.close()
+            except Exception:
+                self.mark_gap("provider_fault", key)
+            finally:
+                with self._lock:
+                    if registered:
+                        self.operations[key]["active"] = False
+                _CURRENT.reset(token)
 
     def mark_gap(self, reason, key=None):
         if reason not in {

@@ -1,9 +1,9 @@
 ---
 summary: Compare native diagnostic bundles and bounded selected operation associations.
 issue: uibcdf/recorda-lab#14
-status: resolved
+status: active
 opened: 2026-10-06
-closed: 2026-10-07
+closed:
 verification: reproduced
 area: [diagnostics, native-references, consumer]
 blocked_by: []
@@ -65,5 +65,15 @@ justified by this synthetic producer evidence. A real producer/user question and
 a separately owned public context/attachment decision are the next integration
 gate. No provider/runtime/workflow default, public release or replay is changed.
 The maintained contract is [../DIAGNOSTIC_ASSOCIATION.md](../DIAGNOSTIC_ASSOCIATION.md).
-Closing documentation preserves every receipt-selected byte. Provider limitations remain
+The earlier candidate receipts are preserved as `diagnostic_association_*_initial.json`.
+Before issue closure, final review reproduced a local consumer scope-budget fault:
+32 inherited safe fields rejected new identities, preventing science/replacing its
+native error. SMonitor's bounded contract is correct. The consumer now contains
+ordinary scope setup/cleanup faults, retains parent restrictions and exposes a
+fixed provider gap. Four added receiving regressions cover metadata setup and ordinary cleanup faults,
+preserving exact success/error identity. Corrected installed qualification passes
+364 tests/four Sabueso skips (305 core + 59 Lab), 31 receiving cases and the same
+55 notebook/14 kernel-fault cells. Exact corrected hosted qualification is pending
+before final closure.
+Provider limitations remain
 `uibcdf/smonitor#40`, `uibcdf/smonitor#41`, `uibcdf/smonitor#42`.

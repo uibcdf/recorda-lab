@@ -1,0 +1,297 @@
+{
+  "created_utc": "2026-10-07T06:12:54.773976+00:00",
+  "issue": "uibcdf/recorda-lab#14",
+  "tool": {
+    "name": "gh-run-receptor",
+    "version": "1.2.0",
+    "published": true,
+    "first_inspection": "inspect --receptor llm --profile ci --capture adaptive",
+    "retention": "subsequent full capture retains raw logs/run/jobs/workflow/manifests; native GitHub conclusions agree"
+  },
+  "qualification": "Exact Lab implementation 8d81819 with existing reviewed Recorda 48a6c9a; no workflow default promotion or provider runtime patch",
+  "runs": [
+    {
+      "run_id": 37579863850,
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850",
+      "event": "workflow_dispatch",
+      "lab_commit": "8d81819a4e7f0e5b2d1019d5f9ce46a94383489d",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs_success": 9,
+      "jobs_skipped": 0,
+      "jobs": [
+        {
+          "name": "scientific",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850/job/112656815209"
+        },
+        {
+          "name": "integration (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850/job/112656815375"
+        },
+        {
+          "name": "integration (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850/job/112656815457"
+        },
+        {
+          "name": "integration (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850/job/112656815500"
+        },
+        {
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850/job/112656815514"
+        },
+        {
+          "name": "integration (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850/job/112656815527"
+        },
+        {
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850/job/112656815533"
+        },
+        {
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850/job/112656815587"
+        },
+        {
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579863850/job/112656815618"
+        }
+      ],
+      "pytest_verdicts": [
+        {
+          "log": "dummy (3.14)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "58fea1abc6833ab29462c01bb96e63ee9abb86e2faf62692c326328de8e80639",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "dummy (3.12)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "c93818ca6afbdc0bc7405d863f189c60a5563090f36a8af6f707862b66c5ab4d",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "dummy (3.13)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "19f5950dd3d594d9fb507e4f4ab62f42ffdfb4bf70bfd9e6179d822bb546560e",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "integration (3.14)/12_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests.txt",
+          "sha256": "2fe7bd9ca14c59a28127ac70587f38da5076b6959618633998b08daa22ad7afe",
+          "passed": 46,
+          "skipped": 13,
+          "seconds": 15.18
+        },
+        {
+          "log": "dummy (3.11)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "0c9e7cf38c8c22d99e85860947fa45f25c8668cc583e87e587b0c8ac35fb27f3",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.04
+        },
+        {
+          "log": "integration (3.13)/12_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests.txt",
+          "sha256": "1fc70e849b55526a93fedded7b2692cefb3609f8c7041ce5abce4ef7e539c2bf",
+          "passed": 46,
+          "skipped": 13,
+          "seconds": 9.31
+        },
+        {
+          "log": "integration (3.12)/12_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests.txt",
+          "sha256": "3a0e370023e133bfdeb9fb6421673b653ca258c1eccb95b5f44ad2af9c589a4a",
+          "passed": 46,
+          "skipped": 13,
+          "seconds": 9.54
+        },
+        {
+          "log": "scientific/12_Run python -m pytest --receptor=ci -o pythonpath='' tests .._lab_tests.txt",
+          "sha256": "749befa9737ee7d7b27cf2102d791a2bffbd4c44783eada788374396da5860b6",
+          "passed": 360,
+          "skipped": 4,
+          "seconds": 20.7
+        },
+        {
+          "log": "integration (3.11)/12_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests.txt",
+          "sha256": "5e635820a44c53b9a7539082723a1cb5f354796e11ec0645aa97cd8d4ea8c335",
+          "passed": 46,
+          "skipped": 13,
+          "seconds": 11.02
+        }
+      ],
+      "core_selection_checks": [
+        {
+          "log": "integration (3.14)/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "622d62e1c056cd394edd240876e7d325c7d46489563b8b2cba11f6d56668108b",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913"
+        },
+        {
+          "log": "integration (3.13)/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "a13f5fbf41463eebce4658b0e2683d15597d93d77a7de3bd2dc2f0ada654e17e",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913"
+        },
+        {
+          "log": "integration (3.12)/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "997bb4ef3b3d3933f30c785ad16ad564ba79ea6c20fb5935dceddfc0f4c9a2c3",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913"
+        },
+        {
+          "log": "scientific/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "b810d3756f1de9d56cadd253ff1c2c7a9e14a9e51db375d30867f584ff746002",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913"
+        },
+        {
+          "log": "integration (3.11)/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "07ad7921f1622e3efee565b3d320c00ba939a35ea86bc02833653146ac6db0d1",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913"
+        }
+      ],
+      "receptor_install_steps": [
+        "0_dummy (3.14).txt",
+        "dummy (3.14)/4_Run python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ruff==0.16.5.txt",
+        "1_dummy (3.12).txt",
+        "dummy (3.12)/4_Run python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ruff==0.16.5.txt",
+        "2_dummy (3.13).txt",
+        "dummy (3.13)/4_Run python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ruff==0.16.5.txt",
+        "3_integration (3.14).txt",
+        "integration (3.14)/5_Run mamba-org_setup-micromamba@v2.txt",
+        "integration (3.14)/6_Run python -m pip install pytest-receptor==1.1.0.txt",
+        "4_dummy (3.11).txt",
+        "dummy (3.11)/4_Run python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ruff==0.16.5.txt",
+        "5_integration (3.13).txt",
+        "integration (3.13)/5_Run mamba-org_setup-micromamba@v2.txt",
+        "integration (3.13)/6_Run python -m pip install pytest-receptor==1.1.0.txt",
+        "6_integration (3.12).txt",
+        "integration (3.12)/5_Run mamba-org_setup-micromamba@v2.txt",
+        "integration (3.12)/6_Run python -m pip install pytest-receptor==1.1.0.txt",
+        "7_scientific.txt",
+        "scientific/5_Run mamba-org_setup-micromamba@v2.txt",
+        "scientific/6_Run python -m pip install pytest-receptor==1.1.0.txt",
+        "8_integration (3.11).txt",
+        "integration (3.11)/5_Run mamba-org_setup-micromamba@v2.txt",
+        "integration (3.11)/6_Run python -m pip install pytest-receptor==1.1.0.txt"
+      ],
+      "capture_directory": "/tmp/recorda-lab14-manual-verdict.json",
+      "capture_sha256": {
+        "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+        "checks.json": "07af12995840abaf27e4014050a96c882f4c0da682a8b8ac12d6406b1e5e479c",
+        "jobs.json": "54c4517441190779efa4fa0dbb6195595dac8ff4945c1c604727f7a11802ad00",
+        "logs.zip": "233f7d2c086311c50617ea35218986afa48b40de9de004fec4919fbf857dcacb",
+        "manifest.json": "5bcf9cac5d66755a339e04748d55b04097da62bc012d34681f83b34e7d0dbe60",
+        "run.json": "1d61006a790cee0de82f7291b92a4b9821fc22756c34d0d8f9211e5d44228292",
+        "workflow.json": "1109fceba77a717e8efbf136314f4bec82b5083f4988517dd78da034b1474dee"
+      }
+    },
+    {
+      "run_id": 37579851288,
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579851288",
+      "event": "push",
+      "lab_commit": "8d81819a4e7f0e5b2d1019d5f9ce46a94383489d",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs_success": 4,
+      "jobs_skipped": 2,
+      "jobs": [
+        {
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579851288/job/112656772407"
+        },
+        {
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579851288/job/112656772486"
+        },
+        {
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579851288/job/112656772554"
+        },
+        {
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579851288/job/112656772579"
+        },
+        {
+          "name": "integration",
+          "conclusion": "skipped",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579851288/job/112656773385"
+        },
+        {
+          "name": "scientific",
+          "conclusion": "skipped",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37579851288/job/112656773387"
+        }
+      ],
+      "pytest_verdicts": [
+        {
+          "log": "dummy (3.12)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "b0a5180a22c42d828de1e35a615e1ffaaeca0bcff53d39c0396bd8df4c40eb51",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "dummy (3.11)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "c21b244dfa9084b2af06e374fdeda7f5d97dc69f83c5620b72fab450093df1ed",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "dummy (3.14)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "e5309ff07a5470094b6cfa659b70bfb7fd20582653989b66e745d9e834d992e9",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.07
+        },
+        {
+          "log": "dummy (3.13)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "e9b686188b9d33d7debbb6d078911282acc28a324940ddca531bd1fc7e004643",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.07
+        }
+      ],
+      "core_selection_checks": [],
+      "receptor_install_steps": [
+        "0_dummy (3.12).txt",
+        "dummy (3.12)/4_Run python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ruff==0.16.5.txt",
+        "1_dummy (3.11).txt",
+        "dummy (3.11)/4_Run python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ruff==0.16.5.txt",
+        "2_dummy (3.14).txt",
+        "dummy (3.14)/4_Run python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ruff==0.16.5.txt",
+        "3_dummy (3.13).txt",
+        "dummy (3.13)/4_Run python -m pip install setuptools wheel pytest pytest-receptor==1.1.0 ruff==0.16.5.txt"
+      ],
+      "capture_directory": "/tmp/recorda-lab14-push-verdict.json",
+      "capture_sha256": {
+        "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+        "checks.json": "380cda17a0a4384125264feaaa48bef52e276498a2b4844966b6864fd960f4db",
+        "jobs.json": "886490e9a5b8f945f0fed08e2989cd5ef9b070a1a912bc03ea4f55c93fe2c922",
+        "logs.zip": "5a8d451ee498d13342f925976ee6bc84baf669158baed99140426a8605252f5d",
+        "manifest.json": "40e9f7f3487e319a41c36aadc808f0d19d550334bde580cba05211186e6db0d6",
+        "run.json": "b46b03454be9a4d353f7b18393b8e731dd37d8174ab0e39f18d23cd65e5fc3a4",
+        "workflow.json": "1109fceba77a717e8efbf136314f4bec82b5083f4988517dd78da034b1474dee"
+      }
+    }
+  ],
+  "local_receipt_sha256": "5f462a4937e928701894a76b52240dde94279a4a179796f36fc297e72bac3048",
+  "limits": [
+    "Routine push executes four dummy jobs and skips two manual job groups",
+    "Manual integration executes all nine jobs; scientific combines core/Lab on Python 3.14, kernel/dummy cover 3.11\u20133.14",
+    "No newly qualified native SciPy diagnostics, universal safe exporter, release/OS/replay or human usability claims"
+  ]
+}

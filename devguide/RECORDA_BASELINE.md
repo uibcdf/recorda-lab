@@ -1,5 +1,9 @@
 # Recorded laboratory baseline
 
+Final review contains inherited-metadata setup and ordinary scope cleanup faults.
+The corrected installed pair passes 364 tests/four Sabueso skips, with 31 receiving
+cases. Hosted qualification is pending; the initial pair below remains retained.
+
 Read [CHECKPOINT.md](CHECKPOINT.md) for hosted conclusions and resumption steps.
 Historical entries below retain the state at their respective checkpoints.
 

@@ -1,5 +1,9 @@
 # Laboratory checkpoint — 2026-10-07
 
+Final review contains inherited-metadata setup and ordinary scope cleanup faults.
+The corrected installed pair passes 364 tests/four Sabueso skips, with 31 receiving
+cases. Hosted qualification is pending; the initial pair below remains retained.
+
 Resume with Recorda's [development checkpoint](https://github.com/uibcdf/recorda/blob/main/devguide/CHECKPOINT.md),
 this guide and [RECORDA_BASELINE.md](RECORDA_BASELINE.md). Lab owns scenarios
 and evidence, Recorda owns the standalone runtime, and MOLI owns shared contracts.

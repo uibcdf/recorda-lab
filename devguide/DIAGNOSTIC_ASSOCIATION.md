@@ -76,6 +76,12 @@ than preventing the scientific call. The registry retains at most 32 closed
 origins (below the architectural 128-origin ceiling). Counters saturate at 63 bits.
 Snapshots copy facts; mutation does not affect later observations.
 
+An inherited SMonitor scope may already use all 32 safe metadata fields. If new
+association identities cannot be added, the consumer keeps the parent's capture
+restrictions, records `provider_fault`, and runs the native scientific call without
+claiming assigned observations. Ordinary scope setup/cleanup errors are diagnostic
+gaps, not replacement scientific failures; native interrupts still propagate.
+
 Observation states are `observed_under_policy`, `limited` and `incomplete` with
 fixed gap labels. Zero observations do not mean no warnings occurred: disabled
 emission, levels, filters, routes, duplicates and unknown producer work affect
@@ -122,13 +128,14 @@ or no-warning inference. Association session/operation/parent binding is checked
 
 The [local receipt](evidence/diagnostic_association_linux_py314.json) retains the
 exact frozen Lab/core source manifests and ordinary installed wheel/provider hashes.
-Linux Python 3.14.7 passes **360 tests/four explicit Sabueso skips** (305 core +
-55 Lab), including **27 new receiving cases**, seven selected notebooks/**55 code
+Corrected Linux Python 3.14.7 qualification passes **364 tests/four explicit Sabueso
+skips** (305 core + 59 Lab), including **31 new receiving cases**, seven selected notebooks/**55 code
 cells** and the **14-cell** kernel fault scenario. Published pytest-receptor 1.1.0,
 provider verification, pip check, governance/canonical MOLI and Ruff pass. The
 initial catalogue-replacement defect is preserved with its resolved regression
 in the local receipt.
 
+The initial candidate is preserved in the `*_initial.json` receipts. Its
 [Exact-pair manual CI](https://github.com/uibcdf/recorda-lab/actions/runs/37579863850)
 passes all **nine jobs** at Lab `8d81819a4e7f0e5b2d1019d5f9ce46a94383489d` with
 Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913`, the unchanged workflow default.
@@ -138,7 +145,8 @@ passes per minor. [Routine push CI](https://github.com/uibcdf/recorda-lab/action
 passes four dummy jobs and skips the two manual groups. Published gh-run-receptor
 1.2.0 and native GitHub conclusions agree; raw capture/verdict/source-selection
 hashes are retained in [the hosted receipt](evidence/diagnostic_association_hosted.json).
-Later closing documentation preserves every local receipt-selected source byte.
+Corrected hosted qualification is pending. Final closing documentation must
+preserve every corrected local receipt-selected source byte.
 No configured CI is treated as executed evidence. Provider defects remain
 `uibcdf/smonitor#41` (buffer resizing) and `uibcdf/smonitor#42` (degradation warning
 precedence); the fault-contained controlled sink does not qualify those fixes.
@@ -149,7 +157,8 @@ All three proposals are coordinated in `uibcdf/moli#62`.
 The two existing-reference alternatives can answer this controlled attempt
 question. A selected sidecar provides bounded facts and explicit gaps; reviewed
 native events retain more diagnostic detail and require an explicit join/review.
-The bounded receiving qualification completes Lab #14. This dummy evidence does not
+The earlier passing pair is retained; final scope-budget containment qualification
+is pending before closing Lab #14. This dummy evidence does not
 yet justify a reusable automatic core bridge: a real producer/user question and
 separately scoped public context/attachment decision are required. Standalone
 acceptance, distribution/OS/coverage, human usability and replay remain separate.

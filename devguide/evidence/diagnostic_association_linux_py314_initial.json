@@ -1,14 +1,14 @@
 {
-  "created_utc": "2026-10-07T06:28:03.632057+00:00",
+  "created_utc": "2026-10-07T06:04:17.224532+00:00",
   "issue": "uibcdf/recorda-lab#14",
-  "lab_parent_commit": "2fd098c25645fa1945718132ae791ca34ee74c18",
+  "lab_parent_commit": "bf344b6db9919050857b533f4a82a149395412ed",
   "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
   "manifest_scope": "Frozen runtime/tests/experiments/notebooks/tools/environments/workflow/metadata/README; later closing documentation must preserve every selected byte",
   "lab_source_sha256": {
     "src/recorda_lab/__init__.py": "e4030acac2b3139b9920fe0045d9eeeca040881e3bdfab7e56e26c07fe87221d",
     "tests/conftest.py": "03ebcc19085325051f7d8491bc92af7d0e0b5bc31513310735b79a5f8c455592",
     "tests/test_activation_experiment.py": "b2eacd47146b04f821358379de0cf3751ff8595233894063e0d518acdcf0320f",
-    "tests/test_diagnostic_association.py": "0337d5b37fc476286a9c0e9bd8d29a2d3b4f868228380df1524ebdfee445afe9",
+    "tests/test_diagnostic_association.py": "1a37bf7b82b72531e4c54eeb1087870f249bafaaf8165fb58738a1cdb59ce8dd",
     "tests/test_dummy.py": "f766b6a5c7f1273576e83f55e4c1b46cb14441b2b1aeeff6b8eb2f5e97f0a6a8",
     "tests/test_experiment.py": "354fd2b39c7873336420a5c14e2e79cb38e5aad53e8bab82e0ef1fc8fe9984de",
     "tests/test_inspection_view_experiment.py": "22852b6b51a976ae535a4079f97dd5b56d70aac7acc5b30f66f7a5ae95061d1c",
@@ -20,7 +20,7 @@
     "tests/test_selection_experiment.py": "be809153c81bcb6f48e029a243bf5882bf92dc9a67fbda7876dd224827b5c997",
     "tests/test_workflow_experiment.py": "7f3e57ea88f8c8e043d9d18ced4f89db2e50bedf5d4243996dd4c0bb995b5ce2",
     "experiments/consumer.py": "f38f7fd6bd71204b3336341d86607e31992f0fb55497dadce85eda5a38f98806",
-    "experiments/diagnostic_consumer.py": "35cd6dfa1a8f84a57c913c34a277c3eba285b0489afacf4a1056671e011adbfb",
+    "experiments/diagnostic_consumer.py": "18f1471250843b75eca66c5f247b81f2a52328e55a46212861aedac5fee481b3",
     "experiments/fixtures/sabueso_uniprot/P00938.json": "6a94f1e8004542306a5f6939de9ea73721745e18c7ae92255261af84dfbf8de9",
     "experiments/fixtures/sabueso_uniprot/P60174.json": "25b200a9f5f22f24d68d7f64445b447770b1875126829b1de2f9e7e01cc6acdd",
     "experiments/fixtures/sabueso_uniprot/P60175.json": "2e98129cdc78d0da7b282c77f27965ec8c80a36ae39fdad847411b76dfa102e3",
@@ -131,18 +131,18 @@
     }
   },
   "qualification": {
-    "command": "RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SCIPY=1 RECORDA_TEST_SMONITOR=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /tmp/recorda-lab12-scientific/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath='' tests /tmp/recorda-lab14/tests --basetemp=/tmp/recorda-lab14-final-qualified",
+    "command": "RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SCIPY=1 RECORDA_TEST_SMONITOR=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /tmp/recorda-lab12-scientific/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath='' tests /tmp/recorda-lab14/tests --basetemp=/tmp/recorda-lab14-qualified-final",
     "working_directory": "/tmp/recorda-lab13-core",
     "exit_code": 0,
-    "passed": 364,
+    "passed": 360,
     "skipped": 4,
     "core_passed": 305,
-    "lab_passed": 59,
-    "new_receiving_tests": 31,
-    "seconds": 33.98
+    "lab_passed": 55,
+    "new_receiving_tests": 27,
+    "seconds": 33.88
   },
   "notebooks": {
-    "receipt_sha256": "f400d39bae668a732976c88c3dacdaa5b849a93ed76840751c00a92f10782755",
+    "receipt_sha256": "6a815f0d79d4be0123387b945422d74498dd7f3b242d50cf1d6ccab7c1bdc4ae",
     "executed": {
       "schema": "recorda-lab.examples/0.1",
       "notebooks": {
@@ -150,43 +150,43 @@
           "code_cells_passed": 9,
           "source_sha256": "52938756c15f959af4d37d76763be1034e3fcdd1489b15c24f9d0a957eec68fb",
           "executed_notebook": "01_manual_activation/executed.ipynb",
-          "executed_sha256": "f83a11ddbb8ffc7219278131707c88b25b3dba271ec35125e9e31eaaab089491"
+          "executed_sha256": "20681b402e373661d27d9e4a360d6cc18482893a41ef8413692bf6f92ecb3a20"
         },
         "02_recording_cost.ipynb": {
           "code_cells_passed": 4,
           "source_sha256": "19ecb334f219f6155708de4d6780b4a90353d951befedad4b7dad07693c2a8d1",
           "executed_notebook": "02_recording_cost/executed.ipynb",
-          "executed_sha256": "6d6172af45c065eb9ede72ed1e546c1800f8a182d3c105afdc31c67a9d5a1962"
+          "executed_sha256": "c55c8451ebdb55e3863907fe6b42e71ba53f1bf62cdeb1f0befef0d40a3d0611"
         },
         "03_scipy_fit.ipynb": {
           "code_cells_passed": 8,
           "source_sha256": "e01c91c84a7e2f3ca1941d17af48b17d2eb362e70d4985c66faf2d3fc272852d",
           "executed_notebook": "03_scipy_fit/executed.ipynb",
-          "executed_sha256": "d7e63dd396fc3f27f7516aa0d5a1adc6e06a082be397ed2cbdfb64aae3a9dd63"
+          "executed_sha256": "05228ce37ebaae82086984b5dadeccdcbe6f7bc7fa62f596fd6647a384e7bdaf"
         },
         "05_capture_selection.ipynb": {
           "code_cells_passed": 8,
           "source_sha256": "28c00f5b4c8ea9fd95ef6ae26cdae4819212f3d8538f23c7c4a968de331cca8e",
           "executed_notebook": "05_capture_selection/executed.ipynb",
-          "executed_sha256": "725fbd15f5005a38db0973cd89f846cc9e60cee46612815941aeebd156f80064"
+          "executed_sha256": "9cc17c5f084c7c41556867d30dcee66fb92a8981c61bca347a79376e8153c240"
         },
         "06_reference_checks.ipynb": {
           "code_cells_passed": 11,
           "source_sha256": "9b03a6d8555084ee719f7c5799ac195acb6ff64254d84cc01f3f1c99c523fca7",
           "executed_notebook": "06_reference_checks/executed.ipynb",
-          "executed_sha256": "4cd4deb70b83fa9c660985718c082da6b7bd0817b56c7c83923764b61c269cd0"
+          "executed_sha256": "b315ffc624cfdc2854ed6737072284c6639d03d1b800a41878203c0d92a36c6c"
         },
         "07_multi_step_workflow.ipynb": {
           "code_cells_passed": 9,
           "source_sha256": "9abb9c6bd9498b32143c9d08a22f68ea7412e931bebdb335706ed9e1a7732329",
           "executed_notebook": "07_multi_step_workflow/executed.ipynb",
-          "executed_sha256": "60c79ff6f94af7cabe1d1976b61f5fa648e36cf67a4c6ac5d82d130dcd3f764e"
+          "executed_sha256": "b112f028c9b14d0828053126e004d18b0ac13e3d9fc28898bc2bf0c79e1cc89a"
         },
         "08_diagnostic_association.ipynb": {
           "code_cells_passed": 6,
           "source_sha256": "7436d78cbed34582cddb6961258be5bb50e0e5288f3293b42b23ac85990514c1",
           "executed_notebook": "08_diagnostic_association/executed.ipynb",
-          "executed_sha256": "9bcd768ce28aef951712c4fc18d49ac96688cfbb1c717d021ae097877133e8e0"
+          "executed_sha256": "8cff22140427cde85608974814b241acd5d76f6f1a26314de7bcd7090468ca9d"
         }
       },
       "skipped": {
@@ -233,18 +233,6 @@
     "pair-qualified": {
       "output": "receptor: 100% 364/364 34s\nPASS exit=0 | 360 passed, 4 skipped | 33.88s\n\nskipped: 4 in 1 group\n  x4 | explicit offline Sabueso lane: RECORDA_LAB_SABUESO=1\n\n<sys>:0: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='utf-8'>",
       "sha256": "8a7d8dfc1ebaeb26c7011d9cffb72167098ef11efdee7d9c5baef7a05b3f989f"
-    },
-    "scope-reproduced": {
-      "output": "FAIL exit=1 | 2 failed, 27 deselected | 0.24s | 2 root causes\n\n[1] CapturePolicyError | 1 test | call\n    smonitor/core/capture.py:77\n    smonitor._diagnostics.CapturePolicyError: Diagnostic capture policy or safe metadata is invalid. Use boolean policy fields and at most 32 bounded primitive metadata fields.\n    frames: tests/test_diagnostic_association.py:86 -> lib/python3.14/contextlib.py:141 (ext) -> experiments/diagnostic_consumer.py:159 -> lib/python3.14/contextlib.py:141 (ext) -> ... -> smonitor/core/capture.py:77 (ext)\n    rerun: pytest tests/test_diagnostic_association.py::test_inherited_metadata_budget_fault_preserves_native_call[False] -q\n\n[2] AssertionError | 1 test | call\n    tests/test_diagnostic_association.py:84\n    AssertionError: assert CapturePolicyError('Diagnostic capture policy or safe metadata is invalid. Use boolean policy fields and at most 32 bounded primitive metadata fields.') is ValueError()\n     +  where CapturePolicyError('Diagnostic capture policy or safe metadata is invalid. Use boolean policy fields and at most 32 bounded primitive metadata fields.') = <ExceptionInfo CapturePolicyError('Diagnostic capture policy or safe metadata is invalid. Use boolean policy fields and at most 32 bounded primitive metadata fields.') tblen=7>.value\n    rerun: pytest tests/test_diagnostic_association.py::test_inherited_metadata_budget_fault_preserves_native_call[True] -q",
-      "sha256": "eb3d04037963e2e622c1b23f03bb6ea9b621bf12aa01380a4f2667ccbd28e03e"
-    },
-    "scope-receiving": {
-      "output": "PASS exit=0 | 31 passed | 1.91s",
-      "sha256": "d85ddccef4f7c61e90513359d03de5210769b2e1ba18f87ff115d60390d7c40b"
-    },
-    "pair-final-qualified": {
-      "output": "receptor: 100% 368/368 34s\nPASS exit=0 | 364 passed, 4 skipped | 33.98s\n\nskipped: 4 in 1 group\n  x4 | explicit offline Sabueso lane: RECORDA_LAB_SABUESO=1\n\n<sys>:0: ResourceWarning: unclosed file <_io.TextIOWrapper name='/dev/null' mode='w' encoding='utf-8'>",
-      "sha256": "c8afad9204ca985f4d0c0e649d51133a7aaa5d626bbbd78da4a4a481e0881a72"
     }
   },
   "resolved_local_defect": {
@@ -263,18 +251,5 @@
     "Scientific/Recorda runtime and workflow default unchanged",
     "No public OS/distribution/replay/human usability certificate"
   ],
-  "hosted_evidence": "Pending separately captured exact-head CI; this local receipt does not claim its outcome",
-  "previous_qualification": {
-    "local_receipt": "diagnostic_association_linux_py314_initial.json",
-    "hosted_receipt": "diagnostic_association_hosted_initial.json",
-    "lab_commit": "8d81819a4e7f0e5b2d1019d5f9ce46a94383489d"
-  },
-  "resolved_scope_defect": {
-    "owner": "uibcdf/recorda-lab#14",
-    "observation": "32 inherited safe fields reject new attempt identities before science; ordinary scope cleanup faults may replace native outcomes",
-    "fix": "Contain ordinary scope setup/cleanup exceptions, preserve parent restrictions and native outcome, expose provider_fault gap",
-    "receiving_cases": 4,
-    "initial_result": "2 failed, 27 deselected",
-    "initial_output_sha256": "eb3d04037963e2e622c1b23f03bb6ea9b621bf12aa01380a4f2667ccbd28e03e"
-  }
+  "hosted_evidence": "Pending separately captured exact-head CI; this local receipt does not claim its outcome"
 }
