@@ -1,10 +1,38 @@
-# Laboratory checkpoint — 2026-10-06
+# Laboratory checkpoint — 2026-10-07
 
 Resume with Recorda's [development checkpoint](https://github.com/uibcdf/recorda/blob/main/devguide/CHECKPOINT.md),
 this guide and [RECORDA_BASELINE.md](RECORDA_BASELINE.md). Lab owns scenarios
 and evidence, Recorda owns the standalone runtime, and MOLI owns shared contracts.
 
-## Current qualified inspection-view pair
+## Current controlled diagnostic association pair
+
+- Recorda: `48a6c9a0630027f0f2c3d8d82215de8e27764913`, unchanged workflow default.
+- Lab implementation: `8d81819a4e7f0e5b2d1019d5f9ce46a94383489d`, under Lab #14.
+
+[DIAGNOSTIC_ASSOCIATION.md](DIAGNOSTIC_ASSOCIATION.md) compares reviewed native
+SMonitor event subsets with bounded consumer-owned selected associations at public
+explicit dummy boundaries. Native science, dependencies and Recorda runtime remain
+unchanged. The [local receipt](evidence/diagnostic_association_linux_py314.json)
+records **360 installed-pair passes/four Sabueso skips**, **27 new cases**, seven
+selected notebooks/**55 code cells**, and **14 kernel fault cells**. The scientific
+oracle and diagnostic-selection oracle are independent.
+
+[Exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37579863850) passes
+all nine jobs; [routine push](https://github.com/uibcdf/recorda-lab/actions/runs/37579851288)
+passes four dummy jobs and skips two manual groups. Actual verdict/source/capture
+hashes are in [the hosted receipt](evidence/diagnostic_association_hosted.json),
+inspected with published gh-run-receptor 1.2.0. Closing documentation preserves all
+local-receipt selected bytes; no workflow default promotion is made.
+
+Both alternatives answer this controlled attempt question. A selected sidecar
+exposes bounded facts/gaps, while native events retain more diagnostic detail.
+A real producer/user question is required before any reusable automatic core
+adapter decision. The trial establishes neither native dummy/SciPy SMonitor
+warnings, complete capture, human usability nor release/OS/replay. Provider
+opportunities remain SMonitor #40–#42. Resolved history is
+[archive/diagnostic_association.md](archive/diagnostic_association.md).
+
+## Previous qualified inspection-view pair
 
 - Recorda: `48a6c9a0630027f0f2c3d8d82215de8e27764913`; core API #21 and supplied-check wording #22.
 - Lab receiving implementation: `b2b44d18f726bae975c7d21af3bf13bcda594980`.
@@ -29,7 +57,7 @@ Notebook 06 has 11 code cells; 07 has nine. These controlled technical answers
 are not a human usability study, scientific interpretation, report freshness,
 public release/general OS or replay qualification. Later documentation preserves
 all selected bytes; only the recorded workflow default changed at promotion.
-Live producer-operation correlation remains separately owned by Recorda #15.
+Subsequent core #15 analysis selected the completed Lab #14 comparison above.
 
 ## Previous published-provider qualified pair
 
@@ -93,8 +121,10 @@ with `uibcdf/recorda#1`; the bounded multi-step trial in Lab #10 is complete.
 New experiments need a concrete consumer question, independent oracle and owning
 issue. Core ecosystem review #2 is complete; MOLI registry reconciliation remains
 separately owned in `uibcdf/moli#62`. Release/OS/coverage remain Recorda #3/#4/#6.
-SMonitor inspection presentation and operation correlation are separate core
-analyses (#14/#15). Lab is not a production integration destination.
+SMonitor inspection presentation/core #14 and operation correlation/core #15
+analyses are complete, with Lab #13/#14 receiving qualification. Another diagnostic
+integration needs a real producer/user question and its own issue before a core
+automatic attachment/context proposal. Lab is not a production integration destination.
 
 
 ## Inspection-view receiving history

@@ -36,7 +36,8 @@ scientific warning usefulness or native SciPy SMonitor emission.
 
 The application calls public `collect_bundle(max_events=512, drop_context=True)`
 explicitly; that call flushes and delivers deferred summaries. It retains unchanged
-native event dictionaries only for the controlled source/catalog and operation.
+native event dictionaries after the declared context omission, only for the
+controlled source/catalog and full session/operation identity pair.
 The reviewed subset omits argv, configuration/catalogs, provider locations,
 reports/triage and unrelated events. It discloses those omissions in `redactions`.
 This is an application-reviewed **subset of a native bundle**, not a general safe
@@ -126,7 +127,18 @@ Linux Python 3.14.7 passes **360 tests/four explicit Sabueso skips** (305 core +
 cells** and the **14-cell** kernel fault scenario. Published pytest-receptor 1.1.0,
 provider verification, pip check, governance/canonical MOLI and Ruff pass. The
 initial catalogue-replacement defect is preserved with its resolved regression
-in the local receipt. Hosted qualification remains pending separately.
+in the local receipt.
+
+[Exact-pair manual CI](https://github.com/uibcdf/recorda-lab/actions/runs/37579863850)
+passes all **nine jobs** at Lab `8d81819a4e7f0e5b2d1019d5f9ce46a94383489d` with
+Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913`, the unchanged workflow default.
+Actual logs report 360 passes/four Sabueso skips in the scientific/recovery lane,
+46 passes/13 optional skips in each Python 3.11–3.14 kernel lane, and six dummy
+passes per minor. [Routine push CI](https://github.com/uibcdf/recorda-lab/actions/runs/37579851288)
+passes four dummy jobs and skips the two manual groups. Published gh-run-receptor
+1.2.0 and native GitHub conclusions agree; raw capture/verdict/source-selection
+hashes are retained in [the hosted receipt](evidence/diagnostic_association_hosted.json).
+Later closing documentation preserves every local receipt-selected source byte.
 No configured CI is treated as executed evidence. Provider defects remain
 `uibcdf/smonitor#41` (buffer resizing) and `uibcdf/smonitor#42` (degradation warning
 precedence); the fault-contained controlled sink does not qualify those fixes.
@@ -137,7 +149,7 @@ All three proposals are coordinated in `uibcdf/moli#62`.
 The two existing-reference alternatives can answer this controlled attempt
 question. A selected sidecar provides bounded facts and explicit gaps; reviewed
 native events retain more diagnostic detail and require an explicit join/review.
-Qualification must finish before closing Lab #14. This dummy evidence does not
+The bounded receiving qualification completes Lab #14. This dummy evidence does not
 yet justify a reusable automatic core bridge: a real producer/user question and
 separately scoped public context/attachment decision are required. Standalone
 acceptance, distribution/OS/coverage, human usability and replay remain separate.

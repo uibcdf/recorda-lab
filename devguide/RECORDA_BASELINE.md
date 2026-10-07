@@ -3,7 +3,22 @@
 Read [CHECKPOINT.md](CHECKPOINT.md) for hosted conclusions and resumption steps.
 Historical entries below retain the state at their respective checkpoints.
 
-## Current integration source — explicit inspection view
+## Current integration source — diagnostic association comparison
+
+Recorda remains `48a6c9a0630027f0f2c3d8d82215de8e27764913`; the workflow default
+is unchanged. Lab #14 implementation is `8d81819a4e7f0e5b2d1019d5f9ce46a94383489d`.
+Local ordinary installed-pair qualification passes 360 tests/four Sabueso skips,
+seven notebooks/55 code cells and 14 real-kernel fault cells. Exact-head manual CI
+passes nine jobs with that pair; routine push passes four dummy jobs and skips
+two manual groups. Read `DIAGNOSTIC_ASSOCIATION.md` and its local/hosted receipts.
+Later closing documentation preserves all receipt-selected source bytes.
+
+The native dummy remains independent and byte-identical. Synthetic consumer
+diagnostics establish controlled association mechanics, not native SciPy warnings
+or general scientific utility. Existing public references suffice for this slice;
+no automatic core bridge, provider patch or default promotion is selected.
+
+## Previous integration source — explicit inspection view
 
 Manual integration pins Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913`. Lab receiving implementation is
 `b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion is `181f706c09cef42ec104a8edc7b3c413601307d9`, under Lab #13. The exact
