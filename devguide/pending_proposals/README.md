@@ -1,5 +1,7 @@
 # Pending proposals
 
+- [Native Sabueso diagnostics](sabueso_diagnostics.md) — `uibcdf/recorda-lab#15`, active.
+
 The diagnostic association comparison is resolved in
 [`../archive/diagnostic_association.md`](../archive/diagnostic_association.md),
 tracked by `uibcdf/recorda-lab#14`. Its corrected exact-pair qualification and

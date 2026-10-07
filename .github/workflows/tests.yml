@@ -17,6 +17,11 @@ on:
         required: false
         default: false
         type: boolean
+      run_sabueso_diagnostics:
+        description: Qualify the fixed native Sabueso diagnostic trial on Python 3.11–3.14
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -126,3 +131,54 @@ jobs:
           RECORDA_LAB_NOTEBOOK: '1'
           RECORDA_LAB_SCIPY: '1'
           RECORDA_TEST_SMONITOR: '1'
+  sabueso_diagnostics:
+    if: github.event_name == 'workflow_dispatch' && inputs.run_sabueso_diagnostics
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: lab
+      - name: Validate source identity
+        env:
+          RECORDA_COMMIT: ${{ inputs.recorda_commit }}
+        run: python -c 'import os,re; assert re.fullmatch(r"[0-9a-f]{40}", os.environ["RECORDA_COMMIT"]), "full reviewed SHA required"'
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/recorda
+          ref: ${{ inputs.recorda_commit }}
+          path: recorda
+      - name: Check out the fixed native scientific producer
+        uses: actions/checkout@v4
+        with:
+          repository: uibcdf/sabueso
+          ref: 68dac8f8bfc35944f5b6dd59aca8cb2a2819388d
+          path: sabueso
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: lab/devtools/conda-envs/sabueso_diagnostics_env.yaml
+          create-args: python=${{ matrix.python }} --strict-channel-priority
+      - run: python -m pip install pytest-receptor==1.1.0
+      - run: python recorda/devtools/check_dependencies.py
+      - run: python recorda/devtools/verify_support_environment.py argdigest
+      - run: python lab/devtools/check_sabueso_environment.py
+      - name: Verify selected source identities
+        env:
+          RECORDA_COMMIT: ${{ inputs.recorda_commit }}
+        run: |
+          python lab/devtools/check_recorda_environment.py --recorda recorda --commit "$RECORDA_COMMIT"
+          test "$(git -C sabueso rev-parse HEAD)" = 68dac8f8bfc35944f5b6dd59aca8cb2a2819388d
+          test -z "$(git -C sabueso status --porcelain)"
+      - run: python -m pip install --no-deps --no-build-isolation ./recorda ./lab ./sabueso
+      - run: python -m pip check
+      - run: >-
+          python -m pytest --receptor=ci -o pythonpath=''
+          lab/tests/test_sabueso_diagnostics.py lab/tests/test_diagnostic_association.py
+        env:
+          RECORDA_LAB_SABUESO_DIAGNOSTICS: '1'

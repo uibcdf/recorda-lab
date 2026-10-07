@@ -1,0 +1,44 @@
+{
+  "rcsb_id": "9LAB",
+  "polymer_entities": [
+    {
+      "rcsb_id": "9LAB_1",
+      "rcsb_polymer_entity_container_identifiers": {
+        "entity_id": "1",
+        "auth_asym_ids": [
+          "A"
+        ],
+        "uniprot_ids": [
+          "P60174"
+        ]
+      },
+      "entity_poly": {
+        "rcsb_sample_sequence_length": 4,
+        "pdbx_seq_one_letter_code_can": "APSR"
+      },
+      "rcsb_polymer_entity_align": [
+        {
+          "reference_database_name": "UniProt",
+          "reference_database_accession": "P60174",
+          "aligned_regions": [
+            {
+              "entity_beg_seq_id": 1,
+              "ref_beg_seq_id": 1,
+              "length": 4
+            }
+          ]
+        }
+      ],
+      "rcsb_polymer_entity_feature": [],
+      "rcsb_entity_host_organism": [],
+      "polymer_entity_instances": []
+    }
+  ],
+  "_partial": {
+    "missing": [
+      "rcsb_polymer_instance_feature",
+      "rcsb_ligand_neighbors"
+    ],
+    "reason": "Fictional instance-field failure for controlled Lab diagnostics"
+  }
+}

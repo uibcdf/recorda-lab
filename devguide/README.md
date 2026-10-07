@@ -76,3 +76,7 @@ reviewed native SMonitor events with bounded selected associations at public
 explicit dummy boundaries. `inspect_diagnostic_association.py` reads retained
 references without scientific/consumer producers. Tracked by
 `uibcdf/recorda-lab#14`; read [DIAGNOSTIC_ASSOCIATION.md](DIAGNOSTIC_ASSOCIATION.md).
+
+`experiments/run_sabueso_diagnostics.py` evaluates real native Sabueso source
+outcomes and delivered warnings per Card attempt, tracked by
+`uibcdf/recorda-lab#15`. Read [SABUESO_DIAGNOSTICS.md](SABUESO_DIAGNOSTICS.md).

@@ -37,7 +37,7 @@ setup/cleanup containment has four receiving regressions. Resolved history is
 
 - Recorda: `48a6c9a0630027f0f2c3d8d82215de8e27764913`; core API #21 and supplied-check wording #22.
 - Lab receiving implementation: `b2b44d18f726bae975c7d21af3bf13bcda594980`.
-- Lab default promotion: `181f706c09cef42ec104a8edc7b3c413641307d9`.
+- Lab default promotion: `181f706c09cef42ec104a8edc7b3c413601307d9`.
 
 `uibcdf/recorda-lab#13` qualifies explicit technical views beside original JSON
 and independent native oracles. [Local receipt](evidence/inspection_view_linux_py314.json):

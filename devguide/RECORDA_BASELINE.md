@@ -21,7 +21,7 @@ no automatic core bridge, provider patch or default promotion is selected.
 ## Previous integration source — explicit inspection view
 
 Manual integration pins Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913`. Lab receiving implementation is
-`b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion is `181f706c09cef42ec104a8edc7b3c413641307d9`, under Lab #13. The exact
+`b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion is `181f706c09cef42ec104a8edc7b3c413601307d9`, under Lab #13. The exact
 candidate passes nine hosted jobs before promotion; the default passes nine after
 promotion without a Recorda override. Local installed qualification passes 333
 with four Sabueso skips and executes six notebooks/49 cells plus 14 kernel fault

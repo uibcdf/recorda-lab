@@ -82,6 +82,8 @@ class SelectedDiagnostics:
     """
 
     name = "lab_selected_diagnostics"
+    # Each controlled experiment declares a fixed producer/code allowlist.
+    allowlist = frozenset((SOURCE, code) for code in set(CODES) | AGGREGATES)
 
     def __init__(self, *, max_entries=256, max_total=512):
         if type(max_entries) is not int or not 1 <= max_entries <= 256:
@@ -219,11 +221,11 @@ class SelectedDiagnostics:
             self._count("invalid")
             return
         source, code, level = (event.get(k) for k in ("source", "code", "level"))
-        if type(source) is not str or type(code) is not str or source != SOURCE:
+        if type(source) is not str or type(code) is not str:
             self._count("excluded")
             return
         aggregate = code in AGGREGATES
-        if code not in CODES and not aggregate:
+        if (source, code) not in self.allowlist:
             self._count("excluded")
             return
         if type(level) is not str or level not in SEVERITIES:
@@ -249,7 +251,7 @@ class SelectedDiagnostics:
             return
         entry = {
             "code": code,
-            "source": SOURCE,
+            "source": source,
             "level": level,
             "kind": "aggregate" if aggregate else "event",
         }

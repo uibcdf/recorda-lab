@@ -1,0 +1,23 @@
+# Lab #15: clean source-built Sabueso with published support providers.
+name: recorda-lab-sabueso-diagnostics
+channels:
+  - uibcdf
+  - conda-forge
+dependencies:
+  - python >=3.11,<3.15
+  - pip
+  - setuptools>=77
+  - wheel
+  - versioningit>=3,<4
+  - pytest
+  - smonitor=0.19.0=py_1
+  - argdigest=0.15.0=py_0
+  - depdigest=0.13.0=py_0
+  - pyunitwizard=0.28.1=py_0
+  - ackredit=0.11.0=py_0
+  - numpy
+  - pint
+  - pyyaml=6.0.3
+  - packaging
+  - pip:
+      - pytest-receptor==1.1.0
