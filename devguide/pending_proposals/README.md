@@ -1,9 +1,9 @@
 # Pending proposals
 
-The diagnostic association comparison is in
-[`diagnostic_association.md`](diagnostic_association.md), tracked by
-`uibcdf/recorda-lab#14`. Earlier exact-pair receipts are preserved; final inherited
-metadata-budget fault handling is undergoing receiving qualification before closure.
+The diagnostic association comparison is resolved in
+[`../archive/diagnostic_association.md`](../archive/diagnostic_association.md),
+tracked by `uibcdf/recorda-lab#14`. Its corrected exact-pair qualification and
+maintained decision are in `../DIAGNOSTIC_ASSOCIATION.md`.
 
 The multi-step workflow is resolved in
 [`../archive/multi_step_workflow.md`](../archive/multi_step_workflow.md),

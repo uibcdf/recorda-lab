@@ -1,17 +1,13 @@
 # Recorded laboratory baseline
 
-Final review contains inherited-metadata setup and ordinary scope cleanup faults.
-The corrected installed pair passes 364 tests/four Sabueso skips, with 31 receiving
-cases. Hosted qualification is pending; the initial pair below remains retained.
-
 Read [CHECKPOINT.md](CHECKPOINT.md) for hosted conclusions and resumption steps.
 Historical entries below retain the state at their respective checkpoints.
 
 ## Current integration source — diagnostic association comparison
 
 Recorda remains `48a6c9a0630027f0f2c3d8d82215de8e27764913`; the workflow default
-is unchanged. Lab #14 implementation is `8d81819a4e7f0e5b2d1019d5f9ce46a94383489d`.
-Local ordinary installed-pair qualification passes 360 tests/four Sabueso skips,
+is unchanged. Lab #14 implementation is `214a68d93a878bfe2b0d70a3aa90f81e00620db1`.
+Local ordinary installed-pair qualification passes 364 tests/four Sabueso skips,
 seven notebooks/55 code cells and 14 real-kernel fault cells. Exact-head manual CI
 passes nine jobs with that pair; routine push passes four dummy jobs and skips
 two manual groups. Read `DIAGNOSTIC_ASSOCIATION.md` and its local/hosted receipts.
@@ -25,7 +21,7 @@ no automatic core bridge, provider patch or default promotion is selected.
 ## Previous integration source — explicit inspection view
 
 Manual integration pins Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913`. Lab receiving implementation is
-`b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion is `181f706c09cef42ec104a8edc7b3c413601307d9`, under Lab #13. The exact
+`b2b44d18f726bae975c7d21af3bf13bcda594980` and default promotion is `181f706c09cef42ec104a8edc7b3c413641307d9`, under Lab #13. The exact
 candidate passes nine hosted jobs before promotion; the default passes nine after
 promotion without a Recorda override. Local installed qualification passes 333
 with four Sabueso skips and executes six notebooks/49 cells plus 14 kernel fault

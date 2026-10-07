@@ -1,9 +1,5 @@
 # Laboratory checkpoint — 2026-10-07
 
-Final review contains inherited-metadata setup and ordinary scope cleanup faults.
-The corrected installed pair passes 364 tests/four Sabueso skips, with 31 receiving
-cases. Hosted qualification is pending; the initial pair below remains retained.
-
 Resume with Recorda's [development checkpoint](https://github.com/uibcdf/recorda/blob/main/devguide/CHECKPOINT.md),
 this guide and [RECORDA_BASELINE.md](RECORDA_BASELINE.md). Lab owns scenarios
 and evidence, Recorda owns the standalone runtime, and MOLI owns shared contracts.
@@ -11,18 +7,18 @@ and evidence, Recorda owns the standalone runtime, and MOLI owns shared contract
 ## Current controlled diagnostic association pair
 
 - Recorda: `48a6c9a0630027f0f2c3d8d82215de8e27764913`, unchanged workflow default.
-- Lab implementation: `8d81819a4e7f0e5b2d1019d5f9ce46a94383489d`, under Lab #14.
+- Lab implementation: `214a68d93a878bfe2b0d70a3aa90f81e00620db1`, under Lab #14.
 
 [DIAGNOSTIC_ASSOCIATION.md](DIAGNOSTIC_ASSOCIATION.md) compares reviewed native
 SMonitor event subsets with bounded consumer-owned selected associations at public
 explicit dummy boundaries. Native science, dependencies and Recorda runtime remain
 unchanged. The [local receipt](evidence/diagnostic_association_linux_py314.json)
-records **360 installed-pair passes/four Sabueso skips**, **27 new cases**, seven
+records **364 installed-pair passes/four Sabueso skips**, **31 new cases**, seven
 selected notebooks/**55 code cells**, and **14 kernel fault cells**. The scientific
 oracle and diagnostic-selection oracle are independent.
 
-[Exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37579863850) passes
-all nine jobs; [routine push](https://github.com/uibcdf/recorda-lab/actions/runs/37579851288)
+[Exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37581680564) passes
+all nine jobs; [routine push](https://github.com/uibcdf/recorda-lab/actions/runs/37581672334)
 passes four dummy jobs and skips two manual groups. Actual verdict/source/capture
 hashes are in [the hosted receipt](evidence/diagnostic_association_hosted.json),
 inspected with published gh-run-receptor 1.2.0. Closing documentation preserves all
@@ -33,14 +29,15 @@ exposes bounded facts/gaps, while native events retain more diagnostic detail.
 A real producer/user question is required before any reusable automatic core
 adapter decision. The trial establishes neither native dummy/SciPy SMonitor
 warnings, complete capture, human usability nor release/OS/replay. Provider
-opportunities remain SMonitor #40–#42. Resolved history is
+opportunities remain SMonitor #40–#42. Initial candidate receipts remain preserved as `*_initial.json`; corrected scope
+setup/cleanup containment has four receiving regressions. Resolved history is
 [archive/diagnostic_association.md](archive/diagnostic_association.md).
 
 ## Previous qualified inspection-view pair
 
 - Recorda: `48a6c9a0630027f0f2c3d8d82215de8e27764913`; core API #21 and supplied-check wording #22.
 - Lab receiving implementation: `b2b44d18f726bae975c7d21af3bf13bcda594980`.
-- Lab default promotion: `181f706c09cef42ec104a8edc7b3c413601307d9`.
+- Lab default promotion: `181f706c09cef42ec104a8edc7b3c413641307d9`.
 
 `uibcdf/recorda-lab#13` qualifies explicit technical views beside original JSON
 and independent native oracles. [Local receipt](evidence/inspection_view_linux_py314.json):

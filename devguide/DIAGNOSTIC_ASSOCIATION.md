@@ -135,18 +135,20 @@ provider verification, pip check, governance/canonical MOLI and Ruff pass. The
 initial catalogue-replacement defect is preserved with its resolved regression
 in the local receipt.
 
-The initial candidate is preserved in the `*_initial.json` receipts. Its
-[Exact-pair manual CI](https://github.com/uibcdf/recorda-lab/actions/runs/37579863850)
-passes all **nine jobs** at Lab `8d81819a4e7f0e5b2d1019d5f9ce46a94383489d` with
+[Corrected exact-pair manual CI](https://github.com/uibcdf/recorda-lab/actions/runs/37581680564)
+passes all **nine jobs** at Lab `214a68d93a878bfe2b0d70a3aa90f81e00620db1` with
 Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913`, the unchanged workflow default.
-Actual logs report 360 passes/four Sabueso skips in the scientific/recovery lane,
-46 passes/13 optional skips in each Python 3.11–3.14 kernel lane, and six dummy
-passes per minor. [Routine push CI](https://github.com/uibcdf/recorda-lab/actions/runs/37579851288)
+Actual logs report 364 passes/four Sabueso skips in the scientific/recovery lane,
+50 passes/13 optional skips in each Python 3.11–3.14 kernel lane, and six dummy
+passes per minor. [Routine push CI](https://github.com/uibcdf/recorda-lab/actions/runs/37581672334)
 passes four dummy jobs and skips the two manual groups. Published gh-run-receptor
 1.2.0 and native GitHub conclusions agree; raw capture/verdict/source-selection
 hashes are retained in [the hosted receipt](evidence/diagnostic_association_hosted.json).
-Corrected hosted qualification is pending. Final closing documentation must
-preserve every corrected local receipt-selected source byte.
+The initial Lab `8d81819` pair, with 360 passes/27 receiving cases, remains in
+`diagnostic_association_*_initial.json`, including its earlier nine passing jobs.
+Final review added four regressions for ordinary scope setup/cleanup faults and
+preserves native outcomes when the inherited safe-metadata budget is full.
+Later closing documentation preserves every corrected local receipt-selected byte.
 No configured CI is treated as executed evidence. Provider defects remain
 `uibcdf/smonitor#41` (buffer resizing) and `uibcdf/smonitor#42` (degradation warning
 precedence); the fault-contained controlled sink does not qualify those fixes.
@@ -157,8 +159,7 @@ All three proposals are coordinated in `uibcdf/moli#62`.
 The two existing-reference alternatives can answer this controlled attempt
 question. A selected sidecar provides bounded facts and explicit gaps; reviewed
 native events retain more diagnostic detail and require an explicit join/review.
-The earlier passing pair is retained; final scope-budget containment qualification
-is pending before closing Lab #14. This dummy evidence does not
+Lab #14 is qualified, including scope-budget containment. This dummy evidence does not
 yet justify a reusable automatic core bridge: a real producer/user question and
 separately scoped public context/attachment decision are required. Standalone
 acceptance, distribution/OS/coverage, human usability and replay remain separate.
