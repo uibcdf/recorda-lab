@@ -30,6 +30,12 @@ They belong to Recorda Lab; the scientific dummy package remains independent.
   interruption, minimal capture and intermediate-file loss. Requires the scientific
   lane; tracked by `uibcdf/recorda-lab#10`. Read `devguide/MULTI_STEP_WORKFLOW.md`.
 
+- `08_diagnostic_association.ipynb`: compare reviewed native diagnostic bundles
+  with bounded selected associations per declared dummy attempt. Preserve failure/
+  retry, the independent scientific oracle and missing-artifact observations.
+  Diagnostics belong to the controlled consumer, not SciPy or the dummy library.
+  Tracked by `uibcdf/recorda-lab#14`; read `devguide/DIAGNOSTIC_ASSOCIATION.md`.
+
 Use Python 3.14 and the declared development environment. Install both checkouts
 with `--no-deps --editable`, then launch `python -m jupyterlab` from the laboratory
 root and select that environment's kernel. The setup cell prints the actual interpreter.

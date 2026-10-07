@@ -70,3 +70,9 @@ with the existing reference and optional SciPy workflow scenarios. Producer-free
 native bytes. Notebooks 06/07 demonstrate the view beside original JSON and the
 separate scientific oracle. Tracked by `uibcdf/recorda-lab#13`; read
 [INSPECTION_VIEW.md](INSPECTION_VIEW.md).
+
+`experiments/run_diagnostic_association.py` and notebook 08 compare application-
+reviewed native SMonitor events with bounded selected associations at public
+explicit dummy boundaries. `inspect_diagnostic_association.py` reads retained
+references without scientific/consumer producers. Tracked by
+`uibcdf/recorda-lab#14`; read [DIAGNOSTIC_ASSOCIATION.md](DIAGNOSTIC_ASSOCIATION.md).

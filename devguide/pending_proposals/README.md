@@ -1,5 +1,8 @@
 # Pending proposals
 
+- [Diagnostic association comparison](diagnostic_association.md) —
+  `uibcdf/recorda-lab#14`, local qualification complete; hosted checks pending.
+
 The multi-step workflow is resolved in
 [`../archive/multi_step_workflow.md`](../archive/multi_step_workflow.md),
 tracked by `uibcdf/recorda-lab#10`.

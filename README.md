@@ -165,3 +165,11 @@ with the existing dummy/reference JSON; add `--workflow` only in the scientific
 lane. Notebooks 06/07 show grouped explanations beside coverage and separate
 scientific checks. Read [the receiving contract](devguide/INSPECTION_VIEW.md) for
 source identities, installed qualification and limits.
+
+The controlled diagnostic association comparison in
+[uibcdf/recorda-lab#14](https://github.com/uibcdf/recorda-lab/issues/14) uses existing
+explicit operations and native references:
+`python experiments/run_diagnostic_association.py DESTINATION`.
+Notebook 08 compares reviewed SMonitor native events with selected per-attempt
+codes/coverage, separate from the unchanged dummy scientific oracle. Read
+[the trial contract](devguide/DIAGNOSTIC_ASSOCIATION.md).

@@ -50,6 +50,7 @@ def test_committed_usage_notebooks_execute_all_cells(tmp_path, monkeypatch):
         "02_recording_cost.ipynb": 4,
         "05_capture_selection.ipynb": 8,
         "06_reference_checks.ipynb": 11,
+        "08_diagnostic_association.ipynb": 6,
     }
     if os.environ.get("RECORDA_LAB_SCIPY") == "1":
         expected["03_scipy_fit.ipynb"] = 8
