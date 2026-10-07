@@ -88,7 +88,7 @@ Sabueso skips** (305 core + 75 Lab), **16 new cases**, seven notebooks/**55 code
 cells**, and **14 kernel-fault cells**. The 47 targeted native/association cases pass.
 An initial test expected a null context after bundle omission; the provider
 correctly removes the key. The receiving assertion was corrected before qualification.
-Exact implementation CI is required before closure; configured lanes alone are
+Exact implementation CI now passes as recorded below; configured lanes alone are
 not qualification. Python 3.11–3.14 native lanes select the 16 new cases and the
 31 existing association regressions using published pytest-receptor 1.1.0.
 
@@ -116,4 +116,18 @@ Final review corrected ordinary reference-error precedence for native warnings,
 interrupts and cancellation (five additional receiving cases). Initial hosted
 preflight rejected the new unclassified environment; explicit route/provider
 admission and five negative cases now pass. Initial receipts remain retained.
-Corrected exact-head hosted qualification is pending before closure.
+
+[Corrected exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143)
+passes **13/13 jobs** at Lab `a0376799c25c6b650ffa79aa6e4012601892d24c`, with
+unchanged Recorda `48a6c9a0630027f0f2c3d8d82215de8e27764913` and fixed clean Sabueso.
+Actual logs report **47 passes** in each native Python 3.11–3.14 lane, **364 passes/
+20 explicit skips** in the existing scientific/recovery lane, **50 passes/29 optional
+skips** in each existing kernel lane, and **six passes** per dummy minor. The
+native cases execute in their dedicated lanes and remain explicitly skipped in
+existing scientific/kernel environments. [Routine push](https://github.com/uibcdf/recorda-lab/actions/runs/37584383768)
+passes four dummy jobs and skips three manual groups. Published pytest-receptor
+1.1.0 and gh-run-receptor 1.2.0 supply actual verdicts; native GitHub conclusions
+agree. [The hosted receipt](evidence/sabueso_diagnostics_hosted.json) retains source/
+provider checks and raw capture/verdict hashes. Closing docs preserve every
+corrected receipt-selected source byte. Earlier failed/initial receipts remain
+unchanged and are not relabelled as passing final evidence.

@@ -1,6 +1,8 @@
 # Pending proposals
 
-- [Native Sabueso diagnostics](sabueso_diagnostics.md) — `uibcdf/recorda-lab#15`, active.
+Native Sabueso diagnostics are resolved in
+[../archive/sabueso_diagnostics.md](../archive/sabueso_diagnostics.md), owned by
+`uibcdf/recorda-lab#15`; current qualification is in `../SABUESO_DIAGNOSTICS.md`.
 
 The diagnostic association comparison is resolved in
 [`../archive/diagnostic_association.md`](../archive/diagnostic_association.md),

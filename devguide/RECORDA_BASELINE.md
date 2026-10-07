@@ -3,7 +3,25 @@
 Read [CHECKPOINT.md](CHECKPOINT.md) for hosted conclusions and resumption steps.
 Historical entries below retain the state at their respective checkpoints.
 
-## Current integration source — diagnostic association comparison
+## Current integration source — native Sabueso diagnostic trial
+
+Lab `a0376799c25c6b650ffa79aa6e4012601892d24c` qualifies installed Sabueso
+`68dac8f8bfc35944f5b6dd59aca8cb2a2819388d` with unchanged Recorda
+`48a6c9a0630027f0f2c3d8d82215de8e27764913`. Local full qualification passes 380
+tests/four historical Sabueso skips; 16 new native cases and 31 existing association
+regressions pass. Seven notebooks/55 cells and 14 kernel-fault cells remain qualified.
+[Corrected exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143)
+passes all 13 jobs, with 47 native passes per Python minor. Read `SABUESO_DIAGNOSTICS.md` and
+its local receipt for source/wheel/provider identities, native/public and fictional
+fixtures, conditional observation and independent source outcomes. Ordinary native
+failure/interruption precedence and explicit fifth-environment admission are corrected.
+
+No scientific package source, Recorda runtime or workflow default is changed.
+Local proof verifies native Conda noarch path mappings; the unchanged core preflight
+limitation remains `uibcdf/recorda#23`. Broader automatic integration, platform
+routing, release/OS and replay remain separate. Closing docs preserve selected bytes.
+
+## Previous integration source — diagnostic association comparison
 
 Recorda remains `48a6c9a0630027f0f2c3d8d82215de8e27764913`; the workflow default
 is unchanged. Lab #14 implementation is `214a68d93a878bfe2b0d70a3aa90f81e00620db1`.

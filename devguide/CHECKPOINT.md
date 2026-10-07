@@ -4,7 +4,38 @@ Resume with Recorda's [development checkpoint](https://github.com/uibcdf/recorda
 this guide and [RECORDA_BASELINE.md](RECORDA_BASELINE.md). Lab owns scenarios
 and evidence, Recorda owns the standalone runtime, and MOLI owns shared contracts.
 
-## Current controlled diagnostic association pair
+## Current native Sabueso diagnostic trial
+
+- Lab implementation: `a0376799c25c6b650ffa79aa6e4012601892d24c`, under `uibcdf/recorda-lab#15`.
+- Recorda runtime: `48a6c9a0630027f0f2c3d8d82215de8e27764913`, unchanged workflow default.
+- Clean Sabueso: `68dac8f8bfc35944f5b6dd59aca8cb2a2819388d`, ordinary source-built installed wheel.
+
+[SABUESO_DIAGNOSTICS.md](SABUESO_DIAGNOSTICS.md) records the real native source
+question. Partial/error source information coexists with a succeeded Card call;
+a direct native source exception stays failed despite retry. Native Cards,
+acquisition evidence, reviewed SMonitor events and bounded selected associations
+remain separately owned. Attributed public UniProt data and fictional RCSB-shaped
+responses are controlled offline inputs; external source connections are forbidden.
+
+The [local receipt](evidence/sabueso_diagnostics_linux_py314.json) records **380
+passes/four historical Sabueso skips**, **16 new receiving cases**, seven notebooks/
+**55 cells**, and **14 kernel-fault cells**. The **47 native/association cases** pass;
+missing/changed files, filtering, producer-free reading and reference-fault native
+warning/interruption/cancellation precedence are checked. [Corrected exact-pair CI](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143)
+passes all 13 jobs, including 47 passes in each 3.11–3.14 native lane. Initial receipts retain the earlier
+preflight failure and local qualification, without relabelling them as final success.
+
+Published provider coordinates and managed bytes are verified. Native Conda's
+noarch path mapping exposes a distinct unchanged core preflight limitation,
+`uibcdf/recorda#23`; local evidence explicitly verifies that mapping rather than
+claiming the old checker passed. The [hosted receipt](evidence/sabueso_diagnostics_hosted.json) retains actual verdicts,
+source/provider checks and capture hashes; published receptors and native GitHub
+conclusions agree. Resolved history is [archive/sabueso_diagnostics.md](archive/sabueso_diagnostics.md).
+Existing references suffice for this bounded
+real-library question; no core automatic context/attachment or MOLI routing change
+is selected. Historical Sabueso #5/#6 remains a separate evidence scope.
+
+## Previous controlled diagnostic association pair
 
 - Recorda: `48a6c9a0630027f0f2c3d8d82215de8e27764913`, unchanged workflow default.
 - Lab implementation: `214a68d93a878bfe2b0d70a3aa90f81e00620db1`, under Lab #14.

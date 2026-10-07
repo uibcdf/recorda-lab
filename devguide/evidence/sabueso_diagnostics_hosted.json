@@ -1,0 +1,358 @@
+{
+  "created_utc": "2026-10-07T07:08:01.948144+00:00",
+  "issue": "uibcdf/recorda-lab#15",
+  "tool": {
+    "name": "gh-run-receptor",
+    "version": "1.2.0",
+    "published": true,
+    "first_inspection": "adaptive, receptor llm, profile ci",
+    "retention": "subsequent full capture; native conclusions authoritative"
+  },
+  "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+  "sabueso_commit": "68dac8f8bfc35944f5b6dd59aca8cb2a2819388d",
+  "local_receipt_sha256": "d96fa56a9e0ea4cb823340a75c3d060b5cf658b53a971832ab31085d9f6bc628",
+  "initial_failure_receipt": "sabueso_diagnostics_hosted_initial.json",
+  "runs": [
+    {
+      "run_id": 37584430143,
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143",
+      "event": "workflow_dispatch",
+      "lab_commit": "a0376799c25c6b650ffa79aa6e4012601892d24c",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "scientific",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671230841"
+        },
+        {
+          "name": "integration (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231048"
+        },
+        {
+          "name": "sabueso_diagnostics (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231061"
+        },
+        {
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231069"
+        },
+        {
+          "name": "integration (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231083"
+        },
+        {
+          "name": "sabueso_diagnostics (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231096"
+        },
+        {
+          "name": "integration (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231161"
+        },
+        {
+          "name": "integration (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231176"
+        },
+        {
+          "name": "sabueso_diagnostics (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231188"
+        },
+        {
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231204"
+        },
+        {
+          "name": "sabueso_diagnostics (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231213"
+        },
+        {
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231219"
+        },
+        {
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584430143/job/112671231234"
+        }
+      ],
+      "pytest_verdicts": [
+        {
+          "log": "sabueso_diagnostics (3.11)/14_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests_test_sabueso_diagnostics.py lab_tests_test_diagnostic_association.py.txt",
+          "sha256": "df8b528ad9e696f94fa8f962ca645a849016dac54265251f5b8f40993ae99384",
+          "passed": 47,
+          "skipped": 0,
+          "seconds": 4.73
+        },
+        {
+          "log": "sabueso_diagnostics (3.13)/14_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests_test_sabueso_diagnostics.py lab_tests_test_diagnostic_association.py.txt",
+          "sha256": "a2237785caf87d9afb2beb229d84162772f38179050cedddf833714872e88bbf",
+          "passed": 47,
+          "skipped": 0,
+          "seconds": 3.0
+        },
+        {
+          "log": "dummy (3.14)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "8cca2d27c0a62b8906ca099d3a29c7d7a339c17115d4c7b8f2b7a5d7086bcc1e",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "integration (3.14)/12_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests.txt",
+          "sha256": "a94888fdbf8dc05fd6822107ce33c334c685f75ea414951959fd2080ce8e205e",
+          "passed": 50,
+          "skipped": 29,
+          "seconds": 10.36
+        },
+        {
+          "log": "dummy (3.12)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "7ea7d95aa0e19a0878d6d1d82802e8fb0383d4b993174d5973aaa81cfc52e643",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "integration (3.13)/12_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests.txt",
+          "sha256": "688468d34da712e3510b9c1b736d06cba863618da06cfa3299d2570e716ddc9d",
+          "passed": 50,
+          "skipped": 29,
+          "seconds": 10.64
+        },
+        {
+          "log": "sabueso_diagnostics (3.14)/14_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests_test_sabueso_diagnostics.py lab_tests_test_diagnostic_association.py.txt",
+          "sha256": "dcc25c67b139c23343c97df35e7f5c245beb0ff63900ecf088a022de1d78722d",
+          "passed": 47,
+          "skipped": 0,
+          "seconds": 4.51
+        },
+        {
+          "log": "dummy (3.13)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "648bf7bdd19e116e782cb2356a7e0dc194927ce64cf7da58e184e301b8f76cf1",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "dummy (3.11)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "15f0edb615329a058cf3a695b9c0416264d8001f4308cef885e689499f20d36b",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "sabueso_diagnostics (3.12)/14_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests_test_sabueso_diagnostics.py lab_tests_test_diagnostic_association.py.txt",
+          "sha256": "6cf5a1c1889d17112063a51865e4b2804aeb7cfa3ca5da92aa499e9e3bb754f5",
+          "passed": 47,
+          "skipped": 0,
+          "seconds": 3.24
+        },
+        {
+          "log": "integration (3.12)/12_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests.txt",
+          "sha256": "07c37280b5b948d80e550106047a4d4b787eaa97822861eda71d24ad48b2d233",
+          "passed": 50,
+          "skipped": 29,
+          "seconds": 10.42
+        },
+        {
+          "log": "integration (3.11)/12_Run python -m pytest --receptor=ci -o pythonpath='' lab_tests.txt",
+          "sha256": "ab80857f0d31c1d696e93477fa75dd176102e5ca628e172eab03e1f936ede5a3",
+          "passed": 50,
+          "skipped": 29,
+          "seconds": 11.21
+        },
+        {
+          "log": "scientific/12_Run python -m pytest --receptor=ci -o pythonpath='' tests .._lab_tests.txt",
+          "sha256": "a0219203066d7d691479f4f39c6d49abde5e3d6c7ac9dc3da8532c33f8fb394f",
+          "passed": 364,
+          "skipped": 20,
+          "seconds": 27.3
+        }
+      ],
+      "source_checks": [
+        {
+          "log": "sabueso_diagnostics (3.11)/11_Verify selected source identities.txt",
+          "sha256": "92d194e47935fc12f3658293cd1d671b7f424f6b822d9bc45b7b74d6fbad4dca",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sabueso_commit": "68dac8f8bfc35944f5b6dd59aca8cb2a2819388d"
+        },
+        {
+          "log": "sabueso_diagnostics (3.13)/11_Verify selected source identities.txt",
+          "sha256": "318705027c3b1756a706ba591ce622b9f1cdd5a07d93e1bcdf125dcd1e8c1721",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sabueso_commit": "68dac8f8bfc35944f5b6dd59aca8cb2a2819388d"
+        },
+        {
+          "log": "integration (3.14)/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "a26090d2ed66f116eaa79cafdc6fe9a2325acc0f62feba591ece8a52a22136a7",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sabueso_commit": null
+        },
+        {
+          "log": "integration (3.13)/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "9ec617a23480143b6a66e3c52e4431f8699be51c3df5b5b5fa3c584dc611dc24",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sabueso_commit": null
+        },
+        {
+          "log": "sabueso_diagnostics (3.14)/11_Verify selected source identities.txt",
+          "sha256": "3ce885a301bf30b81a1ba1de1f1a82bbd2aee0975496e691dc62b714ff7ef407",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sabueso_commit": "68dac8f8bfc35944f5b6dd59aca8cb2a2819388d"
+        },
+        {
+          "log": "sabueso_diagnostics (3.12)/11_Verify selected source identities.txt",
+          "sha256": "26023d090ab33f9edb000e71794e23d887efae8772dbeaf266915c91800ec051",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sabueso_commit": "68dac8f8bfc35944f5b6dd59aca8cb2a2819388d"
+        },
+        {
+          "log": "integration (3.12)/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "6f2476ccf3b9ce5f4358202968f43c6c4a6ed9721026a4b8e7be6918ad786e54",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sabueso_commit": null
+        },
+        {
+          "log": "integration (3.11)/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "1c1ffc82b95ac2feb6e124eb9632b7033ad06accf8379a415c441659527fc330",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sabueso_commit": null
+        },
+        {
+          "log": "scientific/9_Verify the selected Recorda source and laboratory environments.txt",
+          "sha256": "8b8a356e982f41aaa9c062f33224177fb96b864559220169fe075a73735bc53b",
+          "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
+          "sabueso_commit": null
+        }
+      ],
+      "scientific_provider_checks": [
+        {
+          "log": "sabueso_diagnostics (3.11)/10_Run python lab_devtools_check_sabueso_environment.py.txt",
+          "sha256": "a00fe4aedfe351ec41758ca920a3a8f959c2be04313ecea0490721f7e6e9a03e"
+        },
+        {
+          "log": "sabueso_diagnostics (3.13)/10_Run python lab_devtools_check_sabueso_environment.py.txt",
+          "sha256": "7285ab5da58a0ff61d1a5dffcc54d4e06c2e55158a55be12aace9e4a7ba2684b"
+        },
+        {
+          "log": "sabueso_diagnostics (3.14)/10_Run python lab_devtools_check_sabueso_environment.py.txt",
+          "sha256": "1fad6fa46b2297d6e008b600731465124b8261de47d16b20ddfb9c608c0fadca"
+        },
+        {
+          "log": "sabueso_diagnostics (3.12)/10_Run python lab_devtools_check_sabueso_environment.py.txt",
+          "sha256": "225f261fa6101699c84768e526311abad4f27be442d9b8b267e6ef36dd3d8dc3"
+        }
+      ],
+      "capture_sha256": {
+        "run.json": "d74f270871d57b77973a4201309c42503a1dcaa44c24ef5f0729e8c1e45b15e6",
+        "workflow.json": "1109fceba77a717e8efbf136314f4bec82b5083f4988517dd78da034b1474dee",
+        "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+        "jobs.json": "21e974f36a9c6ec3936771fe3f8306a33c4ab00e9463ed8832c57373e17b500e",
+        "logs.zip": "c26c30fe13df77063032fdb2280e0dd22ad56d6c71f0511f6a4b401e72594117",
+        "manifest.json": "4967c75a70acd09c2e6bc0c6ad73532992749aeaa11c45b18d4d6fae714c947f",
+        "checks.json": "e580c129b7656158c81b0b41ce358819c4757f6689770c267a4c69580e701b53"
+      }
+    },
+    {
+      "run_id": 37584383768,
+      "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584383768",
+      "event": "push",
+      "lab_commit": "a0376799c25c6b650ffa79aa6e4012601892d24c",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "dummy (3.11)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584383768/job/112671078934"
+        },
+        {
+          "name": "dummy (3.12)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584383768/job/112671079197"
+        },
+        {
+          "name": "dummy (3.13)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584383768/job/112671079199"
+        },
+        {
+          "name": "dummy (3.14)",
+          "conclusion": "success",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584383768/job/112671079334"
+        },
+        {
+          "name": "scientific",
+          "conclusion": "skipped",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584383768/job/112671079899"
+        },
+        {
+          "name": "sabueso_diagnostics",
+          "conclusion": "skipped",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584383768/job/112671080387"
+        },
+        {
+          "name": "integration",
+          "conclusion": "skipped",
+          "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37584383768/job/112671080388"
+        }
+      ],
+      "pytest_verdicts": [
+        {
+          "log": "dummy (3.14)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "dddc5989d4dbf6f41232acd4862eb24bc35761275ee1ba35b8e7b30a6d9e09d4",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.06
+        },
+        {
+          "log": "dummy (3.13)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "3c5e5363360d7b79945f6b1b1969484a75369188ae72c1a5ec46e9412372ce17",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.04
+        },
+        {
+          "log": "dummy (3.12)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "90471be3bf1b4991b2ae448fa873c5bf7df56baf6fd46d5437f3ee5c03c28274",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.05
+        },
+        {
+          "log": "dummy (3.11)/11_Run python -m pytest --receptor=ci -o pythonpath='' tests_test_dummy.py.txt",
+          "sha256": "c84229fab7315d4aed7460b2545f9ac8c15ae6050e6509767d256cb06c1c12f5",
+          "passed": 6,
+          "skipped": 0,
+          "seconds": 0.03
+        }
+      ],
+      "source_checks": [],
+      "scientific_provider_checks": [],
+      "capture_sha256": {
+        "run.json": "7e4ea17526da648cd65b302ba7ba144743f49173a9db1b954f4c064c719b2530",
+        "workflow.json": "1109fceba77a717e8efbf136314f4bec82b5083f4988517dd78da034b1474dee",
+        "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+        "jobs.json": "7a94b7961c80c8b21d5b72dccbf391d6771d97f352fb23c17131cefd2859b72e",
+        "logs.zip": "732b9535d73c6264cba49f4b34860cc3d128155213490575301e6e406b53883d",
+        "manifest.json": "a4131ff3436f5712621a7ce9ad76e7c888de4d2dda32c8cdcb47191cf0ede5c2",
+        "checks.json": "2b5cdc199a1efb9e0359a2e556b423ba00c6aa9322ce95ca11fcdb8fdc2a5454"
+      }
+    }
+  ],
+  "limits": [
+    "Manual thirteen jobs: four native scientific/association lanes on 3.11\u20133.14, four kernel lanes, four dummy lanes, one existing scientific/recovery lane",
+    "New native cases are executed in the dedicated native lanes; existing scientific/kernel lanes explicitly skip those cases",
+    "Routine push executes four dummy jobs and skips three manual job groups",
+    "No distribution/OS/replay/live source/human usability or automatic attachment claim"
+  ]
+}

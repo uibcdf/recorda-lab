@@ -1,9 +1,9 @@
 ---
 summary: Evaluate native Sabueso source outcomes and diagnostic associations per Card attempt.
 issue: uibcdf/recorda-lab#15
-status: active
+status: resolved
 opened: 2026-10-07
-closed:
+closed: 2026-10-07
 verification: measured
 area: [diagnostics, sabueso, native-references]
 blocked_by: []
@@ -53,11 +53,19 @@ Local installed qualification passes 380 tests/four historical Sabueso skips;
 notebooks/55 code cells and 14 kernel-fault cells pass. Source/wheel/provider
 hashes and explicit native Conda mapping verification are retained in
 `../evidence/sabueso_diagnostics_linux_py314.json`; the unchanged core preflight
-limitation is tracked in uibcdf/recorda#23. Exact hosted qualification is pending. No platform routing, release/OS/replay
+limitation is tracked in uibcdf/recorda#23. Corrected exact-head CI passes all 13 jobs; actual native logs report 47 passes
+per Python 3.11–3.14 minor. Published receptors and native conclusions agree.
+Source/provider checks and capture hashes are retained in
+`../evidence/sabueso_diagnostics_hosted.json`. No platform routing, release/OS/replay
 or human usability qualification is selected.
 
 Final review corrected ordinary reference-error precedence for native warnings,
 interrupts and cancellation (five additional receiving cases). Initial hosted
 preflight rejected the new unclassified environment; explicit route/provider
 admission and five negative cases now pass. Initial receipts remain retained.
-Corrected exact-head hosted qualification is pending before closure.
+The final hosted run is
+[37584430143](https://github.com/uibcdf/recorda-lab/actions/runs/37584430143),
+at Lab `a0376799c25c6b650ffa79aa6e4012601892d24c`. Current receipts freeze the
+corrected sources; closing documentation preserves every selected byte. Existing
+public references answer the bounded native producer question. No automatic
+attachment/context API or platform routing decision is selected.
