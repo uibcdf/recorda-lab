@@ -1,7 +1,7 @@
 {
-  "created_utc": "2026-10-07T06:56:45.455053+00:00",
+  "created_utc": "2026-10-07T06:52:00.732659+00:00",
   "issue": "uibcdf/recorda-lab#15",
-  "lab_parent_commit": "c1a3f26c8ebf9ac4f6fc7d5e48f2f3126bd1ef9f",
+  "lab_parent_commit": "80ffe3e69bb8928b877669f2114c5223120d4282",
   "recorda_commit": "48a6c9a0630027f0f2c3d8d82215de8e27764913",
   "sabueso_commit": "68dac8f8bfc35944f5b6dd59aca8cb2a2819388d",
   "provenance": {
@@ -463,7 +463,7 @@
   "lab_source_sha256": {
     ".github/workflows/tests.yml": "ed517a12bae8599b4a10c2f83d1b8e57b7748ca9a3abbfa6f72f124597a0ef7a",
     "README.md": "e1f870fb76b0209ff8908524eb4529cb75d28b46cf1a87d4dc9febe56393cd73",
-    "devtools/check_recorda_environment.py": "e9bf33bbfa2a7ba622921734949fed134b97e27d79fde46986223a2c668c8adb",
+    "devtools/check_recorda_environment.py": "c6208d3898843af6f87e03cf0fb6631f85ac8c4f9fddaff7672de2d260ce5334",
     "devtools/check_sabueso_environment.py": "7bd2b1c0fbd1d2a90c7d515d7bd8cf2989f5ea799a3497c655dabe5e5c7db62f",
     "devtools/conda-envs/development_env.yaml": "b692fdb678ef66886288221c1382bc2b871053826ebbfabe7c8de0520cc29c8e",
     "devtools/conda-envs/notebook_env.yaml": "e122696a4b2e803493fe2ed8af9b7811223ded8f291cf9a012f4bdc467235b0c",
@@ -495,7 +495,7 @@
     "experiments/run_performance.py": "0570c964f20cd94d53ab0a66eddd9eb629bc5b53b010941049d03039795fed0c",
     "experiments/run_reference_checks.py": "6e5974dd72b752cd58d1d431fc6bd7da3c7b4ec9dd4913042e6324dccf8cf63b",
     "experiments/run_sabueso.py": "020f70bcb846ca9b86f6ac014ea729dc5baee83d187a51581f97bbf74b8bcfae",
-    "experiments/run_sabueso_diagnostics.py": "4fabd2b7ba58cb438c07f84b58884e4374b1e69302068be40df8e57aaeb6597b",
+    "experiments/run_sabueso_diagnostics.py": "1fbbe37f758c6f4e15d38e8a50823e0fec0578761d9ff0496a3e4eccb2906653",
     "experiments/run_scipy.py": "e7d53ccdf79a287f87b491fdf5ab21a72ee829b4131f37bdaa0b57e95f22242f",
     "experiments/run_selection.py": "6229c7b86b93c6c2f3f965e767dbe0e9a2e2ef4b71017ca20eee59b8068f10f1",
     "experiments/run_slice.py": "5bcbd46feafa3b5be96156d0fa75755016857c04b219dd6172bb130c68ee9a66",
@@ -523,7 +523,7 @@
     "tests/test_notebook_experiment.py": "fbf4e3db9dfa5088d9a5b61c491a3b7a8ef56d0f96e868f6deb915cd486ae40c",
     "tests/test_performance_experiment.py": "6797c3e7c1a63b3334e5bc9ffc70c29b23c2c5332fe270ff3664b81eca0905c6",
     "tests/test_reference_checks_experiment.py": "10a98516db5425cb0ac5a0445c78e5a81ce292d63ee74ee6f6e435e56c1a986e",
-    "tests/test_sabueso_diagnostics.py": "9b751c59fe312e27743d3224fd4bcd093be8feaa2ac776b6ba0c2ed2ec59c1f1",
+    "tests/test_sabueso_diagnostics.py": "50b6ec128d5956cabbf200f2fc6c68d88d0e9df19ccbf6cf50cdfbe19fd400c3",
     "tests/test_sabueso_experiment.py": "6c810df7ed3e10dba707df4dc9adeb9c3bdc4580aa890da6943669f2b5d54195",
     "tests/test_scipy_experiment.py": "e0c5a0ce0d40b33d3443ba200db8d1e6d0e6bbe3aad8650e9a15cfb43120e2f7",
     "tests/test_selection_experiment.py": "be809153c81bcb6f48e029a243bf5882bf92dc9a67fbda7876dd224827b5c997",
@@ -547,14 +547,14 @@
     "src/recorda/integrations/argdigest.py": "beb444156e44ba8d08565c0a50ab7a9b37fd9b3691f65d02739601006b7507f9"
   },
   "qualification": {
-    "passed": 380,
+    "passed": 375,
     "skipped": 4,
     "core_passed": 305,
-    "lab_passed": 75,
-    "new_receiving_cases": 16,
-    "seconds": 40.53,
+    "lab_passed": 70,
+    "new_receiving_cases": 11,
+    "seconds": 40.61,
     "working_directory": "/tmp/recorda-lab13-core",
-    "command": "RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SCIPY=1 RECORDA_TEST_SMONITOR=1 RECORDA_LAB_SABUESO_DIAGNOSTICS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /tmp/recorda-lab15-native-env/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath='' tests /tmp/recorda-lab15-native-trial/tests --basetemp=/tmp/recorda-lab15-final-qualified"
+    "command": "RECORDA_LAB_NOTEBOOK=1 RECORDA_LAB_SCIPY=1 RECORDA_TEST_SMONITOR=1 RECORDA_LAB_SABUESO_DIAGNOSTICS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /tmp/recorda-lab15-native-env/bin/python -m pytest -p pytest_receptor.plugin --receptor=llm -o pythonpath='' tests /tmp/recorda-lab15-native-trial/tests --basetemp=/tmp/recorda-lab15-qualified"
   },
   "notebooks": {
     "executed": {
@@ -564,50 +564,50 @@
           "code_cells_passed": 9,
           "source_sha256": "52938756c15f959af4d37d76763be1034e3fcdd1489b15c24f9d0a957eec68fb",
           "executed_notebook": "01_manual_activation/executed.ipynb",
-          "executed_sha256": "4349047581c56bc869095c3c3b27190eda5005aff4ff8fe60af3d3e358d368cb"
+          "executed_sha256": "71ceb118c2e15f9d4fda1ab541d42892467b2ef3b213bae2b99f77a08f48a68a"
         },
         "02_recording_cost.ipynb": {
           "code_cells_passed": 4,
           "source_sha256": "19ecb334f219f6155708de4d6780b4a90353d951befedad4b7dad07693c2a8d1",
           "executed_notebook": "02_recording_cost/executed.ipynb",
-          "executed_sha256": "b349971a9bdc5967cc114afe87caf9aead82a5ba41e47d08189b98855f11bda0"
+          "executed_sha256": "3fd4b1ec130dcf6f33134d1d94c9cacd8bd0ddb7f1fa8513e139db4df430fe94"
         },
         "03_scipy_fit.ipynb": {
           "code_cells_passed": 8,
           "source_sha256": "e01c91c84a7e2f3ca1941d17af48b17d2eb362e70d4985c66faf2d3fc272852d",
           "executed_notebook": "03_scipy_fit/executed.ipynb",
-          "executed_sha256": "f7df06b2b102a55f9c2834df507a7e150f3075d1c1b9f5a9ca3b39db8464e2fc"
+          "executed_sha256": "88135c2c49a0dd3475a00cb373a694b51dee60a29e82f0bd2238327992b70a73"
         },
         "05_capture_selection.ipynb": {
           "code_cells_passed": 8,
           "source_sha256": "28c00f5b4c8ea9fd95ef6ae26cdae4819212f3d8538f23c7c4a968de331cca8e",
           "executed_notebook": "05_capture_selection/executed.ipynb",
-          "executed_sha256": "4a52ad3fa637124b28873d433d8521f902d8595432c48cc2ed17409e9d44f06a"
+          "executed_sha256": "94be85f20becc0589c947fc3accff15ff55805518a5015ab4beb7e3138f01200"
         },
         "06_reference_checks.ipynb": {
           "code_cells_passed": 11,
           "source_sha256": "9b03a6d8555084ee719f7c5799ac195acb6ff64254d84cc01f3f1c99c523fca7",
           "executed_notebook": "06_reference_checks/executed.ipynb",
-          "executed_sha256": "b0f9dd992ffe3c0e5c06074e5c366c96a4e7e53c64b94a1a61332e4175680a6a"
+          "executed_sha256": "409cf0107ded197d4f00c880835a47879f7ece7d93728e5d06a22f11028c9706"
         },
         "07_multi_step_workflow.ipynb": {
           "code_cells_passed": 9,
           "source_sha256": "9abb9c6bd9498b32143c9d08a22f68ea7412e931bebdb335706ed9e1a7732329",
           "executed_notebook": "07_multi_step_workflow/executed.ipynb",
-          "executed_sha256": "841a4424ed2686b8a2cf1a98ba2d1b30eb035dbf8b3523066ab7ed1b2562e8c1"
+          "executed_sha256": "e435cb3d940959c2629a37f05974b619ecde175c741fa8a89ce692335f75de30"
         },
         "08_diagnostic_association.ipynb": {
           "code_cells_passed": 6,
           "source_sha256": "7436d78cbed34582cddb6961258be5bb50e0e5288f3293b42b23ac85990514c1",
           "executed_notebook": "08_diagnostic_association/executed.ipynb",
-          "executed_sha256": "0fdecb96f1164edbec1bfb0a342d42c136c7e1473fde8152b236034aaa1fb79c"
+          "executed_sha256": "024ae507086007728b88823187ca7b462423479d77629027f09c8071395bf052"
         }
       },
       "skipped": {
         "04_sabueso_resolution.ipynb": "enable RECORDA_LAB_SABUESO=1 with the declared trial dependencies"
       }
     },
-    "receipt_sha256": "82ab1c64b019ec941525063bd0af86392127965291d5ebc17fc3c1a7c049bba2",
+    "receipt_sha256": "6f53c915f0227edd422139ed99dbf2933c7b8c7d24888fefd5ef5a9b239c04f6",
     "selected_count": 7,
     "code_cells": 55,
     "kernel_fault_cells": 14
@@ -640,34 +640,6 @@
     "moli": {
       "output": ".: conforms to MOLI governance core.",
       "sha256": "46dcbdf945a9df9b00638285a3757dc5692cb1aaae9e4aa75b66334cc23f7209"
-    },
-    "final-pair": {
-      "output": "receptor: 100% 384/384 41s\nPASS exit=0 | 380 passed, 4 skipped | 40.53s\n\nskipped: 4 in 1 group\n  x4 | explicit offline Sabueso lane: RECORDA_LAB_SABUESO=1",
-      "sha256": "c3c527df01bae13da3aa0c075e069128fc4371e45bf822ef1147b7e92fefc8dc"
-    },
-    "precedence-before": {
-      "output": "FAIL exit=1 | 4 failed, 1 passed, 11 deselected | 1.40s | 4 root causes\n\n[1] OSError | 1 test | call\n    tests/test_sabueso_diagnostics.py:275\n    OSError: reference write fault\n    caused by: sabueso._private.smonitor.warnings.EnrichmentPartialWarning: RCSB PDB answered only part of the record for sabueso:protein:uniprot:P60174 (9LAB) (missing: rcsb_polymer_instance_feature, rcsb_ligand_neighbors); the result is incomplete. The gap is recorded with the result. Retry later, or check the source's availability.\n    frames: tests/test_sabueso_diagnostics.py:294 -> experiments/run_sabueso_diagnostics.py:164 -> tests/test_sabueso_diagnostics.py:275\n    rerun: pytest tests/test_sabueso_diagnostics.py::test_reference_write_fault_cannot_replace_native_failure[warning] -q\n\n[2] OSError | 1 test | call\n    tests/test_sabueso_diagnostics.py:275\n    OSError: reference write fault\n    caused by: KeyboardInterrupt\n    frames: tests/test_sabueso_diagnostics.py:294 -> experiments/run_sabueso_diagnostics.py:164 -> tests/test_sabueso_diagnostics.py:275\n    rerun: pytest tests/test_sabueso_diagnostics.py::test_reference_write_fault_cannot_replace_native_failure[interrupt] -q\n\n[3] OSError | 1 test | call\n    tests/test_sabueso_diagnostics.py:275\n    OSError: reference write fault\n    caused by: SystemExit: 9\n    frames: tests/test_sabueso_diagnostics.py:294 -> experiments/run_sabueso_diagnostics.py:164 -> tests/test_sabueso_diagnostics.py:275\n    rerun: pytest tests/test_sabueso_diagnostics.py::test_reference_write_fault_cannot_replace_native_failure[exit] -q\n\n[4] OSError | 1 test | call\n    tests/test_sabueso_diagnostics.py:275\n    OSError: reference write fault\n    caused by: asyncio.exceptions.CancelledError\n    frames: tests/test_sabueso_diagnostics.py:294 -> experiments/run_sabueso_diagnostics.py:164 -> tests/test_sabueso_diagnostics.py:275\n    rerun: pytest tests/test_sabueso_diagnostics.py::test_reference_write_fault_cannot_replace_native_failure[cancel] -q",
-      "sha256": "64c8b61460a4889ce5a6f4787b0fe34d3154bb5932cc66446c99852cb43482e4"
-    },
-    "precedence-after": {
-      "output": "PASS exit=0 | 47 passed | 8.09s",
-      "sha256": "ecce1a1e66dfe9b3a7af29fe1c452cbd947846fcce402398df5b8bb11ed04e3c"
-    },
-    "environment-preflight": {
-      "output": "{\"dummy_dependencies\": 0, \"recorda_commit\": \"48a6c9a0630027f0f2c3d8d82215de8e27764913\", \"runtime_environments\": 5}",
-      "sha256": "5ffc20663c00c76e4609230b60a8a130367e24ba7fff35fd9114d14641ad5761"
-    },
-    "preflight-negative": {
-      "output": "unknown : rejected: unclassified or missing laboratory environment\nmissing-provider : rejected: sabueso_diagnostics_env.yaml: missing reviewed published artifact for smonitor\nmissing-scientific-provider : rejected: sabueso_diagnostics_env.yaml: missing reviewed scientific artifact pyunitwizard=0.28.1=py_0\nunsupported-python : rejected: sabueso_diagnostics_env.yaml: python has python==3.15.*, requires python<3.15,>=3.11\nwrong-route : rejected: sabueso_diagnostics: required provider closure is not provisioned",
-      "sha256": "095948ef087309fbf3dff3c0e8d483a86015d5e9dc51f2fd71781a1e56244ee2"
-    },
-    "final-ruff-check": {
-      "output": "All checks passed!",
-      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
-    },
-    "final-ruff-format": {
-      "output": "88 files already formatted",
-      "sha256": "0e8875b6c474ca3639d7a7112ea95c546141b46dca674c9c33d3e55821b32afe"
     }
   },
   "local_provider_mapping": {
@@ -698,22 +670,5 @@
     "No scientific/core/provider source change, automatic bridge, release/OS/replay/human usability or MOLI routing claim",
     "Four historical Sabueso tests remain explicitly skipped; this native diagnostic trial is a separate newly qualified case"
   ],
-  "hosted_evidence": "Pending separately receipted exact implementation CI",
-  "previous_qualification": "sabueso_diagnostics_linux_py314_initial.json",
-  "resolved_local_defects": [
-    {
-      "owner": "uibcdf/recorda-lab#15",
-      "observation": "New native Conda recipe was unclassified in existing Lab preflight, blocking all nine non-dummy initial CI jobs",
-      "fix": "Explicit fifth-environment admission with scientific provider pins and workflow route verification",
-      "negative_cases": 5,
-      "initial_ci_run": 37583935898
-    },
-    {
-      "owner": "uibcdf/recorda-lab#15",
-      "observation": "Ordinary reference-write fault replaced native warning/error or interrupt/cancellation outside ConnectorError",
-      "fix": "Track/rethrow all native BaseException instances, preserve them on ordinary reference faults, retain only controlled native ConnectorError traces",
-      "receiving_cases": 5,
-      "initial_result": "4 failed, 1 passed, 11 deselected"
-    }
-  ]
+  "hosted_evidence": "Pending separately receipted exact implementation CI"
 }

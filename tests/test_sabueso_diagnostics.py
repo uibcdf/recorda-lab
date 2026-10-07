@@ -230,3 +230,75 @@ with trial.offline(),trial.recorda.session('interrupted-native',path=sys.argv[1]
     record = recorda.inspect(journal)
     assert record.status == "incomplete" and record.operations[0]["status"] == "incomplete"
     assert record.operations[0]["outputs"] == {}
+
+
+@pytest.mark.parametrize("kind", ["connector", "warning", "interrupt", "exit", "cancel"])
+def test_reference_write_fault_cannot_replace_native_failure(trial, tmp_path, monkeypatch, kind):
+    import asyncio
+    import warnings
+
+    from recorda.runtime import Operation
+    from sabueso._private.smonitor.warnings import EnrichmentPartialWarning
+
+    error = None
+    native = trial.native_call
+
+    def observed(mode):
+        nonlocal error
+        if kind in ["interrupt", "exit", "cancel"]:
+            error = {
+                "interrupt": KeyboardInterrupt(),
+                "exit": SystemExit(9),
+                "cancel": asyncio.CancelledError(),
+            }[kind]
+            raise error
+        try:
+            return native(mode)
+        except BaseException as caught:
+            error = caught
+            raise
+
+    monkeypatch.setattr(trial, "native_call", observed)
+    native_entry = trial.get_entry
+
+    def source(*args, **kwargs):
+        nonlocal error
+        try:
+            return native_entry(*args, **kwargs)
+        except trial.ConnectorError as caught:
+            error = caught
+            raise
+
+    monkeypatch.setattr(trial, "get_entry", source)
+
+    def broken(*args):
+        raise OSError("reference write fault")
+
+    monkeypatch.setattr(Operation, "output", broken)
+    sink = trial.SabuesoDiagnostics()
+    sink.attach(trial.configure_application())
+    root = tmp_path / "artifacts"
+    root.mkdir()
+    expected = {
+        "connector": trial.ConnectorError,
+        "warning": EnrichmentPartialWarning,
+        "interrupt": KeyboardInterrupt,
+        "exit": SystemExit,
+        "cancel": asyncio.CancelledError,
+    }[kind]
+    try:
+        with trial.offline(), warnings.catch_warnings():
+            warnings.simplefilter("error", EnrichmentPartialWarning)
+            with pytest.raises(expected) as caught:
+                with trial.recorda.session("precedence", path=tmp_path / "record.jsonl") as session:
+                    trial.attempt(
+                        session,
+                        sink,
+                        root,
+                        "attempt",
+                        None if kind == "connector" else "partial",
+                        [],
+                    )
+            assert caught.value is error
+    finally:
+        sink.detach()

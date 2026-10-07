@@ -1,0 +1,72 @@
+{
+  "issue": "uibcdf/recorda-lab#15",
+  "run_id": 37583935898,
+  "url": "https://github.com/uibcdf/recorda-lab/actions/runs/37583935898",
+  "lab_commit": "c1a3f26c8ebf9ac4f6fc7d5e48f2f3126bd1ef9f",
+  "conclusion": "failure",
+  "jobs": [
+    {
+      "name": "scientific",
+      "conclusion": "failure"
+    },
+    {
+      "name": "sabueso_diagnostics (3.12)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "sabueso_diagnostics (3.13)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "sabueso_diagnostics (3.11)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "dummy (3.11)",
+      "conclusion": "success"
+    },
+    {
+      "name": "integration (3.14)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "dummy (3.14)",
+      "conclusion": "success"
+    },
+    {
+      "name": "integration (3.11)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "integration (3.13)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "dummy (3.12)",
+      "conclusion": "success"
+    },
+    {
+      "name": "integration (3.12)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "sabueso_diagnostics (3.14)",
+      "conclusion": "failure"
+    },
+    {
+      "name": "dummy (3.13)",
+      "conclusion": "success"
+    }
+  ],
+  "cause": "Lab preflight rejected new unclassified environment before scientific tests",
+  "capture_sha256": {
+    "run.json": "85cd12122ce35f6798ce29e2022ea7cf08cd86edbbb6aba2b1162d6f09d9c4c5",
+    "workflow.json": "1109fceba77a717e8efbf136314f4bec82b5083f4988517dd78da034b1474dee",
+    "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+    "jobs.json": "e206a70796c61fe0a0c535d99e28c8a6c7d12c7ad6d4283f44665c3f7d4a6bbb",
+    "logs.zip": "53b2d42767a3b82186628980a156b7d27118f38c5451b4efcd6f0d07d1655c2e",
+    "manifest.json": "47aa09a6f471c93364c0ea7ed8dee55dacd5f87da9101f650aff09d750b317f3",
+    "checks.json": "1ca25bd728ca0ee9dda931645c49f4ba3b02e485362e592d0eb3449eea08ae44"
+  },
+  "receptor": "Published gh-run-receptor 1.2.0 first adaptive inspection, subsequent full retention"
+}

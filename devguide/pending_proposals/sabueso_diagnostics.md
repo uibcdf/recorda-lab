@@ -48,10 +48,16 @@ published receptors and actual appropriate hosted checks.
 
 ## Resolution
 
-Local installed qualification passes 375 tests/four historical Sabueso skips;
-11 new cases and 31 existing association regressions pass. Seven selected
+Local installed qualification passes 380 tests/four historical Sabueso skips;
+16 new cases and 31 existing association regressions pass. Seven selected
 notebooks/55 code cells and 14 kernel-fault cells pass. Source/wheel/provider
 hashes and explicit native Conda mapping verification are retained in
 `../evidence/sabueso_diagnostics_linux_py314.json`; the unchanged core preflight
 limitation is tracked in uibcdf/recorda#23. Exact hosted qualification is pending. No platform routing, release/OS/replay
 or human usability qualification is selected.
+
+Final review corrected ordinary reference-error precedence for native warnings,
+interrupts and cancellation (five additional receiving cases). Initial hosted
+preflight rejected the new unclassified environment; explicit route/provider
+admission and five negative cases now pass. Initial receipts remain retained.
+Corrected exact-head hosted qualification is pending before closure.

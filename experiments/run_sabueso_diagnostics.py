@@ -104,7 +104,7 @@ def attempt(session, sink, root, name, kind, files, *, writer=retain):
                     result = native_call(kind)
                 else:
                     get_entry("9LAB", client=resolver("failure").rcsb)
-        except ConnectorError as native_error:
+        except BaseException as native_error:
             error = native_error
             # Public Recorda operation must observe the native failure.
             raise
@@ -127,7 +127,7 @@ def attempt(session, sink, root, name, kind, files, *, writer=retain):
                         card.acquisition_trace["id"],
                         files,
                     )
-                elif error is not None:
+                elif isinstance(error, ConnectorError):
                     artifacts["native_acquisition"] = writer(
                         root / f"{name}-acquisition.json",
                         error.acquisition_trace,

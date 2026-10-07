@@ -83,13 +83,13 @@ is unchanged. Native process interrupts/cancellation retain their behavior.
 ## Qualification and decision
 
 The [local receipt](evidence/sabueso_diagnostics_linux_py314.json) records the
-installed pair and frozen source/wheel/provider hashes: **375 passed/four historical
-Sabueso skips** (305 core + 70 Lab), **11 new cases**, seven notebooks/**55 code
-cells**, and **14 kernel-fault cells**. The 42 targeted native/association cases pass.
+installed pair and frozen source/wheel/provider hashes: **380 passed/four historical
+Sabueso skips** (305 core + 75 Lab), **16 new cases**, seven notebooks/**55 code
+cells**, and **14 kernel-fault cells**. The 47 targeted native/association cases pass.
 An initial test expected a null context after bundle omission; the provider
 correctly removes the key. The receiving assertion was corrected before qualification.
 Exact implementation CI is required before closure; configured lanes alone are
-not qualification. Python 3.11–3.14 native lanes select the 11 new cases and the
+not qualification. Python 3.11–3.14 native lanes select the 16 new cases and the
 31 existing association regressions using published pytest-receptor 1.1.0.
 
 Local native Conda installation stores archive-relative noarch paths in
@@ -111,3 +111,9 @@ receiving qualification. No MOLI routing change is selected.
 Historical Sabueso #5/#6 receipts and the synthetic #14 receipts remain unchanged.
 This is a controlled real-library technical trial, not live source completeness,
 production adoption, human usability, release/OS/distribution or replay evidence.
+
+Final review corrected ordinary reference-error precedence for native warnings,
+interrupts and cancellation (five additional receiving cases). Initial hosted
+preflight rejected the new unclassified environment; explicit route/provider
+admission and five negative cases now pass. Initial receipts remain retained.
+Corrected exact-head hosted qualification is pending before closure.

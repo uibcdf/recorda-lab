@@ -18,6 +18,7 @@ ENVIRONMENTS = {
     "test_env.yaml",
     "notebook_env.yaml",
     "scientific_env.yaml",
+    "sabueso_diagnostics_env.yaml",
 }
 PROVIDERS = {"smonitor": "0.19.0=py_1", "argdigest": "0.15.0=py_0", "depdigest": "0.13.0=py_0"}
 
@@ -53,6 +54,10 @@ def audit(root, recorda, commit):
         for provider, coordinate in PROVIDERS.items():
             if f"{provider}={coordinate}" not in entries:
                 raise ValueError(f"{name}: missing reviewed published artifact for {provider}")
+        if name == "sabueso_diagnostics_env.yaml":
+            for artifact in ("pyunitwizard=0.28.1=py_0", "ackredit=0.11.0=py_0"):
+                if artifact not in entries:
+                    raise ValueError(f"{name}: missing reviewed scientific artifact {artifact}")
         for provider, requirement in required.items():
             candidate = supplied.get(provider)
             if candidate is None or not checker.contained(
@@ -63,6 +68,7 @@ def audit(root, recorda, commit):
     for job, environment in (
         ("integration", "notebook_env.yaml"),
         ("scientific", "scientific_env.yaml"),
+        ("sabueso_diagnostics", "sabueso_diagnostics_env.yaml"),
     ):
         steps = workflow[job]["steps"]
         routes = [
