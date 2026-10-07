@@ -18,7 +18,11 @@ failure/interruption precedence and explicit fifth-environment admission are cor
 
 No scientific package source, Recorda runtime or workflow default is changed.
 Local proof verifies native Conda noarch path mappings; the unchanged core preflight
-limitation remains `uibcdf/recorda#23`. Broader automatic integration, platform
+limitation is preserved in the original receipts under `uibcdf/recorda#23`.
+That defect is subsequently resolved in core verifier
+`9228c84f78221442a4ceb0cfbc45887a919d8367`; the Lab default remains unchanged.
+Original standalone acceptance is complete; read `STANDALONE_ACCEPTANCE.md`.
+Broader automatic integration, platform
 routing, release/OS and replay remain separate. Closing docs preserve selected bytes.
 
 ## Previous integration source — diagnostic association comparison
@@ -138,7 +142,8 @@ These results qualify those recorded inputs, not subsequent laboratory changes.
 
 Historical 0.0.0 receipts remain unchanged. This is source test infrastructure;
 package distribution, public OS qualification and archival remain separate work.
-Consolidation remains tracked in `uibcdf/recorda-lab#1`. The subsequently
+Historical consolidation was tracked in `uibcdf/recorda-lab#1`, now resolved
+against the original criteria as recorded in `STANDALONE_ACCEPTANCE.md`. The subsequently
 completed controlled Sabueso scenario is tracked in `uibcdf/recorda-lab#5`.
 
 ## Native exception-reference extension

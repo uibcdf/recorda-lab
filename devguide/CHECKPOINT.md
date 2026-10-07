@@ -4,6 +4,20 @@ Resume with Recorda's [development checkpoint](https://github.com/uibcdf/recorda
 this guide and [RECORDA_BASELINE.md](RECORDA_BASELINE.md). Lab owns scenarios
 and evidence, Recorda owns the standalone runtime, and MOLI owns shared contracts.
 
+## Original standalone laboratory acceptance completed
+
+`uibcdf/recorda-lab#1` and `uibcdf/recorda#1` are resolved against the original
+criteria, including bounded real SciPy/native Sabueso follow-ons. Read
+[STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) and
+[archive/controlled_laboratory.md](archive/controlled_laboratory.md).
+The paired [consolidation receipt](evidence/standalone_acceptance_consolidation.json)
+records 101 fresh targeted passes, both original five-scenario artifact sets,
+ten journals read with Recorda/stdlib alone and qualified source/wheel continuity.
+Existing full scientific and current-core qualifications retain separate scopes;
+their successful runs were reinspected with published gh-run-receptor 1.2.0.
+Package metadata, native science, notebooks and workflow default remain unchanged.
+Release/OS/coverage and new scientific/shared integration gates stay separately owned.
+
 ## Current native Sabueso diagnostic trial
 
 - Lab implementation: `a0376799c25c6b650ffa79aa6e4012601892d24c`, under `uibcdf/recorda-lab#15`.
@@ -26,9 +40,11 @@ passes all 13 jobs, including 47 passes in each 3.11–3.14 native lane. Initial
 preflight failure and local qualification, without relabelling them as final success.
 
 Published provider coordinates and managed bytes are verified. Native Conda's
-noarch path mapping exposes a distinct unchanged core preflight limitation,
-`uibcdf/recorda#23`; local evidence explicitly verifies that mapping rather than
-claiming the old checker passed. The [hosted receipt](evidence/sabueso_diagnostics_hosted.json) retains actual verdicts,
+noarch path mapping exposed the older core preflight limitation,
+`uibcdf/recorda#23`; the trial's local evidence explicitly verified that mapping.
+Recorda subsequently resolved #23 at `9228c84f78221442a4ceb0cfbc45887a919d8367`
+with separate native Conda/micromamba and eleven-job core CI proof. The original
+trial receipts and this workflow's older default selection remain unchanged. The [hosted receipt](evidence/sabueso_diagnostics_hosted.json) retains actual verdicts,
 source/provider checks and capture hashes; published receptors and native GitHub
 conclusions agree. Resolved history is [archive/sabueso_diagnostics.md](archive/sabueso_diagnostics.md).
 Existing references suffice for this bounded
@@ -148,8 +164,10 @@ No public release, general OS support, authenticated integrity or replay is qual
 ## Next work
 
 The completed receiving analysis is [archive/published_recorda_providers.md](archive/published_recorda_providers.md).
-Consolidate remaining standalone acceptance in `uibcdf/recorda-lab#1`, coordinated
-with `uibcdf/recorda#1`; the bounded multi-step trial in Lab #10 is complete.
+Original standalone acceptance in `uibcdf/recorda-lab#1` / `uibcdf/recorda#1`
+is complete. The next engineering gate is packaging/distribution in
+`uibcdf/recorda#3`, with installed-OS and coverage in #4/#6. The laboratory has no
+queued scenario solely to keep the original coordination issue open.
 New experiments need a concrete consumer question, independent oracle and owning
 issue. Core ecosystem review #2 is complete; MOLI registry reconciliation remains
 separately owned in `uibcdf/moli#62`. Release/OS/coverage remain Recorda #3/#4/#6.

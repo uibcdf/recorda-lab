@@ -11,3 +11,8 @@ The controlled diagnostic association comparison is in
 The real native Sabueso source diagnostic trial is in
 [sabueso_diagnostics.md](sabueso_diagnostics.md), owned by `uibcdf/recorda-lab#15`;
 read `../SABUESO_DIAGNOSTICS.md` for its maintained decision.
+
+
+The original controlled laboratory acceptance is resolved in
+[controlled_laboratory.md](controlled_laboratory.md), owned by
+`uibcdf/recorda-lab#1`; read `../STANDALONE_ACCEPTANCE.md` for current scope.

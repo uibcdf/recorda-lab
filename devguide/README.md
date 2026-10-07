@@ -7,8 +7,10 @@ The laboratory owns dummy fixtures, controlled failures, acceptance scenarios an
 experiment artifacts. Recorda owns recording behavior and its provisional API.
 MOLI owns shared provenance and governance contracts. Follow `reporting_protocol.md`.
 
-The laboratory is tracked by `uibcdf/recorda-lab#1`, coordinated
-with the core experiment in `uibcdf/recorda#1`. Its local runner
+The original laboratory acceptance is complete in `uibcdf/recorda-lab#1`,
+coordinated with the core experiment in `uibcdf/recorda#1`. Read
+[STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) for the criterion/evidence
+matrix and independently owned remaining gates. Its local runner
 checks success, failure, interruption, inactive behavior, nesting, omissions, native
 references and declared coverage. A run produces fresh inspectable artifacts.
 

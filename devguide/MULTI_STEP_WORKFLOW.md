@@ -100,6 +100,8 @@ Four routine jobs and all seven integration jobs passed; the scientific log repo
 official conclusions are in `evidence/multi_step_workflow_hosted.json`.
 Later documentation-only commits do not change the tested implementation files.
 
-Broader standalone acceptance remains open. No automatic capture, retained-source
+Original standalone acceptance was subsequently completed; read
+[STANDALONE_ACCEPTANCE.md](STANDALONE_ACCEPTANCE.md) for its separate criterion
+matrix and consolidation evidence. No automatic capture, retained-source
 authenticity, complete dependency closure, public support, replay, release or MOLI
 integration follows from this experiment.

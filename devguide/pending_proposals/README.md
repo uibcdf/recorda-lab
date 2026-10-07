@@ -19,4 +19,6 @@ laboratory scenarios are tracked in this repository's issue board.
 Published required-provider adoption is resolved in
 [`../archive/published_recorda_providers.md`](../archive/published_recorda_providers.md),
 tracked by `uibcdf/recorda-lab#12`. The exact current pair and executed gates
-are in `../CHECKPOINT.md`; broader laboratory acceptance remains open.
+are in `../CHECKPOINT.md`. Original laboratory acceptance is resolved in
+[`../archive/controlled_laboratory.md`](../archive/controlled_laboratory.md);
+read `../STANDALONE_ACCEPTANCE.md` for the criterion/evidence matrix.
